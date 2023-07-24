@@ -1,0 +1,15 @@
+.container
+	.container-inner main
+		.main-content
+			header
+				header-inner
+					.header-logo
+					.btn-header
+					.trigger
+						span * 3
+			section.banner
+				h1
+			section.welcome
+				img * 3
+				
+			

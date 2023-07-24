@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANA App</title>
+    <!-- <link rel="shortcut icon" href="../static/images/common/favicon.ico"> -->
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body>
+
+    <div class="wrap fullPopup">
+        <div class="container flex column fullHeight sb">
+            <div class="popupHeader">
+                <div class="fullPopup--title">
+                    <div class="profile_top">
+                        <div class="desc_top pl30">
+                            <label><img src="../../images/common/on_star.png" alt=""><input type="text"  class="edit_name" placeholder="이름을 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder='이름을 입력하세요'" maxlength='5'></label>
+                            <img src="../../images/common/ico_pencil_dark.png" alt="수정">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="scrollWrap inCont">
+                <div class="inpWrap edit_wrap">
+                    <div class="inputWrap ">
+                        <input type="text" name="" id="" class="inp" value="" placeholder="전화번호를 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder='전화번호를 입력하세요'" onKeyup="inputPhoneNumber(this);" maxlength="13">
+                        <button class="btn edit" type="submit"><span class="hide">수정</span></button>
+                    </div>
+                    <div class="inputWrap">
+                        <input type="text" name="" id="" class="inp" value="" placeholder="고객 정보를 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder='고객 정보를 입력하세요'">
+                        <button class="btn edit" type="submit"><span class="hide">수정</span></button>
+                    </div>
+                    <div class="inputWrap">
+                        <input type="text" name="" id="" class="inp" value="" placeholder="고객 생일을 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder='고객 생일을 입력하세요'" oninput="autoHyphen(this)" maxlength="10">
+                        <button class="btn edit" type="submit"><span class="hide">수정</span></button>
+                    </div>
+                </div>
+                <div class="btnArea">
+                    <button type="button" class="btn ty1"><span class="text">완료</span></button>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="closeBtn"><span>닫기</span></a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" href="../img/logo.png" />
+	<link rel="apple-touch-icon" href="../img/logo.png" />
+	<meta name="robots" content="ALL" />
+	<title>MAHA proj.</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+	<link rel="stylesheet" href="../css/fontawesome.all.min.css" />
+	<link rel="stylesheet" href="../css/jquery.fancybox.css" />
+	<link rel="stylesheet" href="../css/right.solution.css" />
+	<!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+	<!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+	<script src="../js/jquery.min.js?v=3.6.0"></script>
+	<script src="../js/jquery.ui.js"></script>
+	<script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+	<script src="../js/jquery.form.min.js"></script>
+	<script src="../js/jquery.fileDownload.js"></script>
+	<script src="../js/right.solution.js"></script>
+	<script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+	<script src="../js/duallistbox.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		function frmSubmit() {
+			if (!confirm("직원 정보 변경사항을\n저장하시겠습니까?")) return;
+
+			$.ajax({
+				url: "/account/employee/excuteEmployee.act",
+				async: true,
+				type: "post",
+				data: $("form[name=frm]").serialize(),
+				dataType: 'json',
+				success: function (res, textStatus) {
+					var resultMsg = res.resultMsg;
+					if (resultMsg == "success") {
+						var paramVo = res.paramVo;
+						alert("저장되었습니다.");
+						parent.location.reload();
+						return;
+					}
+				}
+			});
+		}
+
+		// function del(employeeId) {
+		// 	if(!confirm("삭제하시겠습니까?")) return;
+
+		// 	$.ajax({
+		// 		url: "/account/employee/delEmployee.act",
+		// 		async: true,
+		// 		type: "post",
+		// 		data: $("form[name=frm]").serialize(),
+		// 		dataType: 'json',
+		// 		success: function (res, textStatus) {
+		// 			var resultMsg = res.resultMsg;
+		// 			if (resultMsg == "success") {
+		// 				var paramVo = res.paramVo;
+		// 				alert("저장되었습니다.");
+		// 				parent.location.reload();
+		// 				return;
+		// 			}
+		// 		}
+		// 	});
+		// }
+	</script>
+	<section class="pop_total_wrap">
+		<h2><strong>권한추가</strong></h2>
+		<section class="box_wrap">
+			<div class="p5">
+				<table class="tbl_update">
+					<colgroup>
+						<col width="80" />
+					<tbody>
+						<tr>
+							<th><label for="authName">권한명 <strong>*</strong></label></th>
+							<td><input type="text" name="authName" id="authName" maxlength="50" placeholder="권한명"
+									required /></td>
+						</tr>
+					</tbody>
+					<col />
+					</colgroup>
+				</table>
+				<div class="stretch_wrap mt10 duallistbox" style="">
+					<div style="flex-basis:calc(50% - 25px);width:calc(50% - 25px);">
+						<h6 class="fs13 pb5" style="margin-bottom: 10px;"><em class="fa-fw fa fa-bars"></em>시스템 URL</h6>
+						<span>
+							<label>
+								화면/기능명
+								<span>
+									<input id="searchKeyword" name="searchKeyword"
+										style="width: 150px; margin-left: 7px;" placeholder="검색어" type="text" value=""
+										maxlength="20" />
+								</span>
+							</label>
+							<button type="submit" class="btns green small" style="margin-left: 7px;"><i class="fa fa-search"></i>
+								검색</button>
+						</span>
+						<div class="ofyA dlb-left" style="max-height: 190px; margin-top: 10px;">
+							<table class="tbl_sort_list">
+								<colgroup>
+									<col width="40" />
+									<col />
+									<col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><input type="checkbox" value="left" /></th>
+										<th scope="col">URL</th>
+										<th scope="col">메뉴설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" name="menu_id" value="2" /></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="menu_id" value="3" /></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="menu_id" value="4" /></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="menu_id" value="6" /></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="menu_id" value="7" /></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="stretch_middle_btn_wrap" style="flex-basis:50px;width:50px;">
+						<button title="추가" type="button" class="btns normal p0 dlb-send-right-btn"
+							style="width:34px;"><em class="fa-fw fa fa-arrow-right"></em></button>
+						<button title="삭제" type="button" class="btns normal p0 mt10 dlb-send-left-btn"
+							style="width:34px;"><em class="fa-fw fa fa-arrow-left"></em></button>
+					</div>
+					<div style="flex-basis:calc(50% - 25px);width:calc(50% - 25px);">
+						<h6 class="fs13 pb5" style="margin-bottom: 43px;"><em class="fa-fw far fa-check-square"></em>메뉴권한</h6>
+						<div class="ofyA dlb-right" style="max-height: 190px;">
+							<table class="tbl_sort_list">
+								<colgroup>
+									<col width="40" />
+									<col />
+									<col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"></th>
+										<th scope="col">URL</th>
+										<th scope="col">메뉴설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" name="menu_id" value="2" /></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="menu_id" value="3" /></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="menu_id" value="4" /></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<aside class="btn_pop_wrap">
+				<div class="f_r">
+					<button type="submit" class="btns darkgray"><i class="fa fa-fw fa-save"></i>추가</button>
+					<button type="button" class="btns red ml5 btn_parent_fancy_close" onclick="parent.$.fancybox.close()"><i class="fa fa-fw fa-times"></i> 취소</button>
+				</div>
+			</aside>
+		</section>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile main page</title>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <!-- custom CSS -->
+    <script src="js/right.solution.sort.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <div class="header_inner">
+                <div class="logo"><img src="mo_images/logo.jpg" alt=""></div>
+                <div class="lnb">
+                    <div class="trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="gnb">
+                    <div class="dropdown-navi">공동구매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">공동구매 리스트</a>
+                    </div>
+                    <div class="dropdown-navi">발전소 매매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">발전소 매매 물건</a>
+                        <a href="#none">최근 거래 완료 매물</a>
+                    </div>
+                    <div class="dropdown-navi">ESM 관리<i class="xi-angle-down"></i></div>
+                    <div class="dropdown-navi">공지사항<i class="xi-angle-down"></i></div>
+                    <div class="gnb_inner">
+                        <a href="#none">로그인</a>
+                        <a href="#none">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <section class="mo_for_sale">
+            <div class="mo_forsale_banner">
+                <img src="mo_images/mo_for_sale_banner.jpg" alt="">
+                <div class="mo_forsale_heading">
+                    <h1>발전소 매매</h1>
+                    <p>
+                        SSOM O&M Platform을 통한 <br>
+                        발전소 매매 비교 견적 및 서비스 신청을 하실 수 있습니다.
+                    </p>
+                </div>
+                <div class="for_sale_inner">
+                    <div class="fs_top_btn">
+                        <button><i class="fa fa-check" aria-hidden="true"></i> 전체</button>
+                        <button>RE100</button>
+                        <button>매매</button>
+                    </div>
+                    <hr style="background-color: #333;">
+                    <h3>전체 매물</h3>
+                    <div class="for_sale_items">
+                        <div class="for_sale_item">
+                            <div class="for_sale_up"></div>
+                            <div class="for_sale_down">
+                                <small>RE100<span><br>998kW</span></small>
+                                <p>
+                                    충남 예산군 대흥면 손지리 12 <br>
+                                    3년차
+                                </p>
+                                <strong>연간발전량<span> 99,999.99MWh</span></strong>
+                            </div>
+                        </div>
+                        <div class="for_sale_item">
+                            <div class="for_sale_up"></div>
+                            <div class="for_sale_down">
+                                <small>RE100<span><br>1,909kW</span></small>
+                                <p>
+                                    충청북도 음성군 원남면 삼용리<br>
+                                    3년차
+                                </p>
+                                <strong>연간발전량<span> 99,999.99MWh</span></strong>
+                            </div>
+                        </div>
+                        <button class="see_more">더보기</button>
+                    </div>
+                </div>
+                </div>
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="footer_inner">
+                <div class="footer_top">
+                    <h3>SSOM 고객센터</h3>
+                    <span>061-123-4567</span>
+                    <p>평일 09:00~18:00 (중식 시간 12:00~13:00)<br>(주말, 공휴일, 대체휴일 제외)</p>
+                    <hr style="background: #a5a5a5;">
+                </div>
+                <div class="footer_bottom">
+                    <p>
+                        Copyright ⓒ SSOM Inc. All Rights Reserved.<br>
+                        주식회사 쏨 | 대표이사 : 정인화 | 사업자번호 123-45-67890<br>
+                        Tel. 061-123-4567 | Fax. 061-234-5678<br>
+                        본사 : 전남 나주시 교육길 13, 스마트파크 F동 401호<br>
+                    </p>
+                    <a href="#none">이용약관</a>
+                    <a href="#none">개인정보취급방침</a>
+                    <a href="#none">공지사항</a>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

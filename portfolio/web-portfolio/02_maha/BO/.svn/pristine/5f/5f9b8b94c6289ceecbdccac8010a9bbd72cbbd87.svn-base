@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="../img/logo.png" />
+    <link rel="apple-touch-icon" href="../img/logo.png" />
+    <meta name="robots" content="ALL" />
+    <title>MAHA proj.</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+    <link rel="stylesheet" href="../css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="../css/right.solution.css" />
+    <!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+    <!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+    <script src="../js/jquery.min.js?v=3.6.0"></script>
+    <script src="../js/jquery.ui.js"></script>
+    <script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+    <script src="../js/jquery.form.min.js"></script>
+    <script src="../js/jquery.fileDownload.js"></script>
+    <script src="../js/right.solution.js"></script>
+    <script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+    <script src="../js/duallistbox.js"></script>
+</head>
+
+<body>
+    <section class="container_sec">
+
+        <script type="text/javascript">
+            function open403Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/forbidden'
+                });
+            }
+
+            function open404Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/404'
+                });
+            }
+
+            function open500Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/internalError'
+                });
+            }
+        </script>
+        <section class="left_wing_sec">
+            <header class="left_wing_header">
+                <div class="logo_wrap">
+                    <h1><a href="/"><strong style="color:#ff4513;">MA</strong><strong
+                                style="color:#009792;">HA</strong></a></h1>
+                </div>
+            </header>
+            <section class="left_wing_body">
+                <article>
+                    <nav class="left_wing_nav">
+                        <ul>
+                            <li><a href="/"><i class="fa-fw fa fa-home"></i> 첫화면</a></li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계정 관리</a>
+                                <ul class="visible">
+                                    <li><a href="/account/employee/list"><i class="fa-fw fa fa-angle-right"></i>직원
+                                            관리</a></li>
+                                    <li><a href="/account/authority/list"><i class="fa-fw fa fa-angle-right"></i>권한
+                                            관리</a></li>
+                                    <li><a href="/account/menu"><i class="fa-fw fa fa-angle-right"></i>메뉴 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>고객관리</a>
+                                <ul class="visible">
+                                    <li><a href="/customer/customer/list"><i
+                                                class="fa-fw fa fa-angle-right"></i>고객관리</a></li>
+                                    <li><a href="/customer/analysis"><i class="fa-fw fa fa-angle-right"></i>분석 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계약관리</a>
+                                <ul class="visible">
+                                    <li><a href="/contract/contract/list"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            리스트</a></li>
+                                    <li><a href="/contract/contract/info"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            정보관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>상품관리</a>
+                                <ul class="visible">
+                                    <li><a href="/insurance/insurancelist"><i
+                                                class="fa-fw fa fa-angle-right"></i>상품리스트</a></li>
+                                    <li><a href="/insurance/uwprocess"><i class="fa-fw fa fa-angle-right"></i>U/W
+                                            PROCESS</a></li>
+                                    <li><a href="/insurance/coverage"><i class="fa-fw fa fa-angle-right"></i>담보 관리</a>
+                                    </li>
+                                    <li><a href="/insurance/score"><i class="fa-fw fa fa-angle-right"></i>SCORE관리</a>
+                                    </li>
+                                    <li><a href="/insurance/fee"><i class="fa-fw fa fa-angle-right"></i>수수료 관리</a></li>
+                                    <li><a href="/insurance/insuranceamount"><i class="fa-fw fa fa-angle-right"></i>보험료
+                                            관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>통계</a>
+                                <ul class="visible">
+                                    <li><a href="/test/list"><i class="fa-fw fa fa-angle-right"></i>설계사 실적 통계</a></li>
+                                    <li><a href="/test/edit"><i class="fa-fw fa fa-angle-right"></i> 매출 통계</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>로그관리</a>
+                                <ul class="visible">
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>직원 로그 관리</a>
+                                    </li>
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>고객 로그 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <hr class="hidden_box clearfix" />
+                    </nav>
+                </article>
+            </section>
+        </section>
+        <section class="right_wing_sec">
+            <aside class="right_white_bar">
+                <div class="left">
+                    <strong>tester</strong> 님, 환영합니다!
+                </div>
+                <div class="right">
+                    <button type="button" class="btns normal small" onclick="location.href='/logout'"><em
+                            class="fa-fw fas fa-running"></em>로그아웃</button>
+                    <button type="button" class="btns normal small" onclick=""><em
+                            class="fa-fw far fa-user"></em>마이페이지</button>
+                </div>
+            </aside>
+            <script type="text/javascript">
+                function movePage(page) {
+                    // GET 방식
+                    var frm = document.frmSearch;
+                    frm.page.value = page;
+                    frm.submit();
+                }
+
+                function openLayer(id) {
+                    $.fancybox({
+                        width: 800,
+                        type: 'iframe',
+                        href: '/account/employee/edit?employeeId=' + id
+                    });
+                }
+
+                function excelDownload() {
+                    $.fileDownload("/account/employee/excelDownload.act", {
+                        httpMethod: "post",
+                        prepareCallback: function (url) {
+                            call_layer_loader("body", "처리 중입니다.");
+                        },
+                        successCallback: function (url) {
+                            remove_layer_loader("body");
+                        },
+                        failCallback: function (responseHtml, url) {
+                            remove_layer_loader("body");
+                        }
+                    });
+                }
+            </script>
+            <section class="right_wing_contents" id="right_wing_contents">
+                <!-- //LIST -->
+                <h3>직업관리</h3>
+                <section class="box_wrap">
+                    <section class="sec_list_group">
+                        <section class="box_wrap search">
+                            <article class="art_search">
+                                <form id="frmSearch" name="frmSearch" onSubmit="movePage(1); return false;"
+                                    action="/account/employee/list" method="get">
+                                    <input id="page" name="page" type="hidden" value="1" />
+                                    <input id="recordSize" name="recordSize" type="hidden" value="15" />
+                                    <fieldset>
+                                        <legend class="hidden_box">상품인수 지침 관리</legend>
+                                        <p class="search_line">
+                                            <em>
+                                                <span class="line_inner">
+                                                    <label>
+                                                        소분류코드
+                                                        <span>
+                                                            <input id="searchKeyword" name="searchKeyword"
+                                                                style="width: 150px; margin-left: 7px;" placeholder="검색"
+                                                                type="text" value="" maxlength="20" />
+                                                        </span>
+                                                    </label>
+                                                    <label>
+                                                        소분류명
+                                                        <span>
+                                                            <input id="searchKeyword" name="searchKeyword"
+                                                                style="width: 150px;margin-left: 7px;" placeholder="검색"
+                                                                type="text" value="" maxlength="20" />
+                                                        </span>
+                                                    </label>
+                                                </span>
+                                            </em>
+                                        </p>
+                                    </fieldset>
+                                    <aside class="btn_search_aside">
+                                        <button type="submit" class="btns green small"><i class="fa fa-search"></i>
+                                            조회</button>
+                                    </aside>
+                                </form>
+                            </article>
+                        </section>
+                        <section class=" list">
+                            <div class="top_three_short_tb">
+                                <article class="art_reload_top01">
+                                    <div>
+                                        <h1 class="top_title">직업대분류정보(개발원)</h1>
+                                        <div class="top_btns">
+                                            <button>추가</button>
+                                            <button>삭제</button>
+                                            <button>업로드</button>
+                                            <button>다운로드</button>
+                                        </div>
+                                        <div class="top_01_tb">
+                                            <div class="top_01_tb_box">
+                                                <table class="tbl_sort_list top_three_tb01">
+                                                    <caption class="hidden_box">목록</caption>
+                                                    <colgroup>
+                                                        <col width="30" />
+                                                        <col width="30" />
+                                                        <col width="20" />
+                                                        <col width="40" />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">코드</th>
+                                                            <th scope="col">대분류명</th>
+                                                            <th scope="col">사용여부</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr onclick="openLayer('1')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>1</td>
+                                                            <td>공공</td>
+                                                            <td>사용</td>
+                                                        </tr>
+                                                        <tr onclick="openLayer('2')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>2</td>
+                                                            <td>관리자(사무직)</td>
+                                                            <td>미사용</td>
+                                                        </tr>
+                                                        <tr onclick="openLayer('3')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>3</td>
+                                                            <td>교육</td>
+                                                            <td>사용</td>
+                                                        </tr>
+                                                        <tr onclick="openLayer('4')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>4</td>
+                                                            <td>군인</td>
+                                                            <td>미사용</td>
+                                                        </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="art_reload_top02">
+                                    <div>
+                                        <h1 class="top_title">직업중분류정보(개발원)</h1>
+                                        <div class="top_btns">
+                                            <button>추가</button>
+                                            <button>삭제</button>
+                                            <button>업로드</button>
+                                            <button>다운로드</button>
+                                        </div>
+                                        <div class="top_02_tb">
+                                            <div class="top_02_tb_box">
+                                                <table class="tbl_sort_list top_three_tb02">
+                                                    <caption class="hidden_box">목록</caption>
+                                                    <colgroup>
+                                                        <col width="30" />
+                                                        <col width="30" />
+                                                        <col width="20" />
+                                                        <col width="40" />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">코드</th>
+                                                            <th scope="col">중분류명</th>
+                                                            <th scope="col">사용여부</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr onclick="openLayer('1')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>16</td>
+                                                            <td>
+                                                                건설 및 광업 관련 사무직 관리
+                                                            </td>
+                                                            <td>사용</td>
+                                                        </tr>
+                                                        <tr onclick="openLayer('2')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>31</td>
+                                                            <td>경영지원 사무직 관리자</td>
+                                                            <td>미사용</td>
+                                                        </tr>
+                                                        <tr onclick="openLayer('3')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>50</td>
+                                                            <td>교육 사무직 관리자</td>
+                                                            <td>사용</td>
+                                                        </tr>
+                                                        <tr onclick="openLayer('4')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>65</td>
+                                                            <td>기업고위임원</td>
+                                                            <td>미사용</td>
+                                                        </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="art_reload_top03">
+                                    <div>
+                                        <h1 class="top_title">직업분류정보(개발원)</h1>
+                                        <div class="top_btns">
+                                            <button>추가</button>
+                                            <button>삭제</button>
+                                            <button>업로드</button>
+                                            <button>다운로드</button>
+                                        </div>
+                                        <div class="top_03_tb">
+                                            <div class="top_03_tb_box">
+                                                <table class="tbl_sort_list top_three_tb03">
+                                                    <caption class="hidden_box">목록</caption>
+                                                    <colgroup>
+                                                        <col width="30" />
+                                                        <col width="30" />
+                                                        <col width="20" />
+                                                        <col width="40" />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">코드</th>
+                                                            <th scope="col">중분류명</th>
+                                                            <th scope="col">사용여부</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr onclick="openLayer('1')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>16</td>
+                                                            <td>
+                                                                건설 및 광업 관련 사무직 관리
+                                                            </td>
+                                                            <td>사용</td>
+                                                        </tr>
+                                                        <tr onclick="openLayer('2')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>31</td>
+                                                            <td>경영지원 사무직 관리자</td>
+                                                            <td>미사용</td>
+                                                        </tr>
+                                                        <tr onclick="openLayer('3')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>50</td>
+                                                            <td>교육 사무직 관리자</td>
+                                                            <td>사용</td>
+                                                        </tr>
+                                                        <tr onclick="openLayer('4')">
+                                                            <td><input type="checkbox"></td>
+                                                            <td>65</td>
+                                                            <td>기업고위임원</td>
+                                                            <td>미사용</td>
+                                                        </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                            </div>
+                            <article class="art_reload_cipctop">
+                                <h1>상품보험료</h1>
+                                <div class="top_btns" style="margin-top: 32px;">
+                                    <button>추가</button>
+                                    <button>삭제</button>
+                                    <button>업로드</button>
+                                    <button>다운로드</button>
+                                </div>
+                                <div class="art_reload_cipc_top_box">
+                                    <!-- 어령 -->
+                                    <table class="tbl_sort_list list top_tb">
+                                        <caption class="hidden_box">상품보험료</caption>
+                                        <colgroup>
+                                            <col width="5" />
+                                            <col width="5" />
+                                            <col width="5" />
+                                            <col width="5" />
+                                            <col width="5" />
+                                            <col width="5" />
+                                            <col width="5" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">회사코드</th>
+                                                <th scope="col">회사명</th>
+                                                <th scope="col">직업코드</th>
+                                                <th scope="col">상해급수</th>
+                                                <th scope="col">위험등급</th>
+                                                <th scope="col">적용시작일자</th>
+                                                <th scope="col">적용종료일자</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>N17</td>
+                                                <td>하나손해보험</td>
+                                                <td>14902A</td>
+                                                <td>1</td>
+                                                <td>A</td>
+                                                <td>2021-10-01</td>
+                                                <td>2099-12-31</td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </article>
+                            <!-- <aside class='pagination'><button type='button' class='btn_arrow first disabled'
+                                    title='첫 페이지'><i class='fa fa-angle-double-left'></i></button><button type='button'
+                                    class='btn_arrow prev disabled' title='이전 페이지'><i
+                                        class='fa fa-angle-left'></i></button><button type='button' class='page active'
+                                    onclick='movePage(1)'><span>1</span></button><button type='button'
+                                    onclick='movePage(2)'><span>2</span></button><button type='button'
+                                    onclick='movePage(3)'><span>3</span></button><button type='button'
+                                    onclick='movePage(4)'><span>4</span></button><button type='button'
+                                    onclick='movePage(5)'><span>5</span></button><button type='button'
+                                    class='btn_arrow next disabled' title='다음 페이지'><i
+                                        class='fa fa-angle-right'></i></button><button type='button'
+                                    class='btn_arrow last disabled' title='마지막 페이지'><i
+                                        class='fa fa-angle-double-right'></i></button></aside> -->
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- LIST// -->
+    </section>
+
+    </section>
+    </section>
+
+</body>
+
+</html>

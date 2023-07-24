@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="../img/logo.png" />
+    <link rel="apple-touch-icon" href="../img/logo.png" />
+    <meta name="robots" content="ALL" />
+    <title>MAHA proj.</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+    <link rel="stylesheet" href="../css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="../css/right.solution.css" />
+    <!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+    <!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+    <script src="../js/jquery.min.js?v=3.6.0"></script>
+    <script src="../js/jquery.ui.js"></script>
+    <script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+    <script src="../js/jquery.form.min.js"></script>
+    <script src="../js/jquery.fileDownload.js"></script>
+    <script src="../js/right.solution.js"></script>
+    <script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+    <script src="../js/duallistbox.js"></script>
+</head>
+
+<body>
+    <section class="container_sec">
+
+        <script type="text/javascript">
+            function open403Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/forbidden'
+                });
+            }
+
+            function open404Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/404'
+                });
+            }
+
+            function open500Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/internalError'
+                });
+            }
+        </script>
+        <section class="left_wing_sec">
+            <header class="left_wing_header">
+                <div class="logo_wrap">
+                    <h1><a href="/"><strong style="color:#ff4513;">MA</strong><strong
+                                style="color:#009792;">HA</strong></a></h1>
+                </div>
+            </header>
+            <section class="left_wing_body">
+                <article>
+                    <nav class="left_wing_nav">
+                        <ul>
+                            <li><a href="/"><i class="fa-fw fa fa-home"></i> 첫화면</a></li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계정 관리</a>
+                                <ul class="visible">
+                                    <li><a href="/account/employee/list"><i class="fa-fw fa fa-angle-right"></i>직원
+                                            관리</a></li>
+                                    <li><a href="/account/authority/list"><i class="fa-fw fa fa-angle-right"></i>권한
+                                            관리</a></li>
+                                    <li><a href="/account/menu"><i class="fa-fw fa fa-angle-right"></i>메뉴 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>고객관리</a>
+                                <ul class="visible">
+                                    <li><a href="/customer/customer/list"><i
+                                                class="fa-fw fa fa-angle-right"></i>고객관리</a></li>
+                                    <li><a href="/customer/analysis"><i class="fa-fw fa fa-angle-right"></i>분석 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계약관리</a>
+                                <ul class="visible">
+                                    <li><a href="/contract/contract/list"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            리스트</a></li>
+                                    <li><a href="/contract/contract/info"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            정보관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>상품관리</a>
+                                <ul class="visible">
+                                    <li><a href="/insurance/insurancelist"><i
+                                                class="fa-fw fa fa-angle-right"></i>상품리스트</a></li>
+                                    <li><a href="/insurance/uwprocess"><i class="fa-fw fa fa-angle-right"></i>U/W
+                                            PROCESS</a></li>
+                                    <li><a href="/insurance/coverage"><i class="fa-fw fa fa-angle-right"></i>담보 관리</a>
+                                    </li>
+                                    <li><a href="/insurance/score"><i class="fa-fw fa fa-angle-right"></i>SCORE관리</a>
+                                    </li>
+                                    <li><a href="/insurance/fee"><i class="fa-fw fa fa-angle-right"></i>수수료 관리</a></li>
+                                    <li><a href="/insurance/insuranceamount"><i class="fa-fw fa fa-angle-right"></i>보험료
+                                            관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>통계</a>
+                                <ul class="visible">
+                                    <li><a href="/test/list"><i class="fa-fw fa fa-angle-right"></i>설계사 실적 통계</a></li>
+                                    <li><a href="/test/edit"><i class="fa-fw fa fa-angle-right"></i> 매출 통계</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>로그관리</a>
+                                <ul class="visible">
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>직원 로그 관리</a>
+                                    </li>
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>고객 로그 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <hr class="hidden_box clearfix" />
+                    </nav>
+                </article>
+            </section>
+        </section>
+        <section class="right_wing_sec">
+            <aside class="right_white_bar">
+                <div class="left">
+                    <strong>tester</strong> 님, 환영합니다!
+                </div>
+                <div class="right">
+                    <button type="button" class="btns normal small" onclick="location.href='/logout'"><em
+                            class="fa-fw fas fa-running"></em>로그아웃</button>
+                    <button type="button" class="btns normal small" onclick=""><em
+                            class="fa-fw far fa-user"></em>마이페이지</button>
+                </div>
+            </aside>
+            <script type="text/javascript">
+                function movePage(page) {
+                    // GET 방식
+                    var frm = document.frmSearch;
+                    frm.page.value = page;
+                    frm.submit();
+                }
+
+                function openLayer(id) {
+                    $.fancybox({
+                        width: 800,
+                        type: 'iframe',
+                        href: '/account/employee/edit?employeeId=' + id
+                    });
+                }
+
+                function excelDownload() {
+                    $.fileDownload("/account/employee/excelDownload.act", {
+                        httpMethod: "post",
+                        prepareCallback: function (url) {
+                            call_layer_loader("body", "처리 중입니다.");
+                        },
+                        successCallback: function (url) {
+                            remove_layer_loader("body");
+                        },
+                        failCallback: function (responseHtml, url) {
+                            remove_layer_loader("body");
+                        }
+                    });
+                }
+            </script>
+            <section class="right_wing_contents" id="right_wing_contents">
+                <!-- //LIST -->
+                <h3>표준 보장 금액 관리</h3>
+                <section class="box_wrap">
+                    <section class="sec_list_group">
+                        <section class="box_wrap search">
+                            <article class="art_search" style="overflow: hidden;">
+                                <aside class="btn_search_aside" style="margin-top: -3px; float: right;">
+                                    <button type="submit" class="btns green small"><i class="fa fa-search"></i>
+                                        등록</button>
+                                </aside>
+                                <form id="frmSearch" name="frmSearch" onSubmit="movePage(1); return false;"
+                                    action="/account/employee/list" method="get">
+                                </form>
+                            </article>
+                        </section>
+                        <section class=" list">
+                            <article class="art_reload">
+                                <div class="Comn_codemgnt_btbox">
+                                    <table class="tbl_sort_list list x-scroll" style="width: 155%;">
+                                        <caption class="hidden_box">목록</caption>
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="3">성별</th>
+                                                <th colspan="2">연령대</th>
+                                                <th colspan="11">사망 / 상해 / 기타 </th>
+                                                <th colspan="7">진단 / 실손 </th>
+                                                <th colspan="11">수술 / 입원 / 운전자 </th>
+                                            </tr>
+                                            <tr>
+                                                <th rowspan="2">시작</th>
+                                                <th rowspan="2">끝</th>
+                                                <th rowspan="2">질병사망</th>
+                                                <th rowspan="2">상해사망</th>
+                                                <th colspan="3">상해장해</th>
+                                                <th colspan="3">질병상해</th>
+                                                <th colspan="3">기타</th>
+                                                <th colspan="3">암</th>
+                                                <th colspan="4">2대질환</th>
+                                                <th colspan="5">수술</th>
+                                                <th colspan="3">입원</th>
+                                                <th colspan="3">운전자</th>
+                                            </tr>
+                                            <tr>
+                                                <th>100%</th>
+                                                <th>79%</th>
+                                                <th>3%</th>
+                                                <th>100%</th>
+                                                <th>79%</th>
+                                                <th>3%</th>
+                                                <th>치매</th>
+                                                <th>치아보철</th>
+                                                <th>배상책임</th>
+                                                <th>고액암</th>
+                                                <th>일반암</th>
+                                                <th>유사암</th>
+                                                <th>뇌혈관</th>
+                                                <th>뇌출혈</th>
+                                                <th>심혈관</th>
+                                                <th>급성심근<br>경색</th>
+                                                <th>질병</th>
+                                                <th>상해</th>
+                                                <th>암</th>
+                                                <th>뇌혈관</th>
+                                                <th>심장질환</th>
+                                                <th>질병</th>
+                                                <th>암</th>
+                                                <th>상해</th>
+                                                <th>벌금</th>
+                                                <th>교통사고<br>처리</th>
+                                                <th>변호사</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>0</td>
+                                                <td>9</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>10</td>
+                                                <td>19</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>20</td>
+                                                <td>29</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>30</td>
+                                                <td>39</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>40</td>
+                                                <td>49</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>50</td>
+                                                <td>59</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>60</td>
+                                                <td>69</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>70</td>
+                                                <td>79</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>80</td>
+                                                <td>89</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>90</td>
+                                                <td>200</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>여</td>
+                                                <td>0</td>
+                                                <td>9</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="b
+                                                
+                                                order: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>여</td>
+                                                <td>10</td>
+                                                <td>19</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>여</td>
+                                                <td>20</td>
+                                                <td>29</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>여</td>
+                                                <td>30</td>
+                                                <td>39</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>여</td>
+                                                <td>40</td>
+                                                <td>49</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>여</td>
+                                                <td>50</td>
+                                                <td>59</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>여</td>
+                                                <td>60</td>
+                                                <td>69</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>여</td>
+                                                <td>70</td>
+                                                <td>79</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>여</td>
+                                                <td>80</td>
+                                                <td>89</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>남</td>
+                                                <td>90</td>
+                                                <td>200</td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                                <td><input type="text" style="border: none; text-align: center; width: 100%;"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </article>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- LIST// -->
+    </section>
+
+    </section>
+    </section>
+
+</body>
+
+</html>

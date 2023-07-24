@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="prototype.css">
+  <title>transition screen prototype</title>
+  <!-- jquary -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+  <div class="open-navi">
+    <i class="xi-arrow-right"></i>
+  </div>
+  <div class="close-navi">
+    <i class="xi-arrow-left"></i>
+  </div>
+  <div class="front"></div>
+  <div class="back"></div>
+
+  <script>
+    $('.open-navi').click(function () {
+      $(this).addClass('active')
+      $('.close-navi').addClass('active')
+      $('.front').fadeOut()
+      $('.back').fadeIn()
+    })
+    $('.close-navi').click(function () {
+      $(this).removeClass('active')
+      $('.open-navi').removeClass('active')
+      $('.back').fadeOut()
+      $('.front').fadeIn()
+    })
+  </script>
+
+</body>
+
+</html>

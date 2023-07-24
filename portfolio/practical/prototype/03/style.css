@@ -1,0 +1,114 @@
+/* google web font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Font Awesome 4.7.0 CND */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  line-height: 1.6em;
+  margin: 0;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* accordian image gallery */
+.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+}
+.gallery li {
+/*  border-right: 5px solid #000;*/
+  flex: 1;
+  height: 100vh;
+  box-sizing: border-box;
+  transition: 0.5s;
+  overflow: hidden;
+  position: relative;
+  filter: grayscale(1)
+}
+.gallery li:last-child {
+  border: none;
+}
+.gallery:hover {
+  
+}
+.gallery:hover li {
+  
+}
+.gallery li:hover {
+  flex: 3;
+  filter: grayscale(0);
+  box-shadow: 10px 10px 30px #000;
+}
+.gallery li:nth-child(1) {
+  background: url(images/slide-01.jpg) no-repeat center center;
+  background-size: cover;
+  
+}
+.gallery li:nth-child(2) {
+   background: url(images/slide-02.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery li:nth-child(3) {
+   background: url(images/slide-03.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery li:nth-child(4) {
+   background: url(images/slide-04.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery li:nth-child(5) {
+   background: url(images/slide-05.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+.content {
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  bottom: -450px;
+  left: 0;
+  padding: 40px 15px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+.content:before {
+  content:'';
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  transform-origin: bottom left;
+  transform: rotate(-2deg) scale(1.1);
+}
+.gallery li:hover .content {
+  bottom: 0;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.content h2 {}
+.content p {}
+.sns {
+  
+}
+.sns a {
+  color: #fff;
+  padding: 5px;
+  transition: 0.3s;
+}
+.sns a:hover {
+  color: gray;
+  transform: scale (1.5);
+}

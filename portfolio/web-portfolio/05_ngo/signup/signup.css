@@ -1,0 +1,108 @@
+/* googlefont cdn */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Righteous&display=swap');
+
+/* default css */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* common css */
+span {
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.error {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: red;
+}
+.inputbox {
+    padding: 10px 8px;
+    font-weight: 700;
+    border: 1px solid gray;
+    outline: none;
+}
+hr {
+    margin-top: 20px;
+    border: 1px solid #e6e6e6;
+}
+
+/* custom css */
+.wrapper {
+    width: 40%;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 18px rgb(195, 193, 193);
+}
+
+.wrapper h1 {
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.phone_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.token_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+.token_wrapper #token_btn {
+    background-color: #9ab106;
+    color: #fff;
+    border: none;
+    padding: 7px 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+.token_wrapper #token_timer_btn:disabled {
+    color: lightgray;
+    background-color: gray;
+    text-transform: uppercase;
+    padding: 7px 8px;
+    border: none;
+}
+.footer #signup_btn {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 35px;
+    margin-left: 45%;
+}
+.footer #signup_btn:disabled {
+    color: lightgray;
+    background-color: gray;
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+@media screen and (max-width:768px) {
+    .wrapper {
+        width: 80%;
+    }
+    .footer #signup_btn {
+        width: 100%;
+        margin-left: 0;
+    }
+}

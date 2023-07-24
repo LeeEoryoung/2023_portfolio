@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WNC SIGN UP</title>
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" sizes="16x16">
+    <!-- signup css -->
+    <link rel="stylesheet" href="./signup.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <h1>SIGN UP</h1>
+        <hr />
+        <span>e-mail</span>
+        <input type="text" class="inputbox" id="email" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Email'">
+        <div class="error" id="error_email"></div>
+        <span>name</span>
+        <input type="text" class="inputbox" id="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'">
+        <div class="error" id="error_name"></div>
+        <span>password</span>
+        <input type="password" class="inputbox" id="password1" placeholder="Enter your password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your password'">
+        <div class="error" id="error_password1"></div>
+        <span>re-password</span>
+        <input type="password" class="inputbox" id="password2" placeholder="Re-Enter your password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Re-Enter your password'">
+        <div class="error" id="error_password2"></div>
+        <hr />
+        <div class="phone_wrapper">
+            <span>phone number</span>
+            <input class="inputbox" type="text" oninput="number(this)" maxlength="13" placeholder="Your phone number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your phone number'">
+        </div>
+        <hr />
+        <div class="token_wrapper">
+            <div class="token" id="token">000000</div>
+            <button id="token_btn" onclick="getToken()" >send code</button>
+        </div>
+        <div class="token_wrapper">
+            <div class="token_timer" id="token_timer">3:00</div>
+            <button id="token_timer_btn" onclick="getTokenTimerConfirm()" disabled>confirmed</button>
+        </div>
+        <hr />
+        <div class="footer">
+            <button id="signup_btn" onclick="signup()" disabled>sign up</button>
+        </div>
+    </div>
+    
+
+
+    
+    
+    <script src="./signup.js"></script>
+</body>
+</html>

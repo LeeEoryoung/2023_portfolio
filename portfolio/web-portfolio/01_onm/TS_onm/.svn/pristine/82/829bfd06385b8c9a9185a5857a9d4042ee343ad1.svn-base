@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>발전소 매매 상세</title>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <!-- custom CSS -->
+    <script src="/js/right.solution.sort.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="header_inner">
+            <header>
+                <nav>
+                    <div class="logo">
+                        <a href="#"><img src="images/logo.png" alt="ssom logo"></a>
+                    </div>
+                    <div class="navi">
+                        <ul class="gnb">
+                            <li>
+                                <a href="#none">공동구매</a>
+                                <!-- <div class="sub-menu">
+                                    <a href="#none">공동구매 리스트</a>
+                                </div> -->
+                            </li>
+                            <li>
+                                <a href="#none">발전소 매매</a>
+                                <!-- <div class="sub-menu">
+                                    <a href="#none">발전소 매매 물건</a>
+                                    <a href="#none">최근 거래 완료 매물</a>
+                                </div> -->
+                            </li>
+                            <li>
+                                <a href="#none">ESM 관리</a>
+                                <!-- <div class="sub-menu">
+                                    <a href="#none">ESM 소개</a>
+                                </div> -->
+                            </li>
+                            <li>
+                                <a href="#none">공지사항</a>
+                            </li>
+                        </ul>
+                        <div class="sub_inner">
+                            <div class="sub-menu">
+                                <ul class="item1">
+                                    <li><a href="#none">공동구매 리스트</a></li>
+                                </ul>
+                                <ul class="item2">
+                                    <li><a href="#none">발전소 매매 물건</a></li>
+                                    <li><a href="#none">최근 거래 완료 매물</a></li>
+                                </ul>
+                                <ul class="item3">
+                                    <li><a href="#none">ESM 소개</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub_bg"></div>
+                    </div>
+                    <div class="header_login">
+                        <a href="#none">로그인</a>
+                        <a href="#none">회원가입</a>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <!-- /header -->
+        <!-- contents section -->
+        <section class="for_sale_dt">
+            <div class="for_sale_dt_banner">
+                <img src="images/traded_sale_banner.jpg" alt="">
+            </div>
+            <div class="for_sale_dt_inner">
+                <div class="for_sale_dt_inner_top">
+                    <div class="for_sale_dt_top_left">
+                        <img src="images/for_sale_dt.jpg" alt="">
+                    </div>
+                    <div class="for_sale_dt_top_right">
+                        <h1>경기도 양구군 남면 적리 492kW</h1>
+                        <p>
+                            올해 10월 사용전검사 받았으며 탄소 1등급 모듈로 올해 하반기 150원대에 입찰했습니다. 2메가 발전소 모두 국산 1등급 모듈입니다.
+                        </p>
+                        <hr style="background-color: #333;">
+                        <div>
+                            <table>
+                                <tr>
+                                    <th scope="row">연간발전량</th>
+                                    <td><span>999,999,999원</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">연간 REC</th>
+                                    <td>9,999 REC</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">월 매출 평균</th>
+                                    <td>999,999,999</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">발전시간</th>
+                                    <td>999,999,999원</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button>매매 문의</button>
+                    </div>
+                </div>
+                <div class="for_sale_dt_inner_bottom">
+                    <h3>발전소 정보</h3>
+                    <hr style="background-color: #333;">
+                    <div class="fs_icons_list">
+                        <div class="fs_icon">
+                            <img src="images/for_sale_icon01.jpg" alt="">
+                            <p>발전소 연차</p>
+                            <strong>9년차</strong>
+                        </div>
+                        <div class="fs_icon">
+                            <img src="images/for_sale_icon02.jpg" alt="">
+                            <p>REC 계약형태</p>
+                            <strong>현물</strong>
+                        </div>
+                        <div class="fs_icon">
+                            <img src="images/for_sale_icon03.jpg" alt="">
+                            <p>설치위치</p>
+                            <strong>지상형</strong>
+                        </div>
+                        <div class="fs_icon">
+                            <img src="images/for_sale_icon04.jpg" alt="">
+                            <p>가중치</p>
+                            <strong>99.99</strong>
+                        </div>
+                    </div>
+                    <table>
+                        <tr>
+                            <th scope="row">용량</th>
+                            <td>999,999 kW</td>
+                            <th scope="row">연간 운영관리비</th>
+                            <td>999,999,999원</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">상업운전개시</th>
+                            <td>9999년 12월</td>
+                            <th scope="row">패널</th>
+                            <td>한화</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">REC 가중치</th>
+                            <td>99.99</td>
+                            <th scope="row">인버터</th>
+                            <td>한화</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">REC 가중치</th>
+                            <td>99.99</td>
+                            <th scope="row">인버터</th>
+                            <td>한화</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">계약형태</th>
+                            <td>현물</td>
+                            <th scope="row">토지면적</th>
+                            <td>999,999.9 m2</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">대출잔액</th>
+                            <td>999,999,999원</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- /contents section -->
+    <!-- footer -->
+    <footer>
+        <div class="footer_inner">
+            <div class="footer_left">
+                <h3>SSOM 고객센터</h3>
+                <span>061-123-4567</span>
+                <p>평일 09:00~18:00 (중식 시간 12:00~13:00)<br>(주말, 공휴일, 대체휴일 제외)</p>
+            </div>
+            <div class="footer_right">
+                <p>
+                    Copyright ⓒ SSOM Inc. All Rights Reserved.<br>
+                    주식회사 쏨 | 대표이사 : 정인화 | 사업자번호 123-45-67890<br>
+                    Tel. 061-123-4567 | Fax. 061-234-5678<br>
+                    본사 : 전남 나주시 교육길 13, 스마트파크 F동 401호<br>
+                </p>
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보취급방침</a>
+                <a href="#none">공지사항</a>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+    </div>
+</body>
+
+</html>

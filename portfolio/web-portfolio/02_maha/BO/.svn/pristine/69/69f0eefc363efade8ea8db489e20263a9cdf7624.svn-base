@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" href="../img/logo.png"/>
+<link rel="apple-touch-icon" href="../img/logo.png"/>
+<meta name="robots" content="ALL"/>
+<title>MAHA proj.</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap"/>
+<link rel="stylesheet" href="../css/fontawesome.all.min.css"/>
+<link rel="stylesheet" href="../css/jquery.fancybox.css"/>
+<link rel="stylesheet" href="../css/right.solution.css"/>
+<!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+<!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+<script src="../js/jquery.min.js?v=3.6.0"></script>
+<script src="../js/jquery.ui.js"></script>
+<script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+<script src="../js/jquery.form.min.js"></script>
+<script src="../js/jquery.fileDownload.js"></script>
+<script src="../js/right.solution.js"></script>
+<script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+<script src="../js/duallistbox.js"></script>
+</head>
+<body>
+	
+
+
+
+
+
+<script type="text/javascript">
+function frmSubmit() {
+	if(!confirm("직원 정보 변경사항을\n저장하시겠습니까?")) return;
+
+	$.ajax({
+		url: "/account/employee/excuteEmployee.act",
+		async: true,
+		type: "post",
+		data: $("form[name=frm]").serialize(),
+		dataType: 'json',
+		success: function (res, textStatus) {
+			var resultMsg = res.resultMsg;
+			if (resultMsg == "success") {
+				var paramVo = res.paramVo;
+				alert("저장되었습니다.");
+				parent.location.reload();
+				return;
+			}
+		}
+	});
+}
+
+// function del(employeeId) {
+// 	if(!confirm("삭제하시겠습니까?")) return;
+
+// 	$.ajax({
+// 		url: "/account/employee/delEmployee.act",
+// 		async: true,
+// 		type: "post",
+// 		data: $("form[name=frm]").serialize(),
+// 		dataType: 'json',
+// 		success: function (res, textStatus) {
+// 			var resultMsg = res.resultMsg;
+// 			if (resultMsg == "success") {
+// 				var paramVo = res.paramVo;
+// 				alert("저장되었습니다.");
+// 				parent.location.reload();
+// 				return;
+// 			}
+// 		}
+// 	});
+// }
+</script>
+
+<section class="pop_total_wrap">
+	<h2><strong>직원추가 [GA]</strong></h2>
+	<form id="frm" name="frm" action="/account/employee/edit?employeeId=" method="post" onsubmit="frmSubmit(); return false;">
+		<input id="employeeId" name="employeeId" type="hidden" value=""/>
+		<fieldset class="p5">
+			<legend class="hidden_box">직원 추가</legend>
+			<table class="tbl_update" style="text-align: center !important;">
+				<colgroup>
+					<col width="125"/><col/>
+					<col width="80"/><col/>
+					<col width="90"/><col/>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row"><label for="name">사원명 <strong>*</strong></label></th>
+						<td><input id="name" name="name" required="required" type="text" value="" maxlength="20"/></td>
+						<th scope="row"><label for="nickname">영문명 <strong>*</strong></label></th>
+						<td><input id="nickname" name="nickname" type="text" value="" maxlength="50"/></td>
+						<th scope="row"><label for="">사원번호</label></th>
+						<td><small class="fcD13510">자동생성</small></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="email">이메일 <strong>*</strong></label></th>
+						<td><input id="email" name="email" required="required" type="text" value="" maxlength="100"/></td>
+						<th scope="row"><label for="phoneNumber">휴대전화 <strong>*</strong></label></th>
+						<td><input id="phoneNumber" name="phoneNumber" type="tel" class="isnum" required="required" value="" maxlength="11"/></td>
+						<th scope="row"><label for="joinDate">입사일 <strong>*</strong></label></th>
+						<td><input id="joinDate" name="joinDate" style="width:80px;" class="isdate a_c" required="required" type="text" value="" maxlength="10"/></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="authorityId">권한그룹 <strong>*</strong></label></th>
+						<td>
+							<select id="authorityId" name="authorityId" required="true">
+								<option value="">권한그룹</option>
+								<option value="1">슈퍼관리자</option><option value="2">MP권한그룹1</option><option value="3">GA권한그룹1</option>
+							</select>
+						</td>
+						<th scope="row"><label for="employeeClass">직군<strong>*</strong></label></th>
+						<td>
+							<select id="employeeClass" name="employeeClass" required="true">
+								<option value="">직군</option>
+								<option value="1">정규직 내근직</option><option value="2">계약직</option><option value="3">외주 근무자</option><option value="4">GA설계사</option><option value="5">독일</option><option value="6">일용직</option><option value="9">관리자</option>
+							</select>
+						</td>
+						<th scope="row"><label for="deptName">소속 <strong>*</strong></label></th>
+						<td><input id="deptName" name="deptName" required="required" type="text" value="" maxlength="50"/></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="insuranceUniqueNumber">보험 고유번호 <strong>*</strong></label></th>
+						<td><input id="insuranceUniqueNumber" name="insuranceUniqueNumber" class="isnum" required="required" type="text" value="" maxlength="20"/></td>
+						<th scope="row"><label for="certificate">자격증<strong>*</strong></label></th>
+						<td><input id="certificate" name="certificate" required="required" type="text" value="" maxlength="50"/></td>
+						<th scope="row"><label for="commissionDocuYn">위촉서류 제출<strong>*</strong></label></th>
+						<td>
+							<select id="commissionDocuYn" name="commissionDocuYn" required="true">
+								<option value="Y">Y</option>
+								<option value="N">N</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="jobStartDate">동종업계 업무시작일 <strong>*</strong></label></th>
+						<td><input id="jobStartDate" name="jobStartDate" style="width:80px;" class="isdate a_c" required="required" type="text" value="" maxlength="10"/></td>
+						<th scope="row"><label for="status">재직상태</label></th>
+						<td>재직</td>
+						<th></th>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<aside class="btn_pop_wrap">
+			
+			<div class="f_r">
+				<button type="submit" class="btns darkgray"><i class="fa fa-fw fa-save"></i> 저장하기</button>
+				<button type="button" class="btns red ml5 btn_parent_fancy_close" onclick="parent.$.fancybox.close()"><i class="fa fa-fw fa-times"></i> 창닫기</button>
+			</div>
+		</aside>
+	</form>
+</section>
+
+</body>
+</html>

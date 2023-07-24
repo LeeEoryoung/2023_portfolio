@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" >
+    <title>SSOM O&M Mobile Page List</title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+        table th, table td{
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 12px;
+        }
+        th:nth-child(1){
+            width:30%;
+        }
+        th:nth-child(2){
+            width:70%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>URL (link)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>메인</td>
+                <td><a href="mo_main.html" target="_blank">mo_main.html</a></td>
+            </tr>            
+            <tr>
+                <td>ESM</td>
+                <td><a href="mo_esm.html" target="_blank">mo_esm.html</a></td>
+            </tr>
+            <tr>
+                <td>회원가입</td>
+                <td><a href="mo_join.html" target="_blank">mo_join.html</a></td>
+            </tr>
+            <tr>
+                <td>로그인</td>
+                <td><a href="mo_login.html" target="_blank">mo_login.html</a></td>
+            </tr>
+            <tr>
+                <td>아이디 / 비밀번호 찾기</td>
+                <td><a href="mo_findid_pw.html" target="_blank">mo_findid_pw.html</a></td>
+            </tr>
+            <tr>
+                <td>마이페이지</td>
+                <td><a href="mo_my_page.html" target="_blank">mo_my_page.html</a></td>
+            </tr>
+            <tr>
+                <td>발전소 매매 리스트</td>
+                <td><a href="mo_for_sale.html" target="_blank">mo_for_sale.html</a></td>
+            </tr>
+            <tr>
+                <td>발전소 매매 상세</td>
+                <td><a href="mo_for_sale detail.html" target="_blank">mo_for_sale detail.html</a></td>
+            </tr>
+            <tr>
+                <td>최근 거래 완료 매물</td>
+                <td><a href="mo_last_complet.html" target="_blank">mo_last_complete.html</a></td>
+            </tr>
+            <tr>
+                <td>공동구매</td>
+                <td><a href="mo_group_buying.html" target="_blank">mo_group_buying.html</a></td>
+            </tr>
+            <tr>
+                <td>공동구매 상세</td>
+                <td><a href="mo_group_buying detail.html" target="_blank">mo_group_buying detail.html</a></td>
+            </tr>
+            <tr>
+                <td>모달-공동구매</td>
+                <td><a href="공동구매 modal.html" target="_blank">공동구매 modal.html</a></td>
+            </tr>
+            <tr>
+                <td>공지사함 FAQ</td>
+                <td><a href="mo_notice.html" target="_blank">mo_notice.html</a></td>
+            </tr>       
+        </tbody>
+    </table>
+</body>
+</html>

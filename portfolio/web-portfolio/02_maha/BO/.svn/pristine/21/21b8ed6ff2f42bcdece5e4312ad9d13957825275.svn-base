@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MAHA page list</title>
+    <style>
+        .p-c1 {
+            color: gold !important;
+            letter-spacing: 2px;
+        }
+
+        .p-c2 {
+            color: greenyellow !important;
+            letter-spacing: 2px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            background: #000;
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        header .control-list {
+            font-size: 0;
+            margin-left: 10px;
+        }
+
+        header .control-list button {
+            margin-left: 5px;
+            font-size: 10px;
+        }
+
+        .main {
+            margin: 60px 10px 10px;
+        }
+
+        .main h2 {
+            font-size: 18px;
+            line-height: 22px;
+            cursor: pointer;
+        }
+
+        .main h2::before {
+            content: '-';
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            width: 16px;
+            height: 16px;
+            line-height: 14px;
+            border-radius: 8px;
+            background-color: #000;
+            color: #fff;
+            margin: 4px 5px 0 0;
+        }
+
+        .main h2.on::before {
+            content: '+';
+        }
+
+        .main h2.on+table {
+            display: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            word-break: break-all;
+        }
+
+        tr {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        th,
+        td {
+            padding: 5px 10px;
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            font-size: 12px;
+        }
+
+        th {
+            color: #fff;
+            background: #666;
+        }
+
+        th:first-child {
+            border-left: 1px solid #000;
+        }
+
+        th:last-child {
+            border-right: 1px solid #000;
+        }
+
+        colgroup .complete {
+            width: 90px;
+        }
+
+        colgroup .level {
+            width: 12%;
+        }
+
+        .complete {
+            text-align: center;
+        }
+
+        tbody tr:nth-child(2n) {
+            background: #eee;
+        }
+
+        .title {
+            display: table-row !important;
+            cursor: pointer;
+        }
+
+        .title th {
+            text-align: left;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 1px;
+            background: #000;
+            text-decoration: underline;
+            padding: 8px 10px;
+            border-top: 3px solid #888;
+        }
+
+        colgroup+thead .title th {
+            border-top: 0;
+        }
+
+        .title th::before {
+            content: '';
+            display: inline-block;
+            vertical-align: top;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 0;
+            border-bottom: 8px solid #fff;
+            margin: 7px 10px 0 0;
+        }
+
+        .mini tr,
+        .mini+tbody {
+            display: none;
+        }
+
+        .mini .title th::before {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid #fff;
+            border-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <h1>Html List</h1>
+            <div class="control-list">
+                <button class="close">-</button>
+                <button class="open">+</button>
+            </div>
+            <script>
+                document.querySelector('.control-list .close').onclick = function() {
+                    var el = document.querySelectorAll('.title');
+                    var len = el.length;
+                    if (len > 0) {
+                        for (var i = 0; i < len; i++) el[i].parentElement.classList.add('mini');
+                    }
+                };
+
+                document.querySelector('.control-list .open').onclick = function() {
+                    var el = document.querySelectorAll('.mini');
+                    var len = el.length;
+                    if (len > 0) {
+                        for (var i = 0; i < len; i++) el[i].classList.remove('mini');
+                    }
+                };
+            </script>
+        </header>
+        <!-- // header -->
+
+        <div class="main">
+            <!-- table -->
+            <!--  start list -->
+            <table style="margin-bottom: 30px;">
+                <colgroup>
+                    <col class="level">
+                    <col class="level">
+                    <col class="level">
+                    <col class="level">
+                    <col class="link">
+                    <col class="last_edit">
+                    <col class="page_format">
+                    <col class="page_id">
+                    <col class="note">
+                </colgroup>
+
+                <!--  -->
+                <!-- <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="7">Common <span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>lv[4]</th>
+                        <th>link</th>
+                        <th>완료여부</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Layout</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link">
+                            <a href="guide/layout.html" target="_blank">layout</a><br />
+                            <a href="guide/layout_popup.html" target="_blank">layout_popup</a>
+                        </td>
+                        <td class="complete"></td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>Guide</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="guide/template.html" target="_blank">template</a></td>
+                        <td class="complete"></td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody> -->
+                <!--  -->
+
+                <!-- 사용자용 -->
+                <thead>
+                    <tr class="title" onclick="this.parentElement.classList.toggle('mini');">
+                        <th colspan="9">사용자용 List <span class="p-c1">[page]</span></th>
+                    </tr>
+                    <tr>
+                        <th>lv[1]</th>
+                        <th>lv[2]</th>
+                        <th>lv[3]</th>
+                        <th>lv[4]</th>
+                        <th>link</th>
+                        <th>최종수정일</th>
+                        <th>화면형식</th>
+                        <th>화면ID</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- start BO_IA_01 -->
+                    <tr>
+                        <td>로그인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_Login.html" target="_blank">로그인</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_Login</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>마이페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_Mypage.html" target="_blank">마이페이지</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_Mypage</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>메인화면 설정</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_MainSet_Popup.html" target="_blank">메인화면 설정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_MainSet_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>메인화면 설정</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_MainSet_Popup2.html" target="_blank">메인화면 설정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_MainSet_Popup2</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호 변경</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_ChangePW.html" target="_blank">비밀번호 변경</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_ChangePW</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>직원관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_EmpMgmt.html" target="_blank">직원관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_EmpMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>직원추가 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_EmpAddMod_Popup.html" target="_blank">직원추가 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_EmpAddMod_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>직원추가 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_EmpAddMod_Popup2.html" target="_blank">직원추가 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_EmpAddMod_Popup2</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>직원추가 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_EmpAddMod_Popup3.html" target="_blank">직원추가 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_EmpAddMod_Popup3</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>직원추가 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_EmpAddMod_Popup4.html" target="_blank">직원추가 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_EmpAddMod_Popup4</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>직원추가 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_EmpAddMod_Popup5.html" target="_blank">직원추가 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_EmpAddMod_Popup5</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>메뉴관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_MenuMgmt.html" target="_blank">메뉴관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_MenuMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>메뉴추가</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_MenuAdd_Popup.html" target="_blank">메뉴추가</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_MenuAdd_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>메인 권한관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_AuthMgmt.html" target="_blank">메인 권한관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_AuthMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>권한 추가 / 수정</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_AuthAddMod_Popup.html" target="_blank">권한 추가 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_AuthAddMod_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>사원 그룹 관리</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_EmpGroupMgmt_Popup.html" target="_blank">사원 그룹 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_EmpGroupMgmt_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>권한 삭제</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_AuthDel_Popup.html" target="_blank">권한 삭제</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_AuthDel_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>시스템 URL관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_URLMgmt.html" target="_blank">시스템 URL관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_URLMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>URL 추가 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_URLAddMod_Popup.html" target="_blank">URL 추가 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_URLAddMod_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <!-- end BO_IA_01 -->
+                    <!-- start BO_IA_02 -->
+                    <tr>
+                        <td></td>
+                        <td>항목 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_ItemMgmt.html" target="_blank">항목 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_ItemMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>항목 등록 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_ItemAddMod_Popup.html" target="_blank">항목 등록 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_ItemAddMod_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>상품 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_ProdMgmt.html" target="_blank">상품 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_ProdMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>상품 등록 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_ProdAddMod_Popup.html" target="_blank">상품 등록 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_ProdAddMod_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>상품 할인 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_DiscountMgmt.html" target="_blank">상품 할인 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_DiscountMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>상품 할인 등록 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_DiscountAddMod_Popup.html" target="_blank">상품 할인 등록 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_DiscountAddMod_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>상품 특약 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_TreatyMgmt.html" target="_blank">상품 특약 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_TreatyMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>상품 특약 등록 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_TreatyAddMod_Popup.html" target="_blank">상품 특약 등록 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_TreatyAddMod_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>상품 특약 보험료 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_TreatyPrmMgmt.html" target="_blank">상품 특약 보험료 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_TreatyPrmMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>상품 특약 보험료 등록</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_TreatyPrmUpload_Popup.html" target="_blank">상품 특약 보험료 등록</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_TreatyPrmUpload_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>상품 플랜 특약 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_ProdPlanTreatyMgmt.html" target="_blank">상품 플랜 특약 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_ProdPlanTreatyMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>상품 플랜 특약 등록 / 수정</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_ProdPlanTreatyAddMod_Popup.html" target="_blank">상품 플랜 특약 등록 / 수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_ProdPlanTreatyAddMod_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>상품 플랜 특약 업로드</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_ProdPlanTreatyUpload_Popup.html" target="_blank">상품 플랜 특약 업로드</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_ProdPlanTreatyUpload_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>공통 인수 지침 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_UWCommon.html" target="_blank">공통 인수 지침 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWCommon</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(공통 인수 지침 관리)인수 지침 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWCommonInfo_Popup.html" target="_blank">(공통 인수 지침 관리)인수 지침 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWCommonInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(공통 인수 지침 관리)인수 지침 처리 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWCommonProInfo_Popup.html" target="_blank">(공통 인수 지침 관리)인수 지침 처리 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWCommonProInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(공통 인수 지침 관리)인수 지침 기준 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWCommonMasterInfo_Popup.html" target="_blank">(공통 인수 지침 관리)인수 지침 기준 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWCommonMasterInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(공통 인수 지침 관리)인수 지침 대상 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWCommonTargetInfo_Popup.html" target="_blank">(공통 인수 지침 관리)인수 지침 대상 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWCommonTargetInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(공통 인수 지침 관리)인수 지침 업로드</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWCommonUpload_Popup.html" target="_blank">(공통 인수 지침 관리)인수 지침 업로드</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWCommonUpload_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>상품 인수 지침 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_UWProd.html" target="_blank">상품 인수 지침 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWProd</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(상품 인수 지침 관리)인수 지침 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWProdInfo_Popup.html" target="_blank">(상품 인수 지침 관리)인수 지침 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWProdInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(상품 인수 지침 관리)인수 지침 처리 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWProdProInfo_Popup.html" target="_blank">(상품 인수 지침 관리)인수 지침 처리 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWProdProInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(상품 인수 지침 관리)인수 지침 기준 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWProdMasterInfo_Popup.html" target="_blank">(상품 인수 지침 관리)인수 지침 기준 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWProdMasterInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(상품 인수 지침 관리)인수 지침 대상 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWProdTargetInfo_Popup.html" target="_blank">(상품 인수 지침 관리)인수 지침 대상 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWProdTargetInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(상품 인수 지침 관리)인수 지침 대상 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWProdTargetInfo_Popup.html" target="_blank">(상품 인수 지침 관리)인수 지침 대상 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWProdTargetInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(상품 인수 지침 관리)인수 지침 업로드</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWProdTargetInfo_Popup.html" target="_blank">(상품 인수 지침 관리)인수 지침 업로드</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWProdTargetInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>플랜 인수 지침 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_UWPlan.html" target="_blank">플랜 인수 지침 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWPlan</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(플랜 인수 지침 관리)인수 지침 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWPlanInfo_Popup.html" target="_blank">(플랜 인수 지침 관리)인수 지침 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWPlanInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(플랜 인수 지침 관리)인수 지침 처리 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWPlanInfo_Popup.html" target="_blank">(플랜 인수 지침 관리)인수 지침 처리 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWPlanInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(플랜 인수 지침 관리)인수 지침 기준 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWPlanMasterInfo_Popup.html" target="_blank">(플랜 인수 지침 관리)인수 지침 기준 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWPlanMasterInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(플랜 인수 지침 관리)인수 지침 대상 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWPlanTargetInfo_Popup.html" target="_blank">(플랜 인수 지침 관리)인수 대상 기준 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWPlanTargetInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(플랜 인수 지침 관리)인수 지침 업로드</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_UWPlanUpload_Popup.html" target="_blank">(플랜 인수 지침 관리)인수 지침 업로드</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWPlanUpload_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>가입금액 산출관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_InsuredMgmt.html" target="_blank">가입금액 산출관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_InsuredMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(가입 금액 산출 관리)특약키 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_InsuredTreatykeyInfo_Popup.html" target="_blank">(가입 금액 산출 관리)특약키 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_InsuredTreatykeyInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(가입 금액 산출 관리)범위키 변환정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_InsuredRangekeyInfo_Popup.html" target="_blank">(가입 금액 산출 관리)범위키 변환정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_InsuredRangekeyInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(가입 금액 산출 관리)허용값 유형정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_InsuredAllowTypeInfo_Popup.html" target="_blank">(가입 금액 산출 관리)허용값 유형정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_InsuredAllowTypeInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(가입 금액 산출 관리)가입금액 한도정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_InsuredLimitInfo_Popup.html" target="_blank">(가입금액 한도정보)가입금액 한도정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_InsuredLimitInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>(가입 금액 산출 관리)가입금액 업로드</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_InsuredUpload_Popup.html" target="_blank">(가입금액 한도정보)가입금액 업로드</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_InsuredUpload_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>인수 지침 처리 결과</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_UWResult.html" target="_blank">인수 지침 처리 결과</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_UWResult</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>고객 보험료 산출 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_InsuredCalRes.html" target="_blank">고객 보험료 산출 관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_InsuredCalRes</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>할인 정보</td>
+                        <td></td>
+                        <td class="link"><a href="../popup_list/BO_DiscountInfo_Popup.html" target="_blank">할인 정보</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_DiscountInfo_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <!-- end BO_IA_02 -->
+                    <!-- start BO_IA_03 -->
+                    <tr>
+                        <td></td>
+                        <td>설계사 실적 통계</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="../page_list/BO_StatsAgentRes.html" target="_blank">설계사 실적 통계</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_StatsAgentRes</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>직업관리</td>
+                        <td></td>
+                        <td></td>
+                        <td class="link"><a href="./page_list/BO_JobMgmt.html" target="_blank">직업관리</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_JobMgmt</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>직업 대분류 등록/수정</td>
+                        <td></td>
+                        <td class="link"><a href="./page_list/BO_JobLcat_Popup.html" target="_blank">직업 대분류 등록/수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_JobLcat_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>직업 중분류 등록/수정</td>
+                        <td></td>
+                        <td class="link"><a href="./page_list/BO_JobMcat_Popup.html" target="_blank">직업 중분류 등록/수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_JobMcat_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>직업 소분류 등록/수정</td>
+                        <td></td>
+                        <td class="link"><a href="./page_list/BO_JobScat_Popup.html" target="_blank">직업 소분류 등록/수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_JobScat_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>회사별 직업 등록/수정</td>
+                        <td></td>
+                        <td class="link"><a href="./page_list/BO_JobCompany_Popup.html" target="_blank">회사별 직업 등록/수정</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_JobCompany_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>직업정보 업로드</td>
+                        <td></td>
+                        <td class="link"><a href="./page_list/BO_JobUpload_Popup.html" target="_blank">직업정보 업로드</a></td>
+                        <td class="last_edit"></td>
+                        <td class="page_format"></td>
+                        <td class="page_id">BO_JobUpload_Popup</td>
+                        <td class="note"></td>
+                    </tr>
+                    <!-- end BO_IA_03 -->
+                </tbody>
+            </table>
+            <!--  end list -->
+            <!-- // table -->
+        </div>
+    </div>
+</body>
+
+</html>

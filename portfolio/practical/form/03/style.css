@@ -1,0 +1,140 @@
+/* google web font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  line-height: 1.6em;
+  margin: 0;
+  color: 333;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+}
+
+/* entire layout */
+.container {}
+header {
+  height: 50px;
+  text-align: center;
+  padding-top: 8px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+section {
+  height: calc(100vh - 40px);
+  position: relative;
+  background-color: #f8f8f8;
+}
+.login {
+  width: 350px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 35px;
+  box-sizing: border-box;
+}
+.login h1 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 10px;
+}
+.btn {
+  border: 1px solid;
+  display: block;
+  margin: 13px 0;
+  text-align: center;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: gray;
+  color: #fff;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn.mobile {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  background: url(images/logo-mobile.png) no-repeat center left 7px;
+}
+.btn.email {
+  background: url(images/logo-email.png) no-repeat center left 10px;
+  background-color: #afafaf;
+}
+.btn.naver {
+  background: url(images/logo-naver.png) no-repeat center left 10px;
+  background-color: #25D366;
+}
+.btn.facebook {
+  background: url(images/logo-facebook.png) no-repeat center left 10px;
+  background-color: #3b5999;
+}
+.btn.line {
+  background: url(images/logo-line.png) no-repeat center left 10px;
+  background-color:  #00c300;
+}
+.or {
+/*  border: 1px solid;*/
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.or:before, 
+.or:after {
+  content:'';
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  background-color: #ddd;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.or:before {
+  left: 0;
+}
+.or:after {
+  right: 0;
+}
+.login-save label {}
+input[id=chk] {
+/*
+  width:0;
+  height: 0;
+  visibility: hidden;
+*/
+  display: none;
+}
+input[id=chk] + em {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: 5px;
+  background: url(images/radio.png) no-repeat;
+  background-position: left;
+/*
+  vertical-align: middle;
+  margin-top: -2px;
+*/
+  transform: translateY(3px);
+}
+input[id=chk]:checked + em {
+  background-position: right;
+}
+
+.register {
+  text-align: center;
+}
+.register a {
+ font-weight: 500;
+}
+.register a:hover {
+ text-decoration: underline;
+}

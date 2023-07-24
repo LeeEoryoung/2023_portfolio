@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANA App</title>
+    <!-- <link rel="shortcut icon" href="../static/images/common/favicon.ico"> -->
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="container flex column fullHeight sb">
+            <div class="userWrap">
+                <div class="userWrapInfo mq">
+                    <div class="profile">
+                        <div class="desc">
+                            <span class="insurance_name insurance_nm_mdqry">이규진 설계사 님, 안녕하세요.</sp>
+                            <p class="insurance_detail">계약3건,분석1건,청구0건</p>
+                        </div>
+                    </div>
+                    <a href="#" class="alarm_bell">&nbsp;
+                        <span class="alarm_num"></span>
+                    </a>
+                </div>
+                <span class="side left"></span>
+                <span class="side right"></span>
+            </div>
+
+            <div class="scrollWrap inCont">
+
+
+                <div class="total_client">
+                    <p>전체 521명</p>
+                    <div>
+                        <div class="client_add">
+                            <img src="../../images/common/plus.png" alt="추가">
+                            <span>추가</span>
+                        </div>
+                        <div class="client_search">
+                            <img src="../../images/common/dk_mini_search.png" alt="검색">
+                            <span>검색</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="lineList">
+                    <li>
+                        <ul class="dList full client_list_wrap">
+                            <li class="top">
+                                <div class="pro_num">
+                                    <strong  class="tit bold"><img src="../../images/common/on_star.png" alt="별아이콘"> 신선한</strong>
+                                    <span>010-2234-2938</span>
+                                </div>
+                                <div class="card_in_tab">
+                                    <a href="#" class="on"><span class="text">청구</span></a>
+                                    <a href="#"><span class="text">분석</span></a>
+                                    <a href="#"><span class="text">계약</span></a>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <div class="pro_num">
+                                    <strong  class="tit bold"><img src="../../images/common/on_star.png" alt="별아이콘"> 권수련</strong>
+                                    <span>010-8002-6620</span>
+                                </div>
+                                <div class="card_in_tab">
+                                    <a href="#"><span class="text">청구</span></a>
+                                    <a href="#"><span class="text">분석</span></a>
+                                    <a href="#"><span class="text">계약</span></a>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <div class="pro_num">
+                                    <strong  class="tit bold"><img src="../../images/common/off_star.png" alt="별아이콘"> 가단태</strong>
+                                    <span>010-3433-2231</span>
+                                </div>
+                                <div class="card_in_tab">
+                                    <a href="#"><span class="text">청구</span></a>
+                                    <a href="#" class="on"><span class="text">분석</span></a>
+                                    <a href="#"><span class="text">계약</span></a>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <div class="pro_num">
+                                    <strong  class="tit bold"><img src="../../images/common/off_star.png" alt="별아이콘"> 신진성</strong>
+                                    <span>010-3433-2231</span>
+                                </div>
+                                <div class="card_in_tab">
+                                    <a href="#"><span class="text">청구</span></a>
+                                    <a href="#"><span class="text">분석</span></a>
+                                    <a href="#"><span class="text">계약</span></a>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <div class="pro_num">
+                                    <strong  class="tit bold"><img src="../../images/common/off_star.png" alt="별아이콘"> 최승우</strong>
+                                    <span>010-2296-0092</span>
+                                </div>
+                                <div class="card_in_tab">
+                                    <a href="#"><span class="text">청구</span></a>
+                                    <a href="#"><span class="text">분석</span></a>
+                                    <a href="#"><span class="text">계약</span></a>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <div class="pro_num">
+                                    <strong  class="tit bold"><img src="../../images/common/off_star.png" alt="별아이콘"> 최현실</strong>
+                                    <span>010-2321-1112</span>
+                                </div>
+                                <div class="card_in_tab">
+                                    <a href="#"><span class="text">청구</span></a>
+                                    <a href="#"><span class="text">분석</span></a>
+                                    <a href="#"><span class="text">계약</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottomContent">
+                <div class="footCont">
+                    <div class="inner">
+                        <a href="" class="on"><img src="../../images/common/client_list_on.png" alt=""></a>
+                        <a href="" class="analysis"><img src="../../images/common/client_calendar_off.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="layerPopup">
+            <div class="formPopup" id="popupForm">
+                <div class="form__cont">
+                    <p class="form-tit">보험금 청구를<br>
+                        취소하시겠습니까?
+                    </p>
+                    <div class="form-btn">
+                        <button type="button" onclick="closeForm()">아니요</button>
+                        <button type="button" onclick="closeForm()">예</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openForm() {
+            document.getElementById("popupForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("popupForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

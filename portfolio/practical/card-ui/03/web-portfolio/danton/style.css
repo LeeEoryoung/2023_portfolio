@@ -1,0 +1,428 @@
+/* google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Tourney:wght@300&display=swap');
+
+/* Font Awesome 4.7.0 CND */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+  box-sizing: border-box;
+  /* border: 1px solid #000; */
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.6em;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* header */
+.container {}
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+.outline {}
+.header-outer {
+  height: 30px;
+  background-color: #011134;
+}
+
+.header-outer .outer-nav  {
+  width: 1280px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.header-outer a {
+  float: right;
+  padding: 2px 10px;
+  color: #fff;
+  transition: 0.35s;
+}
+.header-outer a:hover {
+  color: gold;
+}
+.header-inner {
+  background-color: #fff;
+  /* width: 1280px;
+  margin: auto; */
+}
+.header-inner nav {
+  width: 1280px;
+  margin: auto;
+  overflow: hidden;
+}
+.logo {
+  padding: 10px;
+  float: left;
+}
+.gnb {
+  float: right;
+  margin-top: 30px;
+}
+.gnb a {
+  margin-right: 12px;
+  transition: 0.35s;
+}
+.gnb a:hover {
+  color: gold;
+}
+
+.trigger {}
+.trigger span {
+  
+}
+/* welcome */
+.welcome {
+  position: relative;
+}
+.welcome .heading {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 500px;
+  text-align: right;
+}
+.welcome .heading  h1 {
+  font-size: 56px;
+  font-weight: 900;
+}
+.welcome .heading p {
+  font-size: 24px;
+  line-height: 1.7em;
+}
+/* outlet */
+.outlet {
+}
+.inner {
+  width: 1280px;
+  margin: auto;
+}
+.outlet-inner {
+  display: flex;
+}
+.outlet .photo {
+  flex: 1;
+  text-align: right;
+  padding: 10px;
+}
+.title {
+  flex:1;
+  text-align: center;
+  font-weight: 900;
+}
+.outlet h1 {
+  font-weight: bold;
+  font-size: 42px;
+  margin-top: 120px;
+}
+.outlet p {
+  font-size: 24px;
+  line-height: 2em;
+}
+.outlet span {
+  color: red;
+  font-size: 60px;
+  font-weight: bold;
+}
+.outlet button {
+  padding: 10px 15px;
+  background-color: #011134;
+  color: #fff;
+  border: none;
+  border-radius:  10px;
+  font-size: 23px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.outlet button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.438);
+}
+/***************************** off-line************/
+.offline {
+  padding-top: 20px;
+}
+.offline .inner {
+  display: flex;
+  gap: 50px;
+}
+.offline .item {}
+.offline .item h1 {
+  font-weight: 900;
+}
+.offline .item img {
+  width: 100%;
+}
+.offline .item p span {
+  font-weight: 900;
+  margin-right: 15px;
+}
+
+
+/* best */
+.best {
+  padding-bottom: 30px;
+}
+.inner {
+  width: 1280px;
+}
+.best-inner {}
+.best-inner h1 {
+  padding: 20px;
+}
+.best-inner .item {
+  display: flex;
+  gap: 20px;
+}
+.item .best-photo {
+  flex: 1;
+  position: relative;
+}
+.item .best-photo img {
+  width: 100%;
+}
+.desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.267);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.desc a {
+  color: #fff;
+  transition: 0.35s;
+}
+.desc:hover {
+  opacity: 1;
+}
+.desc a:hover {
+  color: gold;
+}
+.best-inner h1 {
+  text-align: center;
+  font-size: 52px;
+  color: red;
+  font-weight: 900;
+}
+.best-inner h1 span {
+  margin-left: 15px;
+}
+/* delivery */
+.delivery {
+  background-color: #f4f4f4;
+  /* height: 400px; */
+}
+.delivery i {
+  font-size: 130px;
+  display: inline-block;
+  margin-right: 50px;
+}
+.delivery-inner {
+  text-align: center;
+  width: 1000px; 
+  margin: auto;
+  padding: 20px 0;
+}
+.delivery-inner h1 {
+  font-family: 'Tourney', cursive;
+  font-size: 92px;
+  border-bottom: 5px solid #333;
+  margin: 0;
+  padding: 20px;
+}
+.delivery-inner p {
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 2em;
+  margin: 0;
+}
+
+/* repair */
+.repair {
+  padding: 30px;
+}
+.repair-inner {
+  background: url(images/repair.jpg) no-repeat center center;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+.repair-inner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.repair-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+.repair-heading h1 {
+  font-size: 35px;
+}
+.repair-heading p {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+.repair-heading a {
+  color: #fff;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 900;
+}
+.repair-heading a .fa {
+  margin-left: 5px;
+  transition: 0.5s;
+}
+.repair-heading a:hover .fa {
+  transform: translateX(5px);
+}
+.repair-heading a:hover .fa
+
+/* review */
+.reviews {}
+.reviews-inner{}
+.reviews-inner .buyer {
+  overflow: hidden;
+  transition: 0.35s;
+  cursor: pointer;
+}
+.reviews-inner .buyer:hover {
+  background-color: rgba(51, 51, 51, 0.055);
+}
+.reviews-inner .buyer > img {
+  float: left;
+  width: 230px;
+  border-radius: 50%;
+}
+.reviews-inner .buyer:nth-child(2) .user,
+.reviews-inner .buyer:nth-child(2) img {
+  text-align: right;
+}
+.reviews-inner .user {
+  min-height: 230px;
+  float: left;
+  width: 80%;
+  padding: 30px;
+}
+.reviews-inner .user h5 {
+  font-size: 20px;
+  font-weight: 9000;
+}
+.reviews-inner .user p {
+  font-size: 18px;
+  line-height: 1.6em;
+} 
+
+/* copyright */
+footer {
+}
+.footer-sub {
+  width: 100%;
+  background-color: #022165 ;
+}
+.inner {}
+.copyright {
+  text-align: center;
+  color: #fff;
+  padding:  30px;
+}
+.inner .copyright p {
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 0;
+}
+.inner .copyright .btn {
+  width: 180px;
+  margin: 0px 15px;
+  font-size: 18px;
+  background-color: #789efd;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.inner .copyright .btn:hover {
+  color: gold;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* sitemap */
+.footer-main {
+  background-color: #011134;
+  color: #fff;
+}
+.sitemap {
+  display: flex;
+  padding-top: 10px;
+}
+.sitemap ul {
+  list-style: none;
+  flex: 1;
+  text-align: center;
+  padding: 0;
+}
+.sitemap span{
+  font-size: 18px;
+}
+.sitemap li {
+  font-size: 15px;
+}
+.sitemap li a {
+  color: #fff;
+  transition: 0.4s;
+}
+.sitemap li a:hover {
+  color: gold;
+
+} 
+
+/* sub-sitemap */
+.sub-sitemap {
+  overflow: hidden;
+}
+.sub-sitemap p {
+  width: 500px;
+  float: left;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.sub-sitemap .sns {
+  float: right;
+  margin-top: 10px;
+}
+.sub-sitemap .sns a {
+  color: #fff;
+  font-size: 19px;
+  margin: 5px;
+  transition:  0.5s;
+}
+.sub-sitemap .sns a:hover {
+  color: #333;
+}
+
+
+
+

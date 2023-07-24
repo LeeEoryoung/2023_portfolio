@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" >
+    <title>mobile my page</title>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <!-- custom CSS -->
+    <script src="js/right.solution.sort.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <div class="header_inner">
+                <div class="logo"><img src="mo_images/logo.jpg" alt=""></div>
+                <div class="lnb">
+                    <div class="trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="gnb">
+                    <div class="dropdown-navi">공동구매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">공동구매 리스트</a>
+                    </div>
+                    <div class="dropdown-navi">발전소 매매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">발전소 매매 물건</a>
+                        <a href="#none">최근 거래 완료 매물</a>
+                    </div>
+                    <div class="dropdown-navi">ESM 관리<i class="xi-angle-down"></i></div>
+                    <div class="dropdown-navi">공지사항<i class="xi-angle-down"></i></div>
+                    <div class="gnb_inner">
+                        <a href="#none">로그인</a>
+                        <a href="#none">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <section class="mo_mypage member">
+            <h1>My Page</h1>
+            <div class="mo_mypage_inner">
+                <label for="id">ID<strong>*</strong><input type="text" id="id" placeholder="ssom1234" readonly></label>
+                <label for="pw">비밀번호<strong>*</strong><input type="password" id="pw"
+                    placeholder="비밀번호를 입력해 주세요"></label>
+                <small>10자리 이상, 영문 소문자,숫자,특수문자를 포함해주세요.</small>
+                <label for="pw_ck">비밀번호 확인<strong>*</strong><input type="password" id="pw_ck"
+                    placeholder="비밀번호를 입력해 주세요"></label>
+                <label for="name">이름<strong>*</strong> </label><input type="text" id="name"
+                    placeholder="김쏘미" readonly>
+                <label for="ph_num">연락처<strong>*</strong> </label><input type="tel" id="ph_num" maxlength="13"
+                    placeholder="010-2345-6789" readonly>
+                <label for="mail">이메일<strong>*</strong> </label><input type="text" id="mail"
+                    placeholder="ssom@ssom.com" readonly>
+                <label for="bs_name">사업자명</label><input type="text" id="mb_nameail" placeholder="사업자명을 입력해 주세요">
+                <label for="b_num">사업자 등록번호</label><input type="text" id="bs_num" placeholder="000-00-00000">
+                <div class="filebox">
+                    <span>사업자등록증</span>
+                    <input class="upload-name">
+                    <label for="file">파일찾기</label>
+                    <input type="file" id="file">
+                </div>
+                <small>pdf, jpg, jpeg, png파일(10MB 이하)로 업로드 해주세요</small>
+                <button>회원가입</button>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="footer_inner">
+                <div class="footer_top">
+                    <h3>SSOM 고객센터</h3>
+                    <span>061-123-4567</span>
+                    <p>평일 09:00~18:00 (중식 시간 12:00~13:00)<br>(주말, 공휴일, 대체휴일 제외)</p>
+                </div>
+                <div class="footer_bottom">
+                    <p>
+                        Copyright ⓒ SSOM Inc. All Rights Reserved.<br>
+                        주식회사 쏨 | 대표이사 : 정인화 | 사업자번호 123-45-67890<br>
+                        Tel. 061-123-4567 | Fax. 061-234-5678<br>
+                        본사 : 전남 나주시 교육길 13, 스마트파크 F동 401호<br>
+                    </p>
+                    <a href="#none">이용약관</a>
+                    <a href="#none">개인정보취급방침</a>
+                    <a href="#none">공지사항</a>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

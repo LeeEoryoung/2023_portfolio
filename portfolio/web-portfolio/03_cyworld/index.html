@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이어령님의 미니홈피 :: 사이좋은 사람들, 싸이월드</title>
+    <link rel="stylesheet" href="./styles/index.css" rel="stylesheet">
+    <script src="./index.js"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="outerbox">
+            <div class="wrapper">
+                <div class="wrapper_left">
+                    <div class="wrapper_left_header">
+                        <div class="today">
+                            <span>today</span>
+                            <span>0</span>
+                            <span> | total</span>
+                            <span>12345</span>
+                        </div>
+                    </div>
+                    <div class="wrapper_left_body">
+                        <div class="left_body_header">
+                            <div class="left_body_header_gray"></div>
+                            <div class="left_body_header_line"></div>
+                        </div>
+                        <div class="left_body_profile">
+                            <span><i class="fa-regular fa-face-smile-wink"></i> 이어령 </span>
+                            <span><i class="fa-solid fa-phone"></i> 010-1234-5678 </span>
+                            <span><i class="fa-regular fa-envelope"></i> email </span>
+                            <span><i class="fa-brands fa-instagram"></i> insta: pub_lee_ </span>
+                        </div>
+                        <div class="left_body_footer">
+                            <span>오늘의 기분</span>
+                            <select>
+                                <option value="1">기뻐요 😊</option>
+                                <option value="2">화나요 🤬</option>
+                                <option value="3">우울해요 😢</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper_right">
+                    <div class="wrapper_right_header">
+                        <div class="right_header_title">사이좋은 사람들, 싸이월드</div>
+                        <div class="right_header_setting">사생활보호설정<span> ▶</span></div>
+                    </div>
+                    <div class="wrapper_right_body">
+                        <iframe src="./home.html" id="contentFrame"></iframe>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="nav_item" id="menu_home" onclick="menuHome()">홈</div>
+                    <div class="nav_item" id="menu_juckbox" onclick="menuJuckbox()">쥬크박스</div>
+                    <div class="nav_item" id="menu_game" onclick="menuGame()">게임</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

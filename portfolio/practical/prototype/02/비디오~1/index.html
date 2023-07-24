@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>The World's Ocean</title>
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="video-frame">
+			<video src="images/video-female.mp4" muted autoplay loop poster="images/placeholder-female.jpg"></video>
+		</div>
+		<div class="trigger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="logo">
+			<img src="images/logo.png" alt="">
+		</div>
+		<div class="anniversary">
+			<em>Anniversary</em><span>60</span>
+		</div>
+		<div class="heading">
+			<h1><span>Wave Ocean</span> The World's Ocean</h1>
+			<p>
+				The Atlantic Ocean is situated between the Americas and European/African continents. Atlantic Ocean is the second largest and saltiest ocean in the world. It resembles an S-shape between the Americas, Europe and Africa. “Atlantic” originated from the Greek god “Atlas” who carried the sky for eternity.
+			</p>
+			<a class="btn-book" href="#none">Book Now</a>
+			<a class="btn-learn" href="#none">Learn More</a>
+		</div>
+		<!-- GNB Modal -->
+		<div class="modal-gnb">
+			<ul class="gnb">
+				<li><a href="#none" data-text="Attractions">Attractions</a></li>
+				<li><a href="#none" data-text="Hotels & Spa">Hotels & Spa</a></li>
+				<li><a href="#none" data-text="Shop & Dine">Shop & Dine</a></li>
+				<li><a href="#none" data-text="Celebrate">Celebrate</a></li>
+				<li><a href="#none" data-text="Promotions">Promotions</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+		// Trigger
+		$('.trigger').click(function(){
+			$(this).toggleClass('active')
+			$('.modal-gnb').fadeToggle() 
+			$('.anniversary').toggleClass('active')
+		})
+	</script>
+
+</body>
+</html>

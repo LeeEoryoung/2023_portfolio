@@ -1,0 +1,147 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Open+Sans:wght@300&display=swap');
+
+
+/* css */
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+  font-size: 15px;
+  line-height: 1.6em;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eee;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+/* application css */
+.container {}
+.application-form {
+  width: 1100px;
+  background-color: #fff;
+  padding: 30px;
+}
+.application-form h1 {
+  text-align: center;
+}
+.application-form h1 span {
+  color: deeppink;
+}
+.application-form p {
+  text-align: center;
+  border-bottom: 5px solid lightgray;
+}
+
+/*  fieldset css  */
+.application-form fieldset {
+  display: flex;
+  gap: 25px;
+  border: none;
+  padding: 0;
+}
+.application-form .field {
+  flex: 1;
+}
+.application-form .field span {
+  font-weight: 600;
+  display: block;
+}
+.application-form .field em {
+  color: red;
+}
+.application-form .field input:not(input[type=checkbox]),
+.application-form .field select,
+.application-form .field textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+}
+
+.application-form .field input:not(input[type=checkbox]):focus,
+.application-form .field select:focus,
+.application-form .field textarea:focus {
+  background-color: #eee;
+}
+
+.application-form iframe {
+  width: 100%;
+  padding: 0;
+  border: 1px solid #ddd;
+}
+.application-form .field textarea {
+  padding-bottom: 50px;
+  resize: none;
+}
+
+
+/* privacy css */
+.application-form fieldset .privacy {
+  flex-direction: column;
+}
+.application-form .privacy span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.application-form .privacy label input {
+  margin-top: 10px;
+}
+.application-form input[type=submit] {
+  display: block;
+  margin: auto;
+  padding: 5px 25px;
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.application-form input[type=submit]:hover {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.288);
+}
+
+
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+  }
+  .application-form {
+    width: 100%;
+  }
+  .application-form fieldset {
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .application-form h1 {
+    font-size: 20px;
+    line-height: 1.4em;
+  }
+  .application-form p {
+    font-size: 14.5px;
+    padding-bottom: 15px;
+  }
+  .application-form fieldset span {
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .application-form input[type=submit]  {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .application-form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <title>mobile notice page</title>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <!-- custom CSS -->
+    <script src="js/right.solution.sort.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" defer>
+        $(document).ready(function () {
+            // 공지사항 / FAQ tab
+            $('.notice_tab button.notice').click(function () {
+                if ($(this).hasClass('on')) {} else {
+                    $('.notice_tab button.faq').removeClass('on');
+                    $('.faq_inner').hide();
+                    $(this).addClass('on');
+                    $('.notice_inner').show();
+                }
+            });
+            $('.notice_tab button.faq').click(function () {
+                if ($(this).hasClass('on')) {
+
+                } else {
+                    $('.notice_tab button.notice').removeClass('on');
+                    $('.notice_inner').hide();
+                    $(this).addClass('on');
+                    $('.faq_inner').show();
+                }
+            });
+
+            // 공지사항 게시물 open/close
+            $('.notice_drop_title').click(function () {
+                var stat = $(this).hasClass('active');
+                $('.notice_drop_title, .notice_drop_content').removeClass('active');
+                if (stat) {
+                    $(this).removeClass('active');
+                    $(this).next().removeClass('active');
+                } else {
+                    $(this).addClass('active');
+                    $(this).next().addClass('active');
+                }
+            });
+
+            // FAQ 게시물 open/close
+            $('.faq_drop_title').click(function () {
+                var stat = $(this).hasClass('active');
+                $('.faq_drop_title, .faq_drop_content').removeClass('active');
+                if (stat) {
+                    $(this).removeClass('active');
+                    $(this).next().removeClass('active');
+                } else {
+                    $(this).addClass('active');
+                    $(this).next().addClass('active');
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <div class="header_inner">
+                <div class="logo"><img src="mo_images/logo.jpg" alt=""></div>
+                <div class="lnb">
+                    <div class="trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="gnb">
+                    <div class="dropdown-navi">공동구매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">공동구매 리스트</a>
+                    </div>
+                    <div class="dropdown-navi">발전소 매매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">발전소 매매 물건</a>
+                        <a href="#none">최근 거래 완료 매물</a>
+                    </div>
+                    <div class="dropdown-navi">ESM 관리<i class="xi-angle-down"></i></div>
+                    <div class="dropdown-navi">공지사항<i class="xi-angle-down"></i></div>
+                    <div class="gnb_inner">
+                        <a href="#none">로그인</a>
+                        <a href="#none">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <section class="notice">
+            <div class="notice_banner">
+                <img src="mo_images/mo_notice_banner.jpg" alt="">
+                <div class="notice_heading">
+                    <h1>
+                        공지사항
+                    </h1>
+                    <p>
+                        SSOM O&M Platform을 통한 <br>
+                        발전소 매매 비교 견적 및 서비스신청을 하실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="notice_tab">
+                <button class="faq">FAQ</button>
+                <button class="notice on">공지사항</button>
+            </div>
+            <!-- default :: notice -->
+            <div class="notice_inner">
+                <!-- <div class="notice_accor_top">
+                    <p>
+                        대표문의<span> (+82)061-123-4567</span>
+                    </p>
+                    <p>
+                        이메일<span> ssom@ssom.co.kr</span>
+                    </p>
+                </div> -->
+                <hr style="background-color: #333; height: 2px;">
+                <div class="notice_accor_bottom">
+                    <div class="notice_drop_title active">[공지] 시스템 장애 안내<span>2021.12.31</span><i
+                            class="fa fa-angle-down" aria-hidden="true"></i></div>
+                    <div class="notice_drop_content active">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+                        </p>
+                    </div>
+                    <div class="notice_drop_title">[공지] 발전소 매매 오픈 안내<span>2021.12.31</span><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="notice_drop_content">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+
+                        </p>
+                    </div>
+                    <div class="notice_drop_title">[공지] 공동구매 오픈 안내<span>2021.12.31</span><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="notice_drop_content">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+
+                        </p>
+                    </div>
+                    <div class="notice_drop_title">[공지] 서비스 안내<span>2021.12.31</span><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="notice_drop_content">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+
+                        </p>
+                    </div>
+                    <div class="notice_drop_title">[공지] SSOM OnM 오픈안내<span>2021.12.31</span><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="notice_drop_content">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+
+                        </p>
+                    </div>
+                    <div class="notice_drop_title">[공지] 시스템 장애 안내<span>2021.12.31</span><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="notice_drop_content">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+                            <span>2021.12.31</span>
+                        </p>
+                    </div>
+                    <div class="notice_drop_title">[공지] 발전소 매매 오픈 안내<span>2021.12.31</span><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="notice_drop_content">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+
+                        </p>
+                    </div>
+                    <div class="notice_drop_title">[공지] 공동구매 오픈 안내<span>2021.12.31</span><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="notice_drop_content">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+
+                        </p>
+                    </div>
+                    <div class="notice_drop_title">[공지] 서비스 안내<span>2021.12.31</span><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="notice_drop_content">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+
+                        </p>
+                    </div>
+                    <div class="notice_drop_title">[공지] SSOM OnM 오픈안내<span>2021.12.31</span><i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="notice_drop_content">
+                        <p>
+                            [공지] 시스템 장애 안내 <br>
+                            서버 교체 중으로 다소 불편을 드려 죄송합니다. <br>
+                            네트워크 시스템 장애로 인한 민원업무 및 전화업무 장애가 정상 복구 되었습니다. <br>
+                            갑작스러운 서비스 장애로 불편을 드린점 양해 부탁드립니다.
+
+                        </p>
+                    </div>
+                </div>
+                <button class="see_more">더보기</button>
+            </div>
+            <!-- end notice-->
+            <!-- faq -->
+            <div class="faq_inner">
+                <div class="faq_accor_top">
+                    <p>
+                        이메일<span> ssom@ssom.co.kr</span>
+                    </p>
+                    <p>
+                        대표문의<span> (+82)061-123-4567</span>
+                    </p>
+                </div>
+                <hr style="background-color: #333; height: 2px; margin: 0;">
+                <div class="faq_accor_bottom">
+                    <div class="faq_drop_title active">평가판 관련하여 문의드립니다.<i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="faq_drop_content active">
+                        <p>
+                            구성원 추가는 제한없이 무제한으로 생성하실 수 있습니다.
+                            무료 체험기간 동안 누구나 체험할 수 있고 업무에 활용할 수 있습니다.
+                            체험판 기간동안 유료 전환하는 경우 생성된 계정 1개당 1개월 단위로 계산되어 다음 달 후불결제가 진행됩니다. <br>
+                            만약, 체험판 종료 후 유료 상품으로 전환하지 못한 경우 서비스 이용이 정지되고 30일의 유료 전환 유예기간이 제공됩니다.
+                        </p>
+                    </div>
+                    <div class="faq_drop_title">앱은 어디서 다운로드할 수 있나요?<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq_drop_content">
+                        구성원 추가는 제한없이 무제한으로 생성하실 수 있습니다.
+                        무료 체험기간 동안 누구나 체험할 수 있고 업무에 활용할 수 있습니다.
+                        체험판 기간동안 유료 전환하는 경우 생성된 계정 1개당 1개월 단위로 계산되어 다음 달 후불결제가 진행됩니다. <br>
+                        만약, 체험판 종료 후 유료 상품으로 전환하지 못한 경우 서비스 이용이 정지되고 30일의 유료 전환 유예기간이 제공됩니다.
+                    </div>
+                    <div class="faq_drop_title">여러 기기에서 같은 계정으로 사용할 수 있나요?<i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="faq_drop_content">
+                        구성원 추가는 제한없이 무제한으로 생성하실 수 있습니다.
+                        무료 체험기간 동안 누구나 체험할 수 있고 업무에 활용할 수 있습니다.
+                        체험판 기간동안 유료 전환하는 경우 생성된 계정 1개당 1개월 단위로 계산되어 다음 달 후불결제가 진행됩니다. <br>
+                        만약, 체험판 종료 후 유료 상품으로 전환하지 못한 경우 서비스 이용이 정지되고 30일의 유료 전환 유예기간이 제공됩니다.
+                    </div>
+                    <div class="faq_drop_title">무료 체험판 기간은 언제까지인가요?<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq_drop_content">
+                        구성원 추가는 제한없이 무제한으로 생성하실 수 있습니다.
+                        무료 체험기간 동안 누구나 체험할 수 있고 업무에 활용할 수 있습니다.
+                        체험판 기간동안 유료 전환하는 경우 생성된 계정 1개당 1개월 단위로 계산되어 다음 달 후불결제가 진행됩니다. <br>
+                        만약, 체험판 종료 후 유료 상품으로 전환하지 못한 경우 서비스 이용이 정지되고 30일의 유료 전환 유예기간이 제공됩니다.
+                    </div>
+                    <div class="faq_drop_title">평가판 관련하여 문의드립니다.<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq_drop_content">
+                        구성원 추가는 제한없이 무제한으로 생성하실 수 있습니다.
+                        무료 체험기간 동안 누구나 체험할 수 있고 업무에 활용할 수 있습니다.
+                        체험판 기간동안 유료 전환하는 경우 생성된 계정 1개당 1개월 단위로 계산되어 다음 달 후불결제가 진행됩니다. <br>
+                        만약, 체험판 종료 후 유료 상품으로 전환하지 못한 경우 서비스 이용이 정지되고 30일의 유료 전환 유예기간이 제공됩니다.
+                    </div>
+                    <div class="faq_drop_title">회원 유형이 개인일 경우, 가입 및 탈퇴 시<br>어떤 서류 및 정보가 필요한가요?<i
+                            class="fa fa-angle-down" aria-hidden="true"></i></div>
+                    <div class="faq_drop_content">
+                        구성원 추가는 제한없이 무제한으로 생성하실 수 있습니다.
+                        무료 체험기간 동안 누구나 체험할 수 있고 업무에 활용할 수 있습니다.
+                        체험판 기간동안 유료 전환하는 경우 생성된 계정 1개당 1개월 단위로 계산되어 다음 달 후불결제가 진행됩니다. <br>
+                        만약, 체험판 종료 후 유료 상품으로 전환하지 못한 경우 서비스 이용이 정지되고 30일의 유료 전환 유예기간이 제공됩니다.
+                    </div>
+                    <div class="faq_drop_title">해외에서 발급된 신용카드로 결제가 가능한가요?<i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="faq_drop_content">
+                        구성원 추가는 제한없이 무제한으로 생성하실 수 있습니다.
+                        무료 체험기간 동안 누구나 체험할 수 있고 업무에 활용할 수 있습니다.
+                        체험판 기간동안 유료 전환하는 경우 생성된 계정 1개당 1개월 단위로 계산되어 다음 달 후불결제가 진행됩니다. <br>
+                        만약, 체험판 종료 후 유료 상품으로 전환하지 못한 경우 서비스 이용이 정지되고 30일의 유료 전환 유예기간이 제공됩니다.
+                    </div>
+                    <div class="faq_drop_title">계좌 자동이체 시 현금영수증 발급이 필요합니다. <br> 어떻게 발급받나요?<i class="fa fa-angle-down"
+                            aria-hidden="true"></i></div>
+                    <div class="faq_drop_content">
+                        구성원 추가는 제한없이 무제한으로 생성하실 수 있습니다.
+                        무료 체험기간 동안 누구나 체험할 수 있고 업무에 활용할 수 있습니다.
+                        체험판 기간동안 유료 전환하는 경우 생성된 계정 1개당 1개월 단위로 계산되어 다음 달 후불결제가 진행됩니다. <br>
+                        만약, 체험판 종료 후 유료 상품으로 전환하지 못한 경우 서비스 이용이 정지되고 30일의 유료 전환 유예기간이 제공됩니다.
+                    </div>
+                    <div class="faq_drop_title">평가판 관련하여 문의드립니다.<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq_drop_content">
+                        구성원 추가는 제한없이 무제한으로 생성하실 수 있습니다.
+                        무료 체험기간 동안 누구나 체험할 수 있고 업무에 활용할 수 있습니다.
+                        체험판 기간동안 유료 전환하는 경우 생성된 계정 1개당 1개월 단위로 계산되어 다음 달 후불결제가 진행됩니다. <br>
+                        만약, 체험판 종료 후 유료 상품으로 전환하지 못한 경우 서비스 이용이 정지되고 30일의 유료 전환 유예기간이 제공됩니다.
+                    </div>
+                </div>
+                <button class="see_more">더보기</button>
+            </div>
+            <!-- end faq -->
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="footer_inner">
+                <div class="footer_top">
+                    <h3>SSOM 고객센터</h3>
+                    <span>061-123-4567</span>
+                    <p>평일 09:00~18:00 (중식 시간 12:00~13:00)<br>(주말, 공휴일, 대체휴일 제외)</p>
+                </div>
+                <div class="footer_bottom">
+                    <p>
+                        Copyright ⓒ SSOM Inc. All Rights Reserved.<br>
+                        주식회사 쏨 | 대표이사 : 정인화 | 사업자번호 123-45-67890<br>
+                        Tel. 061-123-4567 | Fax. 061-234-5678<br>
+                        본사 : 전남 나주시 교육길 13, 스마트파크 F동 401호<br>
+                    </p>
+                    <a href="#none">이용약관</a>
+                    <a href="#none">개인정보취급방침</a>
+                    <a href="#none">공지사항</a>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

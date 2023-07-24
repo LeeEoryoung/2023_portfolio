@@ -1,0 +1,138 @@
+body {
+  overflow-y: scroll; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.mockup {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.23);
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mobile-mockup {
+  border: 1px solid #ddd;
+  width: 450px;
+  height: 860px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: inset 0 0 7px rgba(7, 6, 6, 0.13);
+}
+
+.iframe-url {
+  position: absolute;
+  width: 400px;
+  height: 700px;
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-btn {
+  border: 1px solid #ddd;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 9px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: inset 0 0 3px rgba(29, 27, 27, 0.91);
+}
+
+.camera {
+  position: absolute;
+  width: 400px;
+  height: 70px;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.camera span {
+  position: absolute;
+  background-color: #555;
+}
+
+.camera span:nth-child(1) {
+  width: 80px;
+  height: 5px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.camera span:nth-child(2) {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}
+
+.camera span:nth-child(3) {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 124px;
+}
+
+.volume {
+  position: absolute;
+  width: 4px;
+  height: 150px;
+  left: -5px;
+  right: 100%;
+  top: 82px;
+}
+
+.volume span,
+.power span {
+  background-color: rgb(190, 190, 190);
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px 0 0 3px;
+}
+
+.volume span:nth-child(1) {
+  top: 0;
+  height: 25px;
+}
+
+.volume span:nth-child(2) {
+  bottom: 50px;
+}
+
+.volume span:nth-child(3) {
+  bottom: 0;
+}
+
+.power {
+  /*  border: 1px solid red;*/
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  top: 82px;
+  left: 100%;
+}
+
+.power span {
+  transform: rotateY(180deg);
+}
+
+.iframe-url iframe {
+  width: 100%;
+  height: 100%;
+}

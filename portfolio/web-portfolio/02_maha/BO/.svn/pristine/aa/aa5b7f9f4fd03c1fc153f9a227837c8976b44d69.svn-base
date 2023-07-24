@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="/img/logo.png" />
+    <link rel="apple-touch-icon" href="/img/logo.png" />
+    <meta name="robots" content="ALL" />
+    <title>MAHA proj.</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+    <link rel="stylesheet" href="/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="/css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="/css/right.solution.css" />
+    <!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+    <!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+    <script src="/js/jquery.min.js?v=3.6.0"></script>
+    <script src="/js/jquery.ui.js"></script>
+    <script src="/js/jquery.fancybox.js?v=2.1.5"></script>
+    <script src="/js/jquery.form.min.js"></script>
+    <script src="/js/jquery.fileDownload.js"></script>
+    <script src="/js/right.solution.js"></script>
+    <script src="/js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+    <script src="/js/duallistbox.js"></script>
+</head>
+
+<body>
+    <section class="container_sec">
+
+        <script type="text/javascript">
+            function open403Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/forbidden'
+                });
+            }
+
+            function open404Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/404'
+                });
+            }
+
+            function open500Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/internalError'
+                });
+            }
+        </script>
+        <section class="left_wing_sec">
+            <header class="left_wing_header">
+                <div class="logo_wrap">
+                    <h1><a href="/"><strong style="color:#ff4513;">MA</strong><strong
+                                style="color:#009792;">HA</strong></a></h1>
+                </div>
+            </header>
+            <section class="left_wing_body">
+                <article>
+                    <nav class="left_wing_nav">
+                        <ul>
+                            <li><a href="/"><i class="fa-fw fa fa-home"></i> 첫화면</a></li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계정 관리</a>
+                                <ul class="visible">
+                                    <li><a href="/account/employee/list"><i class="fa-fw fa fa-angle-right"></i>직원 관리</a></li>
+                                    <li><a href="/account/authority/list"><i class="fa-fw fa fa-angle-right"></i>권한 관리</a></li>
+                                    <li><a href="/account/menu"><i class="fa-fw fa fa-angle-right"></i>메뉴 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>고객관리</a>
+                                <ul class="visible">
+                                    <li><a href="/customer/customer/list"><i class="fa-fw fa fa-angle-right"></i>고객관리</a></li>
+                                    <li><a href="/customer/analysis"><i class="fa-fw fa fa-angle-right"></i>분석 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계약관리</a>
+                                <ul class="visible">
+                                    <li><a href="/contract/contract/list"><i class="fa-fw fa fa-angle-right"></i>계약 리스트</a></li>
+                                    <li><a href="/contract/contract/info"><i class="fa-fw fa fa-angle-right"></i>계약 정보관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>상품관리</a>
+                                <ul class="visible">
+                                    <li><a href="/insurance/insurancelist"><i class="fa-fw fa fa-angle-right"></i>상품리스트</a></li>
+                                    <li><a href="/insurance/uwprocess"><i class="fa-fw fa fa-angle-right"></i>U/W PROCESS</a></li>
+                                    <li><a href="/insurance/coverage"><i class="fa-fw fa fa-angle-right"></i>담보 관리</a></li>
+                                    <li><a href="/insurance/score"><i class="fa-fw fa fa-angle-right"></i>SCORE관리</a></li>
+                                    <li><a href="/insurance/fee"><i class="fa-fw fa fa-angle-right"></i>수수료 관리</a></li>
+                                    <li><a href="/insurance/insuranceamount"><i class="fa-fw fa fa-angle-right"></i>보험료 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>통계</a>
+                                <ul class="visible">
+                                    <li><a href="/test/list"><i class="fa-fw fa fa-angle-right"></i>설계사 실적 통계</a></li>
+                                    <li><a href="/test/edit"><i class="fa-fw fa fa-angle-right"></i> 매출 통계</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>로그관리</a>
+                                <ul class="visible">
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>직원 로그 관리</a></li>
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>고객 로그 관리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <hr class="hidden_box clearfix" />
+                    </nav>
+                </article>
+            </section>
+        </section>
+        <section class="right_wing_sec">
+            <aside class="right_white_bar">
+                <div class="left">
+                    <strong>tester</strong> 님, 환영합니다!
+                </div>
+                <div class="right">
+                    <button type="button" class="btns normal small" onclick="location.href='/logout'"><em
+                            class="fa-fw fas fa-running"></em>로그아웃</button>
+                    <button type="button" class="btns normal small" onclick=""><em
+                            class="fa-fw far fa-user"></em>마이페이지</button>
+                </div>
+            </aside>
+            <script type="text/javascript">
+                function movePage(page) {
+                    // GET 방식
+                    var frm = document.frmSearch;
+                    frm.page.value = page;
+                    frm.submit();
+                }
+
+                function openLayer(id) {
+                    $.fancybox({
+                        width: 800,
+                        type: 'iframe',
+                        href: '/account/employee/edit?employeeId=' + id
+                    });
+                }
+
+                function excelDownload() {
+                    $.fileDownload("/account/employee/excelDownload.act", {
+                        httpMethod: "post",
+                        prepareCallback: function (url) {
+                            call_layer_loader("body", "처리 중입니다.");
+                        },
+                        successCallback: function (url) {
+                            remove_layer_loader("body");
+                        },
+                        failCallback: function (responseHtml, url) {
+                            remove_layer_loader("body");
+                        }
+                    });
+                }
+            </script>
+            <section class="right_wing_contents" id="right_wing_contents">
+                <!-- //LIST -->
+                <h3>특약 코드 관리</h3>
+                <section class="box_wrap">
+                    <section class="sec_list_group">
+                        <!-- <section class="box_wrap search">
+                            <article class="art_search">
+                                <form id="frmSearch" name="frmSearch" onSubmit="movePage(1); return false;"
+                                    action="/account/employee/list" method="get">
+                                    <input id="page" name="page" type="hidden" value="1" />
+                                    <input id="recordSize" name="recordSize" type="hidden" value="15" />
+                                    <fieldset>
+                                        <legend class="hidden_box">검색</legend>
+                                        <p class="search_line">
+                                            <em>
+                                                <span class="line_inner">
+                                                    <select id="authority" name="authority">
+                                                        <option value="">권한그룹</option>
+                                                        <option value="1">슈퍼관리자</option>
+                                                        <option value="2">MP권한그룹1</option>
+                                                        <option value="3">GA권한그룹1</option>
+                                                    </select>
+                                                </span>
+                                            </em>
+                                            <em>
+                                                <span class="line_inner">
+                                                    <span><input id="statusArr1" name="statusArr" type="checkbox"
+                                                            value="0" /><label
+                                                            for="statusArr1">재직</label></span><span><input
+                                                            id="statusArr2" name="statusArr" type="checkbox"
+                                                            value="1" /><label
+                                                            for="statusArr2">퇴사</label></span><span><input
+                                                            id="statusArr3" name="statusArr" type="checkbox"
+                                                            value="2" /><label for="statusArr3">휴직</label></span><input
+                                                        type="hidden" name="_statusArr" value="on" />
+                                                </span>
+                                            </em>
+                                            <em>
+                                                <span class="line_inner">
+                                                    <label>
+                                                        <select id="searchType" name="searchType">
+                                                            <option value="name">사원명</option>
+                                                            <option value="nickname">영문이름</option>
+                                                            <option value="employeeId">사원번호</option>
+                                                        </select>
+                                                        <span>
+                                                            <input id="searchKeyword" name="searchKeyword"
+                                                                style="width: 150px;" placeholder="검색어" type="text"
+                                                                value="" maxlength="20" />
+                                                        </span>
+                                                    </label>
+                                                </span>
+                                            </em>
+                                        </p>
+                                    </fieldset>
+                                    <aside class="btn_search_aside">
+                                        <button type="submit" class="btns green small"><i class="fa fa-search"></i>
+                                            검색</button>
+                                        <button type="button" class="btns orange small reset"
+                                            onclick="$(this).parents('form')[0].reset()"><i class="fa fa-history"></i>
+                                            초기화</button>
+                                    </aside>
+                                </form>
+                            </article>
+                        </section> -->
+
+                        <section class="box_wrap list">
+                            <!-- 22.02.15 [start] style 삽입 -->
+                            <aside class="aside_list_ps_btn pt10" style="padding: 9px 0;">
+                            <!-- 22.02.15 [end] style 삽입 -->
+                                <select class="ml10" onchange="$('[name=recordSize]').val(this.value); movePage(1)">
+                                    <option value="15" selected>특약 코드</option>
+                                    <option value="30">30개 출력</option>
+                                    <option value="60">60개 출력</option>
+                                    <option value="80">80개 출력</option>
+                                    <option value="100">100개 출력</option>
+                                </select>
+                                <!-- 22.02.15 [start] style 삽입 -->
+                                <label style="margin-left: 7px;">
+                                <!-- 22.02.15 [end] style 삽입 -->
+                                    <span>
+                                        <input id="searchKeyword" name="searchKeyword"
+                                            style="width: 150px;" placeholder="검색어" type="text"
+                                            value="" maxlength="20" />
+                                    </span>
+                                </label>
+                                <!-- <span class="tot_article">Total Articles <strong>66</strong></span>
+                                <span class="page_info"><strong>1</strong> of <em>5</em> pages</span> -->
+                                <aside class="mr5">
+                                    <button class="btns darkgray small" onclick="openLayer('')"><i
+                                        class="fa fa-fw fa-plus"></i>특약 추가</button>
+                                </aside>
+                            </aside>
+                            <article class="art_reload">
+                                <table class="tbl_sort_list list">
+                                    <caption class="hidden_box">목록</caption>
+                                    <colgroup>
+                                        <col width="20%" />
+                                        <col width="80%" />
+                                        <!-- <col width="80" />
+                                        <col width="150" />
+                                        <col width="100" />
+                                        <col width="100" />
+                                        <col width="100" />
+                                        <col width="70" />
+                                        <col />
+                                        <col width="255" />
+                                        <col width="100" /> -->
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">특약코드</th>
+                                            <th scope="col">특약명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr onclick="openLayer('100001')">
+                                            <td>23260001</td>
+                                            <td>중증자동차사고부상치료비 보통약관 보장부분 (운전자)</td>
+                                        </tr>
+                                        <tr onclick="openLayer('121001')">
+                                            <td>23260002</td>
+                                            <td>하나손해보험</td>
+                                        </tr>
+                                        <tr onclick="openLayer('121002')">
+                                            <td>23260003</td>
+                                            <td>중증자동차사고부상치료비 보통약관 보장부분 (비운전자)</td>
+                                        </tr>
+                                        <tr onclick="openLayer('121003')">
+                                            <td>23260101</td>
+                                            <td>골프중상해사망후유장해(3~100%) 특별약관</td>
+                                        </tr>
+                                        <tr onclick="openLayer('121005')">
+                                            <td>23260201</td>
+                                            <td>일반상해사망후유장해(3~100%) 특별약관</td>
+                                        </tr>
+                                        <tr onclick="openLayer('121004')">
+                                            <td>23260301</td>
+                                            <td>대중교통이용중교통상해사망후유장해(3~100%) 특별약관</td>
+                                        </tr>
+                                        <tr onclick="openLayer('121006')">
+                                            <td>23260401</td>
+                                            <td>레저활동중상해사망후유장해(3~100%) 특별약관</td>
+                                        </tr>
+                                        <tr onclick="openLayer('121007')">
+                                            <td>23260501</td>
+                                            <td>신주말교통상해사망후유장해(3~100%) 특별약관 (운전자)</td>
+                                        </tr>
+                                        <tr onclick="openLayer('121008')">
+                                            <td>23260502</td>
+                                            <td>신주말교통상해사망후유장해(3~100%) 특별약관 (비운전자)</td>
+                                        </tr>
+                                        <tr onclick="openLayer('121009')">
+                                            <td>23260601</td>
+                                            <td>운전중뺑소니무보험차교통상해사망후유장해(3~100%) 특별약관</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </article>
+                            <aside class='pagination'><button type='button' class='btn_arrow first disabled'
+                                    title='첫 페이지'><i class='fa fa-angle-double-left'></i></button><button type='button'
+                                    class='btn_arrow prev disabled' title='이전 페이지'><i
+                                        class='fa fa-angle-left'></i></button><button type='button' class='page active'
+                                    onclick='movePage(1)'><span>1</span></button><button type='button'
+                                    onclick='movePage(2)'><span>2</span></button><button type='button'
+                                    onclick='movePage(3)'><span>3</span></button><button type='button'
+                                    onclick='movePage(4)'><span>4</span></button><button type='button'
+                                    onclick='movePage(5)'><span>5</span></button><button type='button'
+                                    class='btn_arrow next disabled' title='다음 페이지'><i
+                                        class='fa fa-angle-right'></i></button><button type='button'
+                                    class='btn_arrow last disabled' title='마지막 페이지'><i
+                                        class='fa fa-angle-double-right'></i></button></aside>
+                        </section>
+                    </section>
+                </section>
+                <!-- LIST// -->
+            </section>
+
+        </section>
+    </section>
+
+</body>
+
+</html>

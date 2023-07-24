@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="../img/logo.png" />
+    <link rel="apple-touch-icon" href="../img/logo.png" />
+    <meta name="robots" content="ALL" />
+    <title>MAHA proj.</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+    <link rel="stylesheet" href="../css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="../css/right.solution.css" />
+    <!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+    <!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+    <script src="../js/jquery.min.js?v=3.6.0"></script>
+    <script src="../js/jquery.ui.js"></script>
+    <script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+    <script src="../js/jquery.form.min.js"></script>
+    <script src="../js/jquery.fileDownload.js"></script>
+    <script src="../js/right.solution.js"></script>
+    <script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+    <script src="../js/duallistbox.js"></script>
+</head>
+
+<body>
+    <section class="container_sec">
+
+        <script type="text/javascript">
+            function open403Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/forbidden'
+                });
+            }
+
+            function open404Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/404'
+                });
+            }
+
+            function open500Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/internalError'
+                });
+            }
+        </script>
+        <section class="left_wing_sec">
+            <header class="left_wing_header">
+                <div class="logo_wrap">
+                    <h1><a href="/"><strong style="color:#ff4513;">MA</strong><strong
+                                style="color:#009792;">HA</strong></a></h1>
+                </div>
+            </header>
+            <section class="left_wing_body">
+                <article>
+                    <nav class="left_wing_nav">
+                        <ul>
+                            <li><a href="/"><i class="fa-fw fa fa-home"></i> 첫화면</a></li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계정 관리</a>
+                                <ul class="visible">
+                                    <li><a href="/account/employee/list"><i class="fa-fw fa fa-angle-right"></i>직원
+                                            관리</a></li>
+                                    <li><a href="/account/authority/list"><i class="fa-fw fa fa-angle-right"></i>권한
+                                            관리</a></li>
+                                    <li><a href="/account/menu"><i class="fa-fw fa fa-angle-right"></i>메뉴 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>고객관리</a>
+                                <ul class="visible">
+                                    <li><a href="/customer/customer/list"><i
+                                                class="fa-fw fa fa-angle-right"></i>고객관리</a></li>
+                                    <li><a href="/customer/analysis"><i class="fa-fw fa fa-angle-right"></i>분석 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계약관리</a>
+                                <ul class="visible">
+                                    <li><a href="/contract/contract/list"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            리스트</a></li>
+                                    <li><a href="/contract/contract/info"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            정보관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>상품관리</a>
+                                <ul class="visible">
+                                    <li><a href="/insurance/insurancelist"><i
+                                                class="fa-fw fa fa-angle-right"></i>상품리스트</a></li>
+                                    <li><a href="/insurance/uwprocess"><i class="fa-fw fa fa-angle-right"></i>U/W
+                                            PROCESS</a></li>
+                                    <li><a href="/insurance/coverage"><i class="fa-fw fa fa-angle-right"></i>담보 관리</a>
+                                    </li>
+                                    <li><a href="/insurance/score"><i class="fa-fw fa fa-angle-right"></i>SCORE관리</a>
+                                    </li>
+                                    <li><a href="/insurance/fee"><i class="fa-fw fa fa-angle-right"></i>수수료 관리</a></li>
+                                    <li><a href="/insurance/insuranceamount"><i class="fa-fw fa fa-angle-right"></i>보험료
+                                            관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>통계</a>
+                                <ul class="visible">
+                                    <li><a href="/test/list"><i class="fa-fw fa fa-angle-right"></i>설계사 실적 통계</a></li>
+                                    <li><a href="/test/edit"><i class="fa-fw fa fa-angle-right"></i> 매출 통계</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>로그관리</a>
+                                <ul class="visible">
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>직원 로그 관리</a>
+                                    </li>
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>고객 로그 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <hr class="hidden_box clearfix" />
+                    </nav>
+                </article>
+            </section>
+        </section>
+        <section class="right_wing_sec">
+            <aside class="right_white_bar">
+                <div class="left">
+                    <strong>tester</strong> 님, 환영합니다!
+                </div>
+                <div class="right">
+                    <button type="button" class="btns normal small" onclick="location.href='/logout'"><em
+                            class="fa-fw fas fa-running"></em>로그아웃</button>
+                    <button type="button" class="btns normal small" onclick=""><em
+                            class="fa-fw far fa-user"></em>마이페이지</button>
+                </div>
+            </aside>
+            <script type="text/javascript">
+                function movePage(page) {
+                    // GET 방식
+                    var frm = document.frmSearch;
+                    frm.page.value = page;
+                    frm.submit();
+                }
+
+                function openLayer(id) {
+                    $.fancybox({
+                        width: 800,
+                        type: 'iframe',
+                        href: '/account/employee/edit?employeeId=' + id
+                    });
+                }
+
+                function excelDownload() {
+                    $.fileDownload("/account/employee/excelDownload.act", {
+                        httpMethod: "post",
+                        prepareCallback: function (url) {
+                            call_layer_loader("body", "처리 중입니다.");
+                        },
+                        successCallback: function (url) {
+                            remove_layer_loader("body");
+                        },
+                        failCallback: function (responseHtml, url) {
+                            remove_layer_loader("body");
+                        }
+                    });
+                }
+            </script>
+            <section class="right_wing_contents" id="right_wing_contents">
+                <!-- //LIST -->
+                <h3>공통코드 관리</h3>
+                <section class="box_wrap">
+                    <section class="sec_list_group">
+                        <section class="box_wrap search">
+                            <article class="art_search">
+                                <form id="frmSearch" name="frmSearch" onSubmit="movePage(1); return false;"
+                                    action="/account/employee/list" method="get">
+                                    <input id="page" name="page" type="hidden" value="1" />
+                                    <input id="recordSize" name="recordSize" type="hidden" value="15" />
+                                    <fieldset>
+                                        <legend class="hidden_box">공통코드 관리</legend>
+                                        <p class="search_line">
+                                            <em>
+                                                <span class="line_inner">
+                                                    <label>
+                                                        그룹코드
+                                                        <span>
+                                                            <input id="searchKeyword" name="searchKeyword"
+                                                                style="width: 150px; margin-right: 8px;"
+                                                                placeholder="그룹코드 검색" type="text" value=""
+                                                                maxlength="20" />
+                                                        </span>
+                                                    </label>
+                                                </span>
+                                                <span class="line_inner">
+                                                    <select id="authority" name="authority" style="margin-top: 0;">
+                                                        <option value="">사용여부</option>
+                                                        <option value="1">사용</option>
+                                                        <option value="2">미사용</option>
+                                                    </select>
+                                                </span>
+                                            </em>
+                                        </p>
+                                    </fieldset>
+                                    <aside class="btn_search_aside" style="margin-top: 7px; margin-right: 0;">
+                                        <button type="submit" class="btns green small"><i class="fa fa-search"></i>
+                                            조회</button>
+                                    </aside>
+                                </form>
+                            </article>
+                        </section>
+                        <section class=" list">
+                            <article class="art_reload_top_wrap">
+                                <div>
+                                    <h1 class="top_title">그룹코드정보</h1>
+                                    <div class="top_btns">
+                                        <button>추가</button>
+                                        <button>삭제</button>
+                                    </div>
+                                </div>
+                                <div class="art_reload_top_box">
+                                    <!-- 어령 -->
+                                    <table class="tbl_sort_list list top_tb">
+                                        <caption class="hidden_box">목록</caption>
+                                        <colgroup>
+                                            <col width="30" />
+                                            <col width="50" />
+                                            <col width="50" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">그룹코드</th>
+                                                <th scope="col">그룹명</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>plan_code</td>
+                                                <td>플랜코드</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>judge_result</td>
+                                                <td>판정결과</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>wound_class</td>
+                                                <td>상해급수</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </article>
+                            <!-- 어령 -->
+                            <div>
+                                <h1 class="top_title">코드정보</h1>
+                                <div class="top_btns">
+                                    <button>추가</button>
+                                    <button>삭제</button>
+                                </div>
+                            </div>
+                            <article class="art_reload">
+                                <div class="Comn_codemgnt_btbox" style="width: 150%;">
+                                    <table class="tbl_sort_list list x-scroll">
+                                        <caption class="hidden_box">목록</caption>
+                                        <colgroup>
+                                            <!-- <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" />
+                                                <col width="auto" /> -->
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">코드</th>
+                                                <th scope="col">코드명</th>
+                                                <th scope="col">부모코드</th>
+                                                <th scope="col">코드설명</th>
+                                                <th scope="col">코드레벨</th>
+                                                <th scope="col">코드순서</th>
+                                                <th scope="col">사용여부</th>
+                                                <th scope="col">속성1</th>
+                                                <th scope="col">속성2</th>
+                                                <th scope="col">속성3</th>
+                                                <th scope="col">속성4</th>
+                                                <th scope="col">속성5</th>
+                                                <th scope="col">속성6</th>
+                                                <th scope="col">속성7</th>
+                                                <th scope="col">속성8</th>
+                                                <th scope="col">속성9</th>
+                                                <th scope="col">속성10</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>1</td>
+                                                <td>하나손보 치아 절약형(1Q)</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>Y</td>
+                                                <td>N17</td>
+                                                <td>21A9</td>
+                                                <td>01</td>
+                                                <td>9900</td>
+                                                <td>500000</td>
+                                                <td>30</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>2</td>
+                                                <td>하나손보 치아 기본형(GA)</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>Y</td>
+                                                <td>N17</td>
+                                                <td>21A9</td>
+                                                <td>02</td>
+                                                <td>9900</td>
+                                                <td>500000</td>
+                                                <td>31</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>3</td>
+                                                <td>하나손보 운전자(1Q,GA 공통)</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>3</td>
+                                                <td>Y</td>
+                                                <td>N17</td>
+                                                <td>2326</td>
+                                                <td>01</td>
+                                                <td>15000</td>
+                                                <td>500000</td>
+                                                <td>20</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>4</td>
+                                                <td>하나손보 여성용 암 절약형(1Q)</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>4</td>
+                                                <td>Y</td>
+                                                <td>N17</td>
+                                                <td>21B3</td>
+                                                <td>01</td>
+                                                <td>20000</td>
+                                                <td>500000</td>
+                                                <td>40</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>5</td>
+                                                <td>하나손보 여성용 암 기본형(GA)</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>5</td>
+                                                <td>Y</td>
+                                                <td>N17</td>
+                                                <td>21B3</td>
+                                                <td>02</td>
+                                                <td>20000</td>
+                                                <td>500000</td>
+                                                <td>41</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>6</td>
+                                                <td>하나손보 남성용 암 절약형(1Q)</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>6</td>
+                                                <td>Y</td>
+                                                <td>N17</td>
+                                                <td>21B3</td>
+                                                <td>03</td>
+                                                <td>20000</td>
+                                                <td>500000</td>
+                                                <td>40</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </article>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- LIST// -->
+    </section>
+
+    </section>
+    </section>
+
+</body>
+
+</html>

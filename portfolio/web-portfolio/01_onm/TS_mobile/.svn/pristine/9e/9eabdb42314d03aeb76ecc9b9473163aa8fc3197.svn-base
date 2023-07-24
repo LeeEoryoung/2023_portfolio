@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" >
+    <title>mobile group buying detail page</title>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <!-- custom CSS -->
+    <script src="js/right.solution.sort.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <div class="header_inner">
+                <div class="logo"><img src="mo_images/logo.jpg" alt=""></div>
+                <div class="lnb">
+                    <div class="trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="gnb">
+                    <div class="dropdown-navi">공동구매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">공동구매 리스트</a>
+                    </div>
+                    <div class="dropdown-navi">발전소 매매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">발전소 매매 물건</a>
+                        <a href="#none">최근 거래 완료 매물</a>
+                    </div>
+                    <div class="dropdown-navi">ESM 관리<i class="xi-angle-down"></i></div>
+                    <div class="dropdown-navi">공지사항<i class="xi-angle-down"></i></div>
+                    <div class="gnb_inner">
+                        <a href="#none">로그인</a>
+                        <a href="#none">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <section class="mo_group_buying_detail">
+            <div class="gb_dt_item_top"></div>
+            <div class="mo_gb_dt_inner">
+                <div class="mo_gb_dt_item">
+                    <div class="gb_dt_item_down">
+                        <h3>경기도 화성시 998 kW</h3>
+                        <p>
+                            올해 10월 사용전검사 받았으며 탄소 1등급모듈로 올해 하반기 150원대에 입찰했습니다. 2메가 발전소 모두 국산 1등급 모듈 입니다.
+                        </p>
+                    </div>
+                    <hr style="background-color: #333; height: 2px;">
+                    <div>
+                        <table>
+                            <tr>
+                                <th scope="row">브랜드</th>
+                                <td>브랜드명</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">제조사</th>
+                                <td>제조사명</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">판매자</th>
+                                <td>판매자명</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">금액</th>
+                                <td>목표 달성 시<span> 999,999,999원</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송비</th>
+                                <td>배송비 정보</td>
+                            </tr>
+                        </table>
+                        <button>공동구매 신청</button>
+                    </div>
+                </div>
+                <div class="gb_dt_inner_middle">
+                    <h3>상품정보</h3>
+                    <hr style="background-color: #333;">
+                    <p>
+                        올해 10월 사용전검사 받았으며 탄소 1등급 모듈로 올해 하반기 150원대에 입찰했습니다. 2메가 발전소 모두 국산 1등급 모듈입니다.
+                    </p>
+                </div>
+                <div class="mo_gb_dt_bt">
+                    <h3>비슷한 매물 바로가기</h3>
+                    <hr style="background-color: #333;">
+                    <div class="gb_dt_items">
+                        <div class="gb_item">
+                            <div class="gb_up"></div>
+                            <div class="gb_down">
+                                <small>김충남<span><br>충남 180kw 발전소</span></small>
+                                <p>
+                                    충남 예산군 대흥면 손지리 12
+                                </p>
+                                <strong>28일 남음</strong>
+                                <hr>
+                                <p class="gb_sp">목표달성 시<br><span>999,999,999원</span></p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="footer_inner">
+                <div class="footer_top">
+                    <h3>SSOM 고객센터</h3>
+                    <span>061-123-4567</span>
+                    <p>평일 09:00~18:00 (중식 시간 12:00~13:00)<br>(주말, 공휴일, 대체휴일 제외)</p>
+                    <hr style="background: #a5a5a5;">
+                </div>
+                <div class="footer_bottom">
+                    <p>
+                        Copyright ⓒ SSOM Inc. All Rights Reserved.<br>
+                        주식회사 쏨 | 대표이사 : 정인화 | 사업자번호 123-45-67890<br>
+                        Tel. 061-123-4567 | Fax. 061-234-5678<br>
+                        본사 : 전남 나주시 교육길 13, 스마트파크 F동 401호<br>
+                    </p>
+                    <a href="#none">이용약관</a>
+                    <a href="#none">개인정보취급방침</a>
+                    <a href="#none">공지사항</a>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>

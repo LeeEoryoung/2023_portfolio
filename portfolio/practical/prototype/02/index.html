@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>The World's Amusement parks</title>
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="video-frame">
+			<video src="video/video-02.mp4" muted autoplay loop poster="images/placeholder-female.jpg"></video>
+		</div>
+		<div class="trigger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="logo">
+			<img src="images/logo.png" alt="">
+		</div>
+		<div class="anniversary">
+			<em>Anniversary</em><span>60</span>
+		</div>
+		<div class="heading">
+			<h1><span>Amusement Park</span> The World's Amusement parks</h1>
+			<p>
+				An amusement park is a park that features various attractions, such as rides and games, as well as other events for entertainment purposes. A theme park is a type of amusement park that bases its structures and attractions around a central theme, often featuring multiple areas with different themes.
+			</p>
+			<a class="btn-book" href="#none">Book Now</a>
+			<a class="btn-learn" href="#none">Learn More</a>
+		</div>
+		<!-- GNB Modal -->
+		<div class="modal-gnb">
+			<ul class="gnb">
+				<li><a href="#none" data-text="WONDERFUL WORLD">WONDERFUL WORLD</a></li>
+				<li><a href="#none" data-text="WATER PARK">WATER PARK</a></li>
+				<li><a href="#none" data-text="FESTIVAL">FESTIVAL</a></li>
+				<li><a href="#none" data-text="SHOPPING">SHOPPING</a></li>
+				<li><a href="#none" data-text="TICKET">TICKET</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+		// Trigger
+		$('.trigger').click(function(){
+			$(this).toggleClass('active')
+			$('.modal-gnb').fadeToggle() 
+			$('.anniversary').toggleClass('active')
+		})
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" href="../img/logo.png" />
+	<link rel="apple-touch-icon" href="../img/logo.png" />
+	<meta name="robots" content="ALL" />
+	<title>MAHA proj.</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+	<link rel="stylesheet" href="../css/fontawesome.all.min.css" />
+	<link rel="stylesheet" href="../css/jquery.fancybox.css" />
+	<link rel="stylesheet" href="../css/right.solution.css" />
+	<!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+	<!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+	<script src="../js/jquery.min.js?v=3.6.0"></script>
+	<script src="../js/jquery.ui.js"></script>
+	<script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+	<script src="../js/jquery.form.min.js"></script>
+	<script src="../js/jquery.fileDownload.js"></script>
+	<script src="../js/right.solution.js"></script>
+	<script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+	<script src="../js/duallistbox.js"></script>
+</head>
+
+<body>
+	<section class="container_sec">
+		<section class="left_wing_sec">
+			<header class="left_wing_header">
+				<div class="logo_wrap">
+					<h1><a href="/"><strong style="color:#ff4513;">MA</strong><strong
+								style="color:#009792;">HA</strong></a></h1>
+					<!-- <img src="img/logo.png" alt="" style="width: 50px; float:right; background-color: darkgrey; margin-right: 80px;"> -->
+				</div>
+			</header>
+			<section class="left_wing_body">
+				<article>
+					<nav class="left_wing_nav">
+						<ul>
+							<li><a href="/"><i class="fa-fw fa fa-home"></i> 첫화면</a></li>
+							<li>
+								<a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계정 관리</a>
+								<ul class="visible">
+									<li><a href="/account/employee/list"><i class="fa-fw fa fa-angle-right"></i>직원
+											관리</a></li>
+									<li><a href="/account/authority/list"><i class="fa-fw fa fa-angle-right"></i>권한
+											관리</a></li>
+									<li><a href="/account/menu"><i class="fa-fw fa fa-angle-right"></i>메뉴 관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#folder"><i class="fa-fw fa fa-user-secret"></i>고객관리</a>
+								<ul class="visible">
+									<li><a href="/customer/customer/list"><i
+												class="fa-fw fa fa-angle-right"></i>고객관리</a></li>
+									<li><a href="/customer/analysis"><i class="fa-fw fa fa-angle-right"></i>분석 관리</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계약관리</a>
+								<ul class="visible">
+									<li><a href="/contract/contract/list"><i class="fa-fw fa fa-angle-right"></i>계약
+											리스트</a></li>
+									<li><a href="/contract/contract/info"><i class="fa-fw fa fa-angle-right"></i>계약
+											정보관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#folder"><i class="fa-fw fa fa-user-secret"></i>상품관리</a>
+								<ul class="visible">
+									<li><a href="/insurance/insurancelist"><i
+												class="fa-fw fa fa-angle-right"></i>상품리스트</a></li>
+									<li><a href="/insurance/uwprocess"><i class="fa-fw fa fa-angle-right"></i>U/W
+											PROCESS</a></li>
+									<li><a href="/insurance/coverage"><i class="fa-fw fa fa-angle-right"></i>담보 관리</a>
+									</li>
+									<li><a href="/insurance/score"><i class="fa-fw fa fa-angle-right"></i>SCORE관리</a>
+									</li>
+									<li><a href="/insurance/fee"><i class="fa-fw fa fa-angle-right"></i>수수료 관리</a></li>
+									<li><a href="/insurance/insuranceamount"><i class="fa-fw fa fa-angle-right"></i>보험료
+											관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#folder"><i class="fa-fw fa fa-user-secret"></i>통계</a>
+								<ul class="visible">
+									<li><a href="/test/list"><i class="fa-fw fa fa-angle-right"></i>설계사 실적 통계</a></li>
+									<li><a href="/test/edit"><i class="fa-fw fa fa-angle-right"></i> 매출 통계</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#folder"><i class="fa-fw fa fa-user-secret"></i>로그관리</a>
+								<ul class="visible">
+									<li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>직원 로그 관리</a>
+									</li>
+									<li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>고객 로그 관리</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<hr class="hidden_box clearfix" />
+					</nav>
+				</article>
+			</section>
+		</section>
+		<section class="right_wing_sec">
+			<aside class="right_white_bar">
+				<div class="left">
+					<strong>tester</strong> 님, 환영합니다!
+				</div>
+				<div class="right">
+					<button type="button" class="btns normal small" onclick="location.href='/logout'"><em
+							class="fa-fw fas fa-running"></em>로그아웃</button>
+					<button type="button" class="btns normal small" onclick=""><em
+							class="fa-fw far fa-user"></em>마이페이지</button>
+				</div>
+			</aside>
+			<script type="text/javascript">
+				function open403Layer() {
+					$.fancybox({
+						width: 800,
+						type: 'iframe',
+						href: '/test/forbidden'
+					});
+				}
+
+				function open404Layer() {
+					$.fancybox({
+						width: 800,
+						type: 'iframe',
+						href: '/test/404'
+					});
+				}
+
+				function open500Layer() {
+					$.fancybox({
+						width: 800,
+						type: 'iframe',
+						href: '/test/internalError'
+					});
+				}
+			</script>
+			<!-- 윗단은 가급적 수정하지 말아주세요~ -->
+			<!-- header.jsp 영역// -->
+
+			<!-- //실제contents영역 -->
+			<section class="right_wing_contents" id="right_wing_contents">
+				<section class="box_wrap">
+					<form name="frm" onsubmit="return frmVerify(this);">
+						<h3>메뉴관리</h3>
+						<article class="art_reload">
+							<section class="menu_treeinner">
+								<h1>메뉴 트리</h1>
+								<ol>
+									<li class="main_menu_title">Main<button>관리</button></li>
+									<ul>
+										<li class="sub_menu_title">계정관리<button>관리</button></li>
+										<ul>
+											<li class="menutree_list">직원 관리</li>
+											<li class="menutree_list">메뉴 관리</li>
+											<li class="menutree_list">권환 관리</li>
+											<li class="menutree_list">시스템URL 관리</li>
+										</ul>
+									</ul>
+									<ul>
+										<li class="sub_menu_title">고객관리<button>관리</button></li>
+										<ul>
+											<li class="menutree_list">고객 관리</li>
+											<li class="menutree_list">분석 관리</li>
+										</ul>
+									</ul>
+									<ul>
+										<li class="sub_menu_title">계약 관리<button>관리</button></li>
+										<ul>
+											<li class="menutree_list">계약 리스트</li>
+											<li class="menutree_list">계약 정보 관리</li>
+										</ul>
+									</ul>
+									<ul>
+										<li class="sub_menu_title">상품 관리<button>관리</button></li>
+										<ul>
+											<li class="menutree_list">상품 리스트</li>
+											<li class="menutree_list">U/W PROCESS</li>
+											<li class="menutree_list">담보 관리</li>
+											<li class="menutree_list">SCORE 관리</li>
+											<li class="menutree_list">수수료 관리</li>
+											<li class="menutree_list">보험료 관리</li>
+										</ul>
+									</ul>
+									<ul>
+										<li class="sub_menu_title">통계<button>관리</button></li>
+										<ul>
+											<li class="menutree_list">설계사 실적 통계</li>
+											<li class="menutree_list">매출통계</li>
+										</ul>
+									</ul>
+								</ol>
+							</section>
+						</article>
+					</form>
+				</section>
+			</section>
+			<!-- LOGIN// -->
+		</section>
+		<script type="text/javascript">
+			//로그인
+			function frmVerify(fr) {
+				alert('어흥');
+				return false;
+			}
+
+			//리스트
+			init_sort_list($("#list-sort"));
+			load_button_action($("#list-sort"));
+
+			function load_basic_list() {
+				reload_basic_list($("#list-sort"));
+			}
+
+			function load_button_action(e) { //화면 새로고침 후 콜백
+				$(e).find(".tbl_sort_list tbody td:not(.nc, .nodata)").on("click", function () {
+					console.log($(this).parent().attr("code"));
+				});
+			}
+
+			function fnc_mod(idx) {
+				$.fancybox({
+					width: 800,
+					type: 'iframe',
+					href: '/account/employee/edit?idx=' + idx
+				});
+				// 	var layer_html = '<section class="pop_total_wrap bgFFF">'+ $("#layer-popup").html() +'</section>';
+				// 	$.fancybox(layer_html,{ autoSize:false, width:800, height:'auto', type:'inline' });
+			}
+
+			//분리형
+			//sortable
+			$("#tbl_code_detail tbody").sortable({
+				tolerance: 'pointer',
+				handle: '.move',
+				axis: 'y',
+				containment: 'parent',
+			});
+		</script>
+		<script>
+			//layout용 함수
+			$(window).on("load", function () {
+				$(".left_wing_nav > ul > li").eq(0).trigger("click");
+
+
+			});
+		</script>
+		<!-- 실제contents영역// -->
+
+		<!-- 아랫단은 가급적 수정하지 말아주세요~ -->
+		<!-- //footer.jsp 영역 -->
+	</section>
+	</section>
+</body>
+
+</html>

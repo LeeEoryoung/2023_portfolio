@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<link rel="shortcut icon" href="../img/logo.png"/>
+<link rel="apple-touch-icon" href="../img/logo.png"/>
+<meta name="robots" content="ALL"/>
+<title>MAHA proj.</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap"/>
+<link rel="stylesheet" href="../css/fontawesome.all.min.css"/>
+<link rel="stylesheet" href="../css/jquery.fancybox.css"/>
+<link rel="stylesheet" href="../css/right.solution.css"/>
+<!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+<!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+<script src="../js/jquery.min.js?v=3.6.0"></script>
+<script src="../js/jquery.ui.js"></script>
+<script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+<script src="../js/jquery.form.min.js"></script>
+<script src="../js/jquery.fileDownload.js"></script>
+<script src="../js/right.solution.js"></script>
+<script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+<script src="../js/duallistbox.js"></script>
+</head>
+<body>
+	
+
+
+
+
+
+<script type="text/javascript">
+function frmSubmit() {
+	if(!confirm("직원 정보 변경사항을\n저장하시겠습니까?")) return;
+
+	$.ajax({
+		url: "/account/employee/excuteEmployee.act",
+		async: true,
+		type: "post",
+		data: $("form[name=frm]").serialize(),
+		dataType: 'json',
+		success: function (res, textStatus) {
+			var resultMsg = res.resultMsg;
+			if (resultMsg == "success") {
+				var paramVo = res.paramVo;
+				alert("저장되었습니다.");
+				parent.location.reload();
+				return;
+			}
+		}
+	});
+}
+
+// function del(employeeId) {
+// 	if(!confirm("삭제하시겠습니까?")) return;
+
+// 	$.ajax({
+// 		url: "/account/employee/delEmployee.act",
+// 		async: true,
+// 		type: "post",
+// 		data: $("form[name=frm]").serialize(),
+// 		dataType: 'json',
+// 		success: function (res, textStatus) {
+// 			var resultMsg = res.resultMsg;
+// 			if (resultMsg == "success") {
+// 				var paramVo = res.paramVo;
+// 				alert("저장되었습니다.");
+// 				parent.location.reload();
+// 				return;
+// 			}
+// 		}
+// 	});
+// }
+</script>
+
+<section class="pop_total_wrap myrun">
+	<h2><strong>마이런 설계사 누적 고객 실적</strong></h2>
+	<form id="frm" name="frm" action="/account/employee/edit?employeeId=" method="post" onsubmit="frmSubmit(); return false;">
+		<input id="employeeId" name="employeeId" type="hidden" value=""/>
+		<fieldset class="p5">
+			<legend class="hidden_box">>마이런 설계사 누적 고객 실적</legend>
+			<table class="tbl_update">
+				<tbody>
+					<tr>
+						<th>고객명</th>
+						<th>연락처</th>
+						<th>가입 건수</th>
+						<th>가입 금액</th>
+					</tr>
+					<tr>
+						<td>아이1</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+					<tr>
+						<td>아이2</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+					<tr>
+						<td>아이3</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+					<tr>
+						<td>아이4</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+					<tr>
+						<td>아이5</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+					<tr>
+						<td>아이6</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+					<tr>
+						<td>아이7</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+					<tr>
+						<td>아이8</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+					<tr>
+						<td>아이9</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+					<tr>
+						<td>아이10</td>
+						<td>010-1234-5678</td>
+						<td>5</td>
+						<td>1,234,567</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<aside class='pagination'><button type='button' class='btn_arrow first disabled'
+			title='첫 페이지'><i class='fa fa-angle-double-left'></i></button><button type='button'
+			class='btn_arrow prev disabled' title='이전 페이지'><i
+				class='fa fa-angle-left'></i></button><button type='button' class='page active'
+			onclick='movePage(1)'><span>1</span></button><button type='button'
+			onclick='movePage(2)'><span>2</span></button><button type='button'
+			onclick='movePage(3)'><span>3</span></button><button type='button'
+			onclick='movePage(4)'><span>4</span></button><button type='button'
+			onclick='movePage(5)'><span>5</span></button><button type='button'
+			class='btn_arrow next disabled' title='다음 페이지'><i
+				class='fa fa-angle-right'></i></button><button type='button'
+			class='btn_arrow last disabled' title='마지막 페이지'><i
+				class='fa fa-angle-double-right'></i></button></aside>
+		<aside class="btn_pop_wrap">
+			<div class="f_r">
+				<button type="submit" class="btns darkgray"><i class="fa fa-fw fa-save"></i>확인</button>
+			</div>
+		</aside>
+	</form>
+</section>
+
+</body>
+</html>

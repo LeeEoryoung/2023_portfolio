@@ -1,0 +1,1993 @@
+/* google web font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* Font Awesome 4.7.0 CND */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* default css */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    min-width: 1140px;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    line-height: 1.6em;
+    font-size: 15px;
+    color: #333;
+    /* background-color: lightgray; */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+
+}
+
+.container {
+    width: 100%;
+}
+
+.container.member {
+    background-color: #f8f8f8;
+}
+
+/*---------------------------- [ start :: header ] ----------------------------*/
+
+.header_inner {
+    width: 100%;
+    height: 80px;
+}
+
+header {
+    width: 100%;
+    /* border-bottom: 1px solid #bbb; */
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    height: 80px;
+    width: 1140px;
+    margin: auto;
+    /* position: relative; */
+    display: flex;
+}
+
+.header_inner .logo {
+    float: left;
+    margin-top: 23px;
+}
+
+.navi {
+    width: 740px;
+}
+
+.gnb {
+    list-style: none;
+    height: 80px;
+    margin-top: 3px;
+    font-size: 17px;
+}
+
+.gnb ul {
+    float: right;
+}
+
+.gnb li {
+    float: left;
+    height: 50px;
+    text-align: center;
+    padding: 22px 40px;
+    position: relative;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.gnb li>a {
+    margin-top: 27px;
+    margin-right: 50px;
+    color: #333;
+    display: block;
+    height: 100%;
+    margin: 0;
+}
+
+.sub_inner {
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #d6d6d6;
+    display: block;
+    transition: margin-top .3s ease-in-out;
+    -webkit-transition: margin-top .3s ease-in-out;
+    margin-top:-112px;
+    z-index:-9;
+}
+.sub_bg {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    border-bottom: 1px solid #d6d6d6;
+    display: block;
+    z-index:-1;
+}
+
+.navi:hover .sub_inner {
+    transition: margin-top .4s ease-in-out;
+    -webkit-transition: margin-top .4s ease-in-out;
+    margin-top:0;
+}
+
+.sub-menu {
+    width: 1140px;
+    margin: auto;
+    display: flex;
+}
+
+.sub-menu ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+.sub-menu ul.item1 {
+    margin-left: 314px;
+}
+
+.sub-menu ul.item2 {
+    margin-left: 30px;
+}
+
+.sub-menu ul.item3 {
+    margin-left: 44px;
+}
+
+.sub-menu a {
+    padding: 5px;
+    display: block;
+    transition: 0.5s;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.sub-menu a:hover {
+    background-color: #f8f8f8;
+    color: #0ca950;
+}
+
+.header_login {
+    float: right;
+    margin-top: 25px;
+    z-index: 2;
+}
+
+.header_login a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+}
+
+.header_login a:last-child::before {
+    content: '　|　';
+}
+
+/*============================ [ end :: header ] ============================*/
+
+
+/*---------------------------- [ start :: main - slick ] ----------------------------*/
+
+.slick-prev:before {
+    content: '';
+}
+
+.slick-next:before {
+    content: '';
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 20px;
+    line-height: 0;
+    position: absolute;
+    top: 74%;
+    display: block;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.slick-prev {
+    left: 18%;
+    z-index: 1;
+    bottom: 0;
+    transform: translate(0px, 0px);
+}
+
+.slick-next {
+    right: 78.2%;
+    bottom: 0;
+    transform: translate(0px, 0px);
+}
+
+.slick-prev i,
+.slick-next i {
+    color: #fff
+}
+
+.slick-prev button,
+.slick-next button {
+    background-color: rgba(0, 0, 0, 0.774);
+    border: none;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+/*============================ [ end :: main - slick ] ============================*/
+
+
+/*---------------------------- [ start :: esm welcome ] ----------------------------*/
+.welcome {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome .heading {
+    position: absolute;
+    top: 0;
+    left: 16%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.welcome .heading h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.welcome .heading p {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #fff;
+}
+
+.slideshow {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+}
+
+/*============================ [ end :: esm welcome ] ============================*/
+
+
+/*---------------------------- [ start :: esm banner ] ----------------------------*/
+
+.esm_banner {
+    position: relative;
+}
+
+.esm_banner .esm_heading {
+    position: absolute;
+    width: 1140px;
+    height: 240px;
+    top: 0;
+    left: 16%;
+}
+
+.esm_banner .esm_heading h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    padding: 40px 0 20px 20px;
+}
+
+.esm_banner .esm_heading p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+/*============================ [ end :: esm banner ] ============================*/
+
+
+/*---------------------------- [ start :: member common ] ----------------------------*/
+
+.join, .login, .my_page, .id_find, .pw_find{
+    width: 560px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.join>h1, .login>h1, .my_page>h1, .id_find>h1, .pw_find>h1{
+    text-align:center;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+/*============================ [ end :: member common ] ============================*/
+
+
+/*---------------------------- [ start :: member join ] ----------------------------*/
+
+.join .join_inner {
+    background-color: #fff;
+    text-align: left;
+    padding: 40px 50px;
+    border-top: 4px solid #0ca950;
+}
+
+.join_inner p {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 0 20px 0;
+}
+
+.join_inner p span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.join_inner label {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.join_inner label strong {
+    color: red;
+}
+
+.join_inner input[type=text],
+.join_inner input[type=password],
+.join_inner input[type=tel],
+.join_inner input[type=file] {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 7px 0;
+}
+
+/****************** input type file css *****************/
+.filebox span {
+    font-weight: 400;
+    font-size: 13px;
+    display: block;
+}
+
+.filebox .upload-name {
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+    vertical-align: middle;
+    border: 1px solid #888;
+    width: 308px;
+    color: #999999;
+    border-radius: 3px;
+}
+
+.filebox label {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #333;
+    vertical-align: middle;
+    background-color: #e9ecef;
+    cursor: pointer;
+    height: 40px;
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    opacity: 0;
+}
+
+/* /input file type css */
+.join_inner small {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ff3600;
+    padding: 0 0 10px 0;
+}
+
+.join_inner .join_ckbox_01 label,
+.join_inner .join_ckbox_02 label {
+    color: #666;
+}
+
+.join_inner .join_ckbox_01,
+.join_inner .join_ckbox_02 {
+    padding-top: 10px;
+}
+
+.join_inner .join_ckbox_01 label a,
+.join_inner .join_ckbox_02 label a {
+    text-decoration: underline;
+}
+
+.join_inner button {
+    background-color: #014282;
+    border: none;
+    padding: 13px 30px;
+    color: #fff;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/*============================ [ end :: member join ] ============================*/
+
+
+
+/*---------------------------- [ start :: member mypage ] ----------------------------*/
+
+.my_page .my_page_inner {
+    background-color: #fff;
+    text-align: left;
+    padding: 30px 50px;
+    border-top: 4px solid #0ca950;
+}
+
+.my_page_inner label {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.my_page_inner label strong {
+    color: red;
+}
+
+.my_page_inner .ro {
+    /* background-color: rgba(136, 136, 136, 0.363); */
+    background-color: #fafafa;
+    border: 1px solid #e1e1e1;
+}
+
+.my_page_inner input[type=text],
+.my_page_inner input[type=password],
+.my_page_inner input[type=tel],
+.my_page_inner input[type=file] {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 7px 0;
+}
+
+.my_page_inner small {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ff3600;
+    padding: 0 0 10px 0;
+}
+
+.my_page_inner button {
+    background-color: #014282;
+    border: none;
+    padding: 13px 30px;
+    color: #fff;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* /my page css */
+/************************************* login css *******************/
+
+.login_inner {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-top: 4px solid #0ca950;
+}
+
+.login_inner .login_inputs {
+    margin: auto;
+}
+
+.login_inner .login_inputs label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+}
+
+.login_inner .login_inputs label:nth-child(6) {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.login_inner .login_inputs input[type=text],
+.login_inner .login_inputs input[type=password] {
+    display: block;
+    background-color: #fafafa;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+    height: 56px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: #999;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.login_inner .login_inputs input[type=checkbox] {
+    margin: 0 10px 30px 0;
+}
+
+.login_inner button {
+    background-color: #014282;
+    border: none;
+    padding: 13px 30px;
+    color: #fff;
+    margin-top: 15px;
+    width: 400px;
+    height: 56px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.login_bt_a {
+    text-align: center;
+}
+
+.login_bt_a a {
+    color: #0ca950;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.login_bt_a a:last-child::before {
+    content: '　|　';
+    color: #888;
+}
+
+/* /login css */
+/* login modal */
+.id_wn_pop {
+    background-color: #fff;
+    width: 380px;
+    border: 4px solid #0ca950;
+    padding: 30px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.id_wn_pop p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+}
+
+.id_wn_pop button {
+    width: 200px;
+    height: 45px;
+    background-color: #014282;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* /login modal */
+/******************************* id find ~ pw find css ***************/
+.contents.idpw {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.id_find, .pw_find{
+    margin:0;
+    margin-bottom: 50px;
+}
+
+.contents h1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #333;
+}
+/* 
+.id_find {
+    float: left;
+    padding-left: 24%;
+    padding-top: 20px;
+}
+
+.pw_find {
+    float: right;
+    padding-right: 24%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.id_find h1,
+.pw_find h1 {
+    text-align: center;
+} */
+
+.id_find_inner,
+.pw_find_inner {
+    /* width: 400px; */
+    height: 530px;
+    background-color: #fff;
+    padding: 30px;
+    border-top: 4px solid #00c950;
+}
+
+.id_find_inner p span,
+.pw_find_inner p span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.id_find_input input[type=text],
+.id_find_input input[type=email],
+.pw_find_input input[type=text],
+.pw_find_input input[type=email],
+.id_find_input button,
+.pw_find_input button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.id_find_input button,
+.pw_find_input button {
+    background-color: #014282;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+/* /id find ~ pw find */
+/*************************** 공동구매 css ***********************/
+.gb_banner {
+    position: relative;
+}
+
+.gb_heading {
+    position: absolute;
+    width: 1140px;
+    height: 240px;
+    top: 0;
+    left: 16%;
+}
+
+.gb_banner .gb_heading h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    padding: 40px 0 20px 20px;
+}
+
+.gb_banner .gb_heading p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.gb_inner {
+    width: 1140px;
+    margin: auto;
+    background-color: #fff;
+}
+.gb_inner .gb_top_btn {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.gb_inner .gb_top_btn button {
+    background-color: #fff;
+    border: 1px solid #0ca950;
+    width: 110px;
+    height: 40px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0ca950;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+    transition: 0.3s;
+}
+.gb_top_btn button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+.gb_top_btn button:last-child {
+    border-radius: 0 5px 5px 0;
+}
+.gb_top_btn button:hover {
+    color: #fff;
+    background-color: #00c950;
+}
+.gb_inner h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+.gb_inner .gb_items_top {
+    display: flex;
+    margin-bottom: 40px;
+    gap: 25px;
+}
+
+.gb_inner .gb_items_bt {
+    display: flex;
+    gap: 25px;
+}
+
+.gb_items_top .gb_item,
+.gb_items_bt .gb_item {
+    flex: 1;
+    width: 266px;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+
+.gb_items_top .gb_item {
+    margin-bottom: 40px;
+}
+
+.gb_item {
+    position: relative;
+}
+.gb_up {
+    height: 162px;
+    background-repeat: no-repeat;
+}
+
+.gb_down {
+    padding: 20px;
+}
+
+.gb_items_top .gb_item:nth-child(1) .gb_up {
+    background-image: url(images/gb_items01.jpg);
+}
+
+.gb_items_top .gb_item:nth-child(2) .gb_up {
+    background-image: url(images/gb_items02.jpg);
+}
+
+.gb_items_top .gb_item:nth-child(3) .gb_up {
+    background-image: url(images/gb_items03.jpg);
+}
+.gb_items_top .gb_item:nth-child(4) .gb_up {
+    background-image: url(images/gb_items04.jpg);
+}
+
+.gb_items_bt .gb_item:nth-child(1) .gb_up {
+    background-image: url(images/gb_items05.jpg);
+}
+
+.gb_items_bt .gb_item:nth-child(2) .gb_up {
+    background-image: url(images/gb_items06.jpg);
+}
+
+.gb_items_bt .gb_item:nth-child(3) .gb_up {
+    background-image: url(images/gb_items07.jpg);
+}
+.gb_items_bt .gb_item:nth-child(4) .gb_up {
+    background-image: url(images/gb_items08.jpg);
+}
+.gb_down small {
+    font-weight: 500;
+    font-size: 14px;
+    color: #666;
+    padding-bottom: 10px;
+}
+
+.gb_down small>span {
+    font-weight: 700;
+    font-size: 22px;
+    color: #014282;
+    padding: 10px;
+}
+
+.gb_down p {
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.gb_down strong {
+    font-weight: 500;
+    font-size: 16px;
+    color: #00c950;
+}
+
+.gb_down .gb_sp {
+    font-weight: 700;
+    font-size: 14px;
+    color: #666;
+    padding-top: 10px;
+}
+
+.gb_down .gb_sp>span {
+    font-weight: 700;
+    font-size: 26px;
+    color: #ff3600;
+}
+
+.gb_inner .see_more {
+    margin-top: 50px;
+    margin-bottom: 140px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #014282;
+    background-color: #fff;
+    border: 1px solid #014282;
+    border-radius: 3px;
+    width: 140px;
+    height: 40px;
+    margin-left: 45%;
+    cursor: pointer;
+}
+/*************************** /공동구매 css ***********************/
+
+/***************************** 공동구매 상세 css ***********************/
+.gb_dt {
+    position: relative;
+}
+
+.gb_dt_inner {
+    width: 1140px;
+    margin: auto;
+}
+
+.gb_dt_inner_top {
+    overflow: hidden;
+    padding: 50px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    width: 1140px;
+}
+.gb_dt_inner_top .gb_dt_top_left {
+    float: left;
+    width: 520px;
+    padding-right: 40px;
+}
+.gb_dt_inner_top .gb_dt_top_right {
+    float: right;
+    width: 480px;
+}
+.gb_dt_top_right h1 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2em;
+    margin: 0;
+}
+.gb_dt_top_right p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+}
+.gb_dt_top_right table th,
+.gb_dt_top_right table td {
+    padding: 5px 0;
+}
+.gb_dt_top_right table th  {
+    font-weight: 500;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+}
+.gb_dt_top_right table td  {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    padding-left: 10px;
+}
+.gb_dt_top_right table td span {
+    font-weight: 700;
+    font-size: 26px;
+    color: #ff3600;
+}
+.gb_dt_top_right button {
+    width: 480px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #014282;
+    border: none;
+    margin-top: 27px;
+    cursor: pointer;
+}
+.gb_dt_inner_middle {
+    margin-top: 370px;
+}
+.gb_dt_inner_middle h3 {
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 26px;
+    color: #333;
+}
+.gb_dt_inner_middle p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+}
+.gb_dt_inner_bottom {
+    margin-top: 250px;
+    margin-bottom: 50px;
+}
+.gb_dt_inner_bottom h3 {
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 26px;
+    color: #333;
+}
+.gb_dt_inner_bottom .gb_dt_items {
+    overflow: hidden;
+}
+.gb_dt_items .gb_item {
+    float: left;
+    margin-left: 25px;
+    border: 1px solid #e1e1e1;
+    width: 266px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.gb_dt_items .gb_item:first-child {
+    margin-left: 0;
+}
+.gb_dt_items .gb_item:nth-child(1) .gb_up {
+    background-image: url(images/gb_items01.jpg);
+}
+
+.gb_dt_items .gb_item:nth-child(2) .gb_up {
+    background-image: url(images/gb_items02.jpg);
+}
+
+.gb_dt_items .gb_item:nth-child(3) .gb_up {
+    background-image: url(images/gb_items03.jpg);
+}
+.gb_dt_items .gb_item:nth-child(4) .gb_up {
+    background-image: url(images/gb_items04.jpg);
+}
+/******************************** /공동구매 상세 css ********************/
+
+/********************* 발전소 매매 , 전체 매물 css ***********************/
+.for_sale_banner {
+    position: relative;
+}
+
+.for_sale_heading {
+    position: absolute;
+    width: 1140px;
+    height: 240px;
+    top: 0;
+    left: 16%;
+}
+
+.for_sale_banner .for_sale_heading h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    padding: 40px 0 20px 20px;
+}
+
+.for_sale_banner .for_sale_heading p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.for_sale_inner {
+    width: 1140px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.for_sale_inner .fs_top_btn {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.for_sale_inner .fs_top_btn button {
+    background-color: #fff;
+    border: 1px solid #0ca950;
+    width: 110px;
+    height: 40px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0ca950;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+    transition: 0.3s;
+}
+
+.for_sale_inner .fs_top_btn button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.for_sale_inner .fs_top_btn button:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.for_sale_inner .fs_top_btn button:hover {
+    background-color: #0ca950;
+    color: #fff;
+}
+
+.for_sale_inner h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+.for_sale_inner .for_sale_items_top {
+    display: flex;
+    margin-bottom: 40px;
+    gap: 25px;
+}
+
+.for_sale_inner .for_sale_items_bt {
+    display: flex;
+    gap: 25px;
+}
+
+.for_sale_items_top .for_sale_item,
+.for_sale_items_bt .for_sale_item {
+    flex: 1;
+    width: 364px;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+
+.for_sale_items_top .for_sale_item {
+    margin-bottom: 40px;
+}
+
+.for_sale_item {
+    position: relative;
+}
+
+.for_sale_up {
+    height: 162px;
+    background-repeat: no-repeat;
+}
+
+.for_sale_down {
+    padding: 20px;
+}
+
+.for_sale_items_top .for_sale_item:nth-child(1) .for_sale_up {
+    background-image: url(images/traded_sale_item01.jpg);
+}
+
+.for_sale_items_top .for_sale_item:nth-child(2) .for_sale_up {
+    background-image: url(images/traded_sale_item02.jpg);
+}
+
+.for_sale_items_top .for_sale_item:nth-child(3) .for_sale_up {
+    background-image: url(images/traded_sale_item03.jpg);
+}
+
+.for_sale_items_bt .for_sale_item:nth-child(1) .for_sale_up {
+    background-image: url(images/traded_sale_item04.jpg);
+}
+
+.for_sale_items_bt .for_sale_item:nth-child(2) .for_sale_up {
+    background-image: url(images/traded_sale_item05.jpg);
+}
+
+.for_sale_items_bt .for_sale_item:nth-child(3) .for_sale_up {
+    background-image: url(images/traded_sale_item06.jpg);
+}
+
+.for_sale_down small {
+    font-weight: 700;
+    font-size: 16px;
+    color: #00c950;
+}
+
+.for_sale_down small>span {
+    font-weight: 700;
+    font-size: 22px;
+    color: #014282;
+    padding: 10px;
+}
+
+.for_sale_down p {
+    font-weight: 500;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.for_sale_down strong {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+}
+
+.for_sale_down strong>span {
+    font-weight: 700;
+    font-size: 26px;
+    color: #ff3600;
+}
+
+.for_sale_down .for_sale_sp {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    padding-top: 10px;
+}
+
+.for_sale_down .for_sale_sp>span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.for_sale_inner .see_more {
+    margin-top: 50px;
+    margin-bottom: 140px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #014282;
+    background-color: #fff;
+    border: 1px solid #014282;
+    border-radius: 3px;
+    width: 140px;
+    height: 40px;
+    margin-left: 45%;
+    cursor: pointer;
+}
+
+/************************************ /발전소 매매, 전체 매물 css ***********************/
+/* 발전소 매매 , 매물 상세 css */
+.for_sale_dt {
+    position: relative;
+}
+.for_sale_dt_inner {
+    width: 1140px;
+    margin: auto;
+}
+.for_sale_dt_inner_top {
+    overflow: hidden;
+    padding: 50px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    width: 1140px;
+}
+.for_sale_dt_inner_top .for_sale_dt_top_left {
+    float: left;
+    width: 520px;
+    padding-right: 40px;
+}
+.for_sale_dt_inner_top .for_sale_dt_top_right {
+    float: right;
+    width: 480px;
+}
+.for_sale_dt_top_right h1 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2em;
+    margin: 0;
+}
+.for_sale_dt_top_right p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+}
+.for_sale_dt_top_right table th,
+.for_sale_dt_top_right table td {
+    padding: 5px 0;
+}
+.for_sale_dt_top_right table th  {
+    font-weight: 500;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+}
+.for_sale_dt_top_right table td  {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    padding-left: 10px;
+}
+.for_sale_dt_top_right table td span {
+    font-weight: 700;
+    font-size: 26px;
+    color: #ff3600;
+
+}
+.for_sale_dt_top_right div{
+    height:207px;
+}
+.for_sale_dt_top_right button {
+    width: 480px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #014282;
+    border: none;
+    cursor: pointer;
+}
+.for_sale_dt_inner_bottom {
+    margin-top: 370px;
+    margin-bottom: 50px;
+}
+.for_sale_dt_inner_bottom h3 {
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 26px;
+    color: #333;
+}
+.for_sale_dt_inner_bottom .fs_icons_list {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.fs_icons_list .fs_icon {
+    float: left;
+    width: 190px;
+    height: 130px;
+    border: 1px solid #e1e1e1;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+}
+.fs_icons_list .fs_icon:first-child {
+    margin-left: 0;
+}
+.fs_icons_list .fs_icon p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+.fs_icons_list .fs_icon strong{
+    font-weight: 700;
+    font-size: 26px;
+    color: #333;
+    margin: 0;
+}
+.for_sale_dt_inner_bottom table {
+    text-align: left;
+    margin-top: 50px;
+}
+.for_sale_dt_inner_bottom tr {
+    height: 60px;
+}
+.for_sale_dt_inner_bottom th {
+    border-bottom: 1px solid #e1e1e1;
+    width: 130px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #666;
+}
+.for_sale_dt_inner_bottom td {
+    width: 450px;
+    border-bottom: 1px solid #e1e1e1;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+}
+/* /발전소 매매 , 매물 상세 css */
+/******************************* 최근거래 완료 매물 css ********************/
+
+.last_td_banner {
+    position: relative;
+
+}
+
+.last_td_heading {
+    position: absolute;
+    width: 1140px;
+    height: 240px;
+    top: 0;
+    left: 16%;
+}
+
+.last_td_banner .last_td_heading h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    padding: 40px 0 20px 20px;
+}
+
+.last_td_banner .last_td_heading p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.last_td_inner {
+    width: 1140px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.last_td_inner h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+.last_td_inner .last_td_items_top {
+    display: flex;
+    margin-bottom: 40px;
+    gap: 25px;
+}
+
+.last_td_inner .last_td_items_bt {
+    display: flex;
+    gap: 25px;
+}
+
+.last_td_items_top .last_td_item,
+.last_td_items_bt .last_td_item {
+    flex: 1;
+    width: 364px;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+
+.last_td_items_top .last_td_item {
+    margin-bottom: 40px;
+}
+
+.last_td_item {
+    position: relative;
+}
+
+.last_td_item::before {
+    content: '거래\A완료';
+    position: absolute;
+    width: 75px;
+    height: 55px;
+    background-color: #333;
+    color: #a9a9a9;
+    top: 0;
+    left: 20px;
+    z-index: 10;
+    font-size: 18px;
+    text-align: center;
+    white-space: pre;
+    padding-top: 5px;
+    padding-bottom: 4px;
+}
+
+.last_td_up {
+    height: 162px;
+    background-repeat: no-repeat;
+}
+
+.last_td_down {
+    padding: 20px;
+}
+
+.last_td_items_top .last_td_item:nth-child(1) .last_td_up {
+    background-image: url(images/traded_sale_item01.jpg);
+}
+
+.last_td_items_top .last_td_item:nth-child(2) .last_td_up {
+    background-image: url(images/traded_sale_item02.jpg);
+}
+
+.last_td_items_top .last_td_item:nth-child(3) .last_td_up {
+    background-image: url(images/traded_sale_item03.jpg);
+}
+
+.last_td_items_bt .last_td_item:nth-child(1) .last_td_up {
+    background-image: url(images/traded_sale_item04.jpg);
+}
+
+.last_td_items_bt .last_td_item:nth-child(2) .last_td_up {
+    background-image: url(images/traded_sale_item05.jpg);
+}
+
+.last_td_items_bt .last_td_item:nth-child(3) .last_td_up {
+    background-image: url(images/traded_sale_item06.jpg);
+}
+
+.last_td_down small {
+    font-weight: 700;
+    font-size: 16px;
+    color: #00c950;
+}
+
+.last_td_down small>span {
+    font-weight: 700;
+    font-size: 22px;
+    color: #014282;
+    padding: 10px;
+}
+
+.last_td_down p {
+    font-weight: 500;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.last_td_down strong {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+}
+
+.last_td_down strong>span {
+    font-weight: 700;
+    font-size: 26px;
+    color: #ff3600;
+}
+
+.last_td_down .last_td_sp {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    padding-top: 10px;
+}
+
+.last_td_down .last_td_sp>span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.last_td_inner .see_more {
+    margin-top: 50px;
+    margin-bottom: 140px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #014282;
+    background-color: #fff;
+    border: 1px solid #014282;
+    border-radius: 3px;
+    width: 140px;
+    height: 40px;
+    margin-left: 45%;
+    cursor: pointer;
+}
+/* /최근거래 완료 매물 css */
+
+/***************************** 공동구매 신청 모달 css *****************/
+
+.modal.hide {
+    display: none;
+}
+
+.modal_bg {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:white;
+    opacity:0.7;
+    z-index:10;
+}
+
+.modal_cont {
+    width: 560px;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-top: 2px solid #0ca950;
+    position: fixed;
+    z-index:11;
+    top:50%;
+    left:50%;
+    margin-top:-240px;
+    margin-left:-280px;
+    padding-bottom: 35px;
+}
+
+.modal.privacy .modal_cont, .modal.agreement .modal_cont{
+    width: 1140px;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    margin-left: -570px;
+}
+
+.modal_inner {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.btn_modal_close {
+    position: absolute;
+    top: 32px;
+    right: 35px;
+}
+
+.modal_inner h1 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    margin: 0;
+    padding: 26px 0;
+    border-bottom: 2px solid #333;
+}
+
+.modal_inner .cont{
+    padding: 0 50px;
+}
+
+.modal_inner h2,
+.modal_inner h2>span {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3em;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.modal_inner h2>span {
+    color: #0ca950;
+}
+
+.modal_inner label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+}
+
+.modal_inner input[type=number] {
+    height: 56px;
+    width: 310px;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 9px 30px;
+    padding: 0 10px;
+}
+
+.l_check {
+    display: block;
+    height: 40px;
+}
+
+.l_check input[type=checkbox]{
+    vertical-align: top;
+}
+
+.l_check span {
+    display: inline-block;
+    margin-top: -4px;
+}
+
+.modal_inner button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    background-color: #014282;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+/* /공동구매 신청 모달css */
+/********** faq css ***************/
+.faq_banner {
+    position: relative;
+}
+.faq_banner .faq_heading {
+    position: absolute;
+    text-align: left;
+    width: 1140px;
+    top: 0;
+    left: 13%;
+}
+
+.faq_banner .faq_heading h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.faq_banner .faq_heading p {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #fff;
+}
+.faq_inner {
+    display: none;
+    margin: auto;
+    width: 1140px;
+}
+.faq_tab {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center;
+}
+.faq_tab button {
+    font-weight: 700;
+    font-size: 20px;
+    color: #666;
+    width: 200px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+.faq_tab button.on {
+    border-bottom: 3px solid #ff3600;
+    color: #ff3600;
+}
+/* .faq_tab button:hover {
+    border-bottom: 3px solid #ff3600;
+    color: #ff3600;
+} */
+.faq_accor_top {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.faq_accor_top input[type=text] {
+    width: 176px;
+    height: 48px;
+    border: 2px solid #333;
+    float: left;
+    font-weight: 400;
+    font-size: 10px;
+    color: #999;
+    background-image: url(images/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    background-size: 18px;
+}
+.faq_accor_top p {
+    float: right;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666;
+}
+.faq_accor_top p span {
+    font-weight: 700;
+    color: #333; 
+}
+.faq_accor_top p:nth-child(1):before {
+    content: '|';
+    padding: 0 7px;
+    padding-left: 10px;
+}
+.faq_accor_bottom {
+    width: 1140px;
+    background-color: #fff;
+    z-index: 1;
+    top: 50px;
+    transition: 0.3s;
+}
+.faq_accor_bottom .faq_drop_title {
+    cursor: pointer;
+    padding: 20px;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+}
+.faq_accor_bottom .faq_drop_title i {
+    float: right;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    /* transition: 0.2s; */
+}
+.faq_accor_bottom .faq_drop_content {
+    display: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    padding: 20px 0 20px 40px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.faq_drop_content.active {
+    display: block;
+}
+.faq_accor_bottom .faq_drop_title.active i {
+    transform: rotate(180deg);
+}
+.faq_inner .see_more {
+    margin-top: 50px;
+    margin-bottom: 140px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #014282;
+    background-color: #fff;
+    border: 1px solid #014282;
+    border-radius: 3px;
+    width: 140px;
+    height: 40px;
+    margin-left: 45%;
+    cursor: pointer;
+}
+/********** /faq css ***************/
+/********** notice css ***************/
+.notice_banner {
+    position: relative;
+}
+.notice_banner .notice_heading {
+    position: absolute;
+    text-align: left;
+    width: 1140px;
+    top: 0;
+    left: 13%;
+}
+
+.notice_banner .notice_heading h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.notice_banner .notice_heading p {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #fff;
+}
+.notice_inner {
+    margin: auto;
+    width: 1140px;
+}
+.notice_tab {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center;
+}
+.notice_tab button {
+    font-weight: 700;
+    font-size: 20px;
+    color: #666;
+    width: 200px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    letter-spacing: -0.05em;
+}
+.notice_tab button.on {
+    border-bottom: 3px solid #ff3600;
+    color: #ff3600;
+}
+/* .notice_tab button:hover {
+    border-bottom: 3px solid #ff3600;
+    color: #ff3600;
+} */
+.notice_accor_top {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+/* .notice_accor_top input[type=text] {
+    width: 276px;
+    height: 48px;
+    border: 2px solid #333;
+    float: left;
+    font-weight: 400;
+    font-size: 16px;
+    color: #999;
+    background-image: url(images/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    background-size: 18px;
+    padding: 0 15px;
+} */
+.notice_accor_top p {
+    float: right;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666;
+}
+.notice_accor_top p span {
+    font-weight: 700;
+    color: #333; 
+}
+.notice_accor_top p:nth-child(1):before {
+    content: '|';
+    padding: 0 7px;
+    padding-left: 10px;
+}
+.notice_accor_bottom {
+    width: 1140px;
+    background-color: #fff;
+    z-index: 1;
+    top: 50px;
+    transition: 0.3s;
+}
+.notice_accor_bottom .notice_drop_title {
+    cursor: pointer;
+    padding: 20px;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+}
+.notice_accor_bottom .notice_drop_title span {
+    margin-right: 30px;
+    font-size: 13px;
+    color: #666;
+    position: absolute;
+    right: 40px;
+}
+.notice_accor_bottom .notice_drop_title i {
+    float: right;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    /* transition: 0.2s; */
+}
+.notice_accor_bottom .notice_drop_content {
+    display: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    padding: 20px 0 20px 40px;
+    border-bottom:1px solid #e1e1e1;
+}
+.notice_drop_content.active {
+    display: block;
+}
+.notice_accor_bottom .notice_drop_title.active i {
+    transform: rotate(180deg);
+}
+.notice_inner .see_more {
+    margin-top: 50px;
+    margin-bottom: 140px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #014282;
+    background-color: #fff;
+    border: 1px solid #014282;
+    border-radius: 3px;
+    width: 140px;
+    height: 40px;
+    margin-left: 45%;
+    cursor: pointer;
+}
+/********** /notice css ***************/
+/***************** footer css *************/
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+.footer_inner {
+    width: 1140px;
+    height: 233px;
+    margin: auto;
+    padding-top: 33px;
+}
+
+.footer_left {
+    float: left;
+}
+
+.footer_left h3 {
+    font-weight: 700;
+    font-size: 16px;
+    color: #a5a5a5;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.footer_left span {
+    font-weight: 700;
+    font-size: 26px;
+    color: #00c756;
+    padding-bottom: 20px;
+}
+
+.footer_left p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footer_right {
+    float: right;
+    padding-left: 20px;
+    margin-top: 20px;
+    border-left: 1px solid #555;
+}
+
+.footer_right p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.footer_right a {
+    color: #fff;
+    border-left: 1px solid #fff;
+    padding: 0 7px;
+    height: 3px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer_right a:nth-child(2) {
+    border-left: none;
+}
+
+/* /footer css */

@@ -1,0 +1,55 @@
+/* google web font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Font Awesome 4.7.0 CND */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  line-height: 1.6em;
+  margin: 0;
+  font-size: 15px;
+  background-image: linear-gradient(-45deg, #30cfd0 0%, #330867 100%);
+  height: 100vh;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* hover navigation */
+.gnb {
+  position: absolute;
+  left: 10px;
+  transform: translateY(50%);
+  list-style: none;
+  margin: 0;
+}
+.gnb li:before {
+  content:"\f105";
+  font-family: fontawesome;
+  color: #fff;
+  font-size: 35px;
+  margin-right: 10px;
+  transform: scale (1.5);
+  opacity: 0;
+}
+.gnb li:hover:before{
+  margin-right: 10px;
+  opacity: 1;
+  color: #fff; 
+}
+.gnb:hover li {
+  opacity: 0.3;
+}
+.gnb li:hover {
+  opacity: 1;
+}
+.gnb li a{
+  color: #fff;
+  font-size: 35px;
+  transition: 0.5s;
+  line-height: 2em;
+}

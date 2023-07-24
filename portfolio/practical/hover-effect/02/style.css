@@ -1,0 +1,107 @@
+/* google web font */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+/* Font Awesome 4.7.0 CND */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+	font-family: 'Mukta', sans-serif;
+	font-size: 15px;
+	color: #fff;
+	line-height: 1.6em;
+	margin: 0;
+}
+a {
+	text-decoration: none
+	color: #fff; 
+}
+
+.content {
+	border: 1px solid red;
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 40px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	background: url('jordan.jpg') no-repeat;
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	background-size: cover;
+	text-align: center;
+	padding-top: 80px;
+	text-transform: capitalize;
+}
+.content-inner {
+	margin-top: 100px;
+	
+}
+.item {
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 5px;
+	width: 32%;
+	height: 165px;
+	margin: 2px;
+	padding-top: 8px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	display: inline-block;
+}
+.item:hover {
+	background-color: rgba(255,255,255,0.3);
+	color: #000;
+}
+.item:hover span {
+	color: red;
+}
+.item h2 {
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+.item em {
+	font-size: 15px;
+}
+.item span {
+	font-size: 13px;
+}
+.btn-new {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	padding: 7px;
+	font-weight: bold;
+}
+.btn-new:hover {
+	color: red;
+	border: 1px solid red;
+	
+}
+.btn-testby {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 5px;
+	font-weight: bold;
+}
+.btn-shop {
+	position: absolute;
+	bottom: 100px;
+	right: 270px;
+	padding: 5px;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 7px 25px;
+	font-weight: bold;
+	background-color: #000;
+	margin-top: 70px;
+	display: inline-block;
+	
+}
+.btn-shop:hover {
+	background-color: rgba(255,255,255,0.3);
+	color: #000;
+}

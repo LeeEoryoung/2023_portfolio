@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANA App</title>
+    <!-- <link rel="shortcut icon" href="../static/images/common/favicon.ico"> -->
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+</head>
+
+<body>
+
+    <div class="wrap fullPopup">
+        <div class="container flex column fullHeight sb bg3">
+            <div class="popupHeader">
+                <div class="fullPopup--title">
+                    <h2 class="hTitle ty1">
+                        추가할 고객을<br>
+                        선택해 주세요
+                    </h2>
+                </div>
+            </div>
+            <div class="scrollWrap inCont">
+                <div class="msgList select_wrap">
+                    <div class="selectall" onchange="customerAllChk(this)">
+                        <label for="allCheck">
+                            <input type="checkbox" id="allCheck"><em></em><span>전체 선택하기</span>
+                        </label>
+                    </div>
+                    <div class="selectitem">
+                        <label>
+                            <input type="checkbox" name='chk'><em></em><span>신선한</span><strong>010-2234-2938</strong>
+                        </label>
+                    </div>
+                    <div class="selectitem">
+                        <label>
+                            <input type="checkbox" name='chk'><em></em><span>권수련</span><strong>010-8002-6620</strong>
+                        </label>
+                    </div>
+                    <div class="selectitem">
+                        <label>
+                            <input type="checkbox" name='chk'><em></em><span>가단태</span><strong>010-3231-1123</strong>
+                        </label>
+                    </div>
+                    <div class="selectitem">
+                        <label>
+                            <input type="checkbox" name='chk'><em></em><span>나석경</span><strong>010-2322-4122</strong>
+                        </label>
+                    </div>
+                    <div class="selectitem">
+                        <label>
+                            <input type="checkbox" name='chk'><em></em><span>신진성</span><strong>010-4687-4485</strong>
+                        </label>
+                    </div>
+                    <div class="selectitem">
+                        <label>
+                            <input type="checkbox" name='chk'><em></em><span>최승우</span><strong>010-3342-1124</strong>
+                        </label>
+                    </div>
+                    <div class="selectitem">
+                        <label>
+                            <input type="checkbox" name='chk'><em></em><span>이승진</span><strong>010-4342-9855</strong>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomContent">
+                <div class="inCont" >
+                    <a href="#" class="btn ty10" name="chk"><span class="text" >추가하기</span></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="closeBtn etc"><span>닫기</span></a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="../img/logo.png" />
+    <link rel="apple-touch-icon" href="../img/logo.png" />
+    <meta name="robots" content="ALL" />
+    <title>MAHA proj.</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+    <link rel="stylesheet" href="../css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="../css/right.solution.css" />
+    <!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+    <!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+    <script src="../js/jquery.min.js?v=3.6.0"></script>
+    <script src="../js/jquery.ui.js"></script>
+    <script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+    <script src="../js/jquery.form.min.js"></script>
+    <script src="../js/jquery.fileDownload.js"></script>
+    <script src="../js/right.solution.js"></script>
+    <script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+    <script src="../js/duallistbox.js"></script>
+</head>
+
+<body>
+    <section class="container_sec">
+
+        <script type="text/javascript">
+            function open403Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/forbidden'
+                });
+            }
+
+            function open404Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/404'
+                });
+            }
+
+            function open500Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/internalError'
+                });
+            }
+        </script>
+        <section class="left_wing_sec">
+            <header class="left_wing_header">
+                <div class="logo_wrap">
+                    <h1><a href="/"><strong style="color:#ff4513;">MA</strong><strong
+                                style="color:#009792;">HA</strong></a></h1>
+                </div>
+            </header>
+            <section class="left_wing_body">
+                <article>
+                    <nav class="left_wing_nav">
+                        <ul>
+                            <li><a href="/"><i class="fa-fw fa fa-home"></i> 첫화면</a></li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계정 관리</a>
+                                <ul class="visible">
+                                    <li><a href="/account/employee/list"><i class="fa-fw fa fa-angle-right"></i>직원
+                                            관리</a></li>
+                                    <li><a href="/account/authority/list"><i class="fa-fw fa fa-angle-right"></i>권한
+                                            관리</a></li>
+                                    <li><a href="/account/menu"><i class="fa-fw fa fa-angle-right"></i>메뉴 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>고객관리</a>
+                                <ul class="visible">
+                                    <li><a href="/customer/customer/list"><i
+                                                class="fa-fw fa fa-angle-right"></i>고객관리</a></li>
+                                    <li><a href="/customer/analysis"><i class="fa-fw fa fa-angle-right"></i>분석 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계약관리</a>
+                                <ul class="visible">
+                                    <li><a href="/contract/contract/list"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            리스트</a></li>
+                                    <li><a href="/contract/contract/info"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            정보관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>상품관리</a>
+                                <ul class="visible">
+                                    <li><a href="/insurance/insurancelist"><i
+                                                class="fa-fw fa fa-angle-right"></i>상품리스트</a></li>
+                                    <li><a href="/insurance/uwprocess"><i class="fa-fw fa fa-angle-right"></i>U/W
+                                            PROCESS</a></li>
+                                    <li><a href="/insurance/coverage"><i class="fa-fw fa fa-angle-right"></i>담보 관리</a>
+                                    </li>
+                                    <li><a href="/insurance/score"><i class="fa-fw fa fa-angle-right"></i>SCORE관리</a>
+                                    </li>
+                                    <li><a href="/insurance/fee"><i class="fa-fw fa fa-angle-right"></i>수수료 관리</a></li>
+                                    <li><a href="/insurance/insuranceamount"><i class="fa-fw fa fa-angle-right"></i>보험료
+                                            관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>통계</a>
+                                <ul class="visible">
+                                    <li><a href="/test/list"><i class="fa-fw fa fa-angle-right"></i>설계사 실적 통계</a></li>
+                                    <li><a href="/test/edit"><i class="fa-fw fa fa-angle-right"></i> 매출 통계</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>로그관리</a>
+                                <ul class="visible">
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>직원 로그 관리</a>
+                                    </li>
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>고객 로그 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <hr class="hidden_box clearfix" />
+                    </nav>
+                </article>
+            </section>
+        </section>
+        <section class="right_wing_sec">
+            <aside class="right_white_bar">
+                <div class="left">
+                    <strong>tester</strong> 님, 환영합니다!
+                </div>
+                <div class="right">
+                    <button type="button" class="btns normal small" onclick="location.href='/logout'"><em
+                            class="fa-fw fas fa-running"></em>로그아웃</button>
+                    <button type="button" class="btns normal small" onclick=""><em
+                            class="fa-fw far fa-user"></em>마이페이지</button>
+                </div>
+            </aside>
+            <script type="text/javascript">
+                function movePage(page) {
+                    // GET 방식
+                    var frm = document.frmSearch;
+                    frm.page.value = page;
+                    frm.submit();
+                }
+
+                function openLayer(id) {
+                    $.fancybox({
+                        width: 800,
+                        type: 'iframe',
+                        href: '/account/employee/edit?employeeId=' + id
+                    });
+                }
+
+                function excelDownload() {
+                    $.fileDownload("/account/employee/excelDownload.act", {
+                        httpMethod: "post",
+                        prepareCallback: function (url) {
+                            call_layer_loader("body", "처리 중입니다.");
+                        },
+                        successCallback: function (url) {
+                            remove_layer_loader("body");
+                        },
+                        failCallback: function (responseHtml, url) {
+                            remove_layer_loader("body");
+                        }
+                    });
+                }
+            </script>
+            <section class="right_wing_contents" id="right_wing_contents">
+                <!-- //LIST -->
+                <h3>공통인수 지침 관리</h3>
+                <section class="box_wrap">
+                    <section class="sec_list_group">
+                        <section class="box_wrap search">
+                            <article class="art_search">
+                                <form id="frmSearch" name="frmSearch" onSubmit="movePage(1); return false;"
+                                    action="/account/employee/list" method="get">
+                                    <input id="page" name="page" type="hidden" value="1" />
+                                    <input id="recordSize" name="recordSize" type="hidden" value="15" />
+                                    <fieldset>
+                                        <legend class="hidden_box">공통인수 지침 관리</legend>
+                                        <p class="search_line">
+                                            <span class="line_inner">
+                                                <select id="authority" name="authority" style="margin-right: 7px;">
+                                                    <option value="">회사명</option>
+                                                    <option value="1">한화손해보험</option>
+                                                    <option value="2">삼성손해보험</option>
+                                                </select>
+                                                <select id="authority" name="authority" style="margin-right: 7px;">
+                                                    <option value="">분류 코드</option>
+                                                    <option value="1">002</option>
+                                                    <option value="2">003</option>
+                                                    <option value="3">004</option>
+                                                    <option value="4">005</option>
+                                                </select>
+                                            </span>
+                                        </p>
+                                    </fieldset>
+                                    <aside class="btn_search_aside">
+                                        <button type="submit" class="btns green small"><i class="fa fa-search"></i>
+                                            조회</button>
+                                    </aside>
+                                </form>
+                            </article>
+                        </section>
+                        <section class=" list">
+                            <div class="top_short_tb">
+                                <article class="art_reload_top">
+                                    <div>
+                                        <h1 class="top_title">인수지침정보</h1>
+                                        <div class="top_btns">
+                                            <button>추가</button>
+                                            <button>삭제</button>
+                                            <button>업로드</button>
+                                            <button>다운로드</button>
+                                    </div>
+                                    <div class="top_left">
+                                        <div class="art_reload_topleft_box">
+                                            <!-- 어령 -->
+                                            <table class="tbl_sort_list list top_tb">
+                                                <caption class="hidden_box">목록</caption>
+                                                <colgroup>
+                                                    <col width="10" />
+                                                    <col width="30" />
+                                                    <col width="70" />
+                                                    <col width="50" />
+                                                    <col width="50" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"></th>
+                                                        <th scope="col">분류코드</th>
+                                                        <th scope="col">분류명</th>
+                                                        <th scope="col">적용시작일자</th>
+                                                        <th scope="col">적용종료일자</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr onclick="openLayer('1')">
+                                                        <td><input type="checkbox"></td>
+                                                        <td>002</td>
+                                                        <td>하나손보 방문검진대상자</td>
+                                                        <td>20211001</td>
+                                                        <td>29991231</td>
+                                                    </tr>
+                                                    <tr onclick="openLayer('2')">
+                                                        <td><input type="checkbox"></td>
+                                                        <td>003</td>
+                                                        <td>하나손보 건강검진</td>
+                                                        <td>20211001</td>
+                                                        <td>29991231</td>
+                                                    </tr>
+                                                    <tr onclick="openLayer('3')">
+                                                        <td><input type="checkbox"></td>
+                                                        <td>002</td>
+                                                        <td>하나손보 재정심사</td>
+                                                        <td>20211001</td>
+                                                        <td>29991231</td>
+                                                    </tr>
+                                                    <tr onclick="openLayer('4')">
+                                                        <td><input type="checkbox"></td>
+                                                        <td>006</td>
+                                                        <td>하나손보 유병력자</td>
+                                                        <td>20211001</td>
+                                                        <td>29991231</td>
+                                                    </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </article>
+                                <article class="art_reload_topright">
+                                    <h1  class="top_title">인수지침대상정보</h1>
+                                    <div class="top_btns">
+                                        <button>추가</button>
+                                        <button>삭제</button>
+                                        <button>업로드</button>
+                                        <button>다운로드</button>
+                                    </div>
+                                    <div class="top_right">
+                                        <div class="art_reload_topright_box">
+                                            <!-- 어령 -->
+                                            <table class="tbl_sort_list list top_tb x-scroll">
+                                                <caption class="hidden_box">목록</caption>
+                                                <colgroup>
+                                                    <!-- <col width="10" />
+                                                    <col width="10" />
+                                                    <col width="20" />
+                                                    <col width="70" />
+                                                    <col width="30" />
+                                                    <col width="20" />
+                                                    <col width="20" />
+                                                    <col width="20" />
+                                                    <col width="20" />
+                                                    <col width="20" />
+                                                    <col width="20" />
+                                                    <col width="20" /> -->
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"></th>
+                                                        <th scope="col">분류코드</th>
+                                                        <th scope="col">지침서열</th>
+                                                        <th scope="col">심사코드</th>
+                                                        <th scope="col">심사명</th>
+                                                        <th scope="col">가능/불가</th>
+                                                        <th scope="col">심사권한</th>
+                                                        <th scope="col">목적물유형</th>
+                                                        <th scope="col">기준값</th>
+                                                        <th scope="col">연산자</th>
+                                                        <th scope="col">대상값</th>
+                                                        <th scope="col">적용시작일자</th>
+                                                        <th scope="col">적용종료일자</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr onclick="openLayer('1')">
+                                                        <td><input type="checkbox"></td>
+                                                        <td>002</td>
+                                                        <td>1</td>
+                                                        <td>NH00226</td>
+                                                        <td>
+                                                            [하나]암+2대 진단비 51~60세 이상 7천 초과 방문검진 대상
+                                                        </td>
+                                                        <td>불가</td>
+                                                        <td>추천불가</td>
+                                                        <td>주피보험자</td>
+                                                        <td></td>
+                                                        <td>></td>
+                                                        <td>70000000</td>
+                                                        <td>20211001</td>
+                                                        <td>29991231</td>
+                                                    </tr>
+                                                    <tr onclick="openLayer('2')">
+                                                        <td><input type="checkbox"></td>
+                                                        <td>002</td>
+                                                        <td>2</td>
+                                                        <td>NH00227</td>
+                                                        <td>
+                                                            [하나]암+2대 진단비 61세 이상 5천 초과 방문검진 대상
+                                                        </td>
+                                                        <td>불가</td>
+                                                        <td>추천불가</td>
+                                                        <td>주피보험자</td>
+                                                        <td></td>
+                                                        <td>></td>
+                                                        <td>50000000</td>
+                                                        <td>20211001</td>
+                                                        <td>29991231</td>
+                                                    </tr>
+                                                    <tr onclick="openLayer('3')">
+                                                        <td><input type="checkbox"></td>
+                                                        <td>002</td>
+                                                        <td>3</td>
+                                                        <td>NH00228</td>
+                                                        <td>
+                                                            [하나]질병사망 51세 이상 5천 초과 방문검진 대상
+                                                        </td>
+                                                        <td>불가</td>
+                                                        <td>추천불가</td>
+                                                        <td>주피보험자</td>
+                                                        <td></td>
+                                                        <td>></td>
+                                                        <td>50000000</td>
+                                                        <td>20211001</td>
+                                                        <td>29991231</td>
+                                                    </tr>
+                                                    <tr onclick="openLayer('4')">
+                                                        <td><input type="checkbox"></td>
+                                                        <td>002</td>
+                                                        <td>4</td>
+                                                        <td>NH00229</td>
+                                                        <td>
+                                                            [하나]과거상병자 방문검진 대상
+                                                        </td>
+                                                        <td>불가</td>
+                                                        <td>추천불가</td>
+                                                        <td>주피보험자</td>
+                                                        <td></td>
+                                                        <td>></td>
+                                                        <td></td>
+                                                        <td>20211001</td>
+                                                        <td>29991231</td>
+                                                    </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <h1 class="top_title">인수지침기준정보</h1>
+                            <div class="top_btns">
+                                <button>추가</button>
+                                <button>삭제</button>
+                                <button>업로드</button>
+                                <button>다운로드</button>
+                            </div>
+                            <article class="art_reload">
+                                <div class="art_reload_bt01_box">
+                                    <!-- 어령 -->
+                                    <table class="tbl_sort_list list">
+                                        <caption class="hidden_box">목록</caption>
+                                        <colgroup>
+                                            <!-- <col width="10" />
+                                            <col width="30" />
+                                            <col width="30" />
+                                            <col width="30" />
+                                            <col width="30" />
+                                            <col width="20" />
+                                            <col width="50" />
+                                            <col width="20" />
+                                            <col width="20" />
+                                            <col width="30" />
+                                            <col width="60" />
+                                        </colgroup> -->
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">분류<br>코드</th>
+                                                <th scope="col">지침<br>서열</th>
+                                                <th scope="col">기준정보<br>서열</th>
+                                                <th scope="col">담보/항목<br>구분</th>
+                                                <th scope="col">담보/항목<br>구분상세</th>
+                                                <th scope="col">담보/항목명</th>
+                                                <th scope="col">연산자구분</th>
+                                                <th scope="col">연산자</th>
+                                                <th scope="col">기준값</th>
+                                                <th scope="col">논리연산자</th>
+                                                <th scope="col">적용시작일자</th>
+                                                <th scope="col">적용종료일자</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr onclick="openLayer('1')">
+                                                <td><input type="checkbox"></td>
+                                                <td>002</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>항목</td>
+                                                <td>고객정보</td>
+                                                <td>보험연령</td>
+                                                <td>비교</td>
+                                                <td>>=</td>
+                                                <td>20</td>
+                                                <td>AND</td>
+                                                <td>20211001</td>
+                                                <td>29991231</td>
+                                            </tr>
+                                            <tr onclick="openLayer('2')">
+                                                <td><input type="checkbox"></td>
+                                                <td>002</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>항목</td>
+                                                <td>고객정보</td>
+                                                <td>보험연령</td>
+                                                <td>비교</td>
+                                                <td><=</td>
+                                                <td>99</td>
+                                                <td>AND</td>
+                                                <td>20211001</td>
+                                                <td>29991231</td>
+                                            </tr>
+                                            <tr onclick="openLayer('3')">
+                                                <td><input type="checkbox"></td>
+                                                <td>002</td>
+                                                <td>2</td>
+                                                <td>1</td>
+                                                <td>항목</td>
+                                                <td>고객정보</td>
+                                                <td>보험연령</td>
+                                                <td>비교</td>
+                                                <td>>=</td>
+                                                <td>20</td>
+                                                <td>AND</td>
+                                                <td>20211001</td>
+                                                <td>29991231</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </article>
+                            <h1 class="top_title">인수지침대상정보</h1>
+                            <div class="top_btns">
+                                <button>추가</button>
+                                <button>삭제</button>
+                                <button>업로드</button>
+                                <button>다운로드</button>
+                            </div>
+                            <article class="art_reload">
+                                <div class="art_reload_bt02_box">
+                                    <!-- 어령 -->
+                                    <table class="tbl_sort_list list">
+                                        <caption class="hidden_box">목록</caption>
+                                        <colgroup>
+                                            <!-- <col width="10" />
+                                            <col width="30" />
+                                            <col width="30" />
+                                            <col width="30" />
+                                            <col width="30" />
+                                            <col width="20" />
+                                            <col width="50" />
+                                            <col width="20" />
+                                            <col width="20" />
+                                            <col width="30" />
+                                            <col width="30" />
+                                            <col width="60" /> -->
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">분류<br>코드</th>
+                                                <th scope="col">지침<br>서열</th>
+                                                <th scope="col">대상정보<br>서열</th>
+                                                <th scope="col">목적물유형</th>
+                                                <th scope="col">담보/항목<br>구분</th>
+                                                <th scope="col">담보/항목<br>구분상세</th>
+                                                <th scope="col">담보/항목명</th>
+                                                <th scope="col">연산자구분</th>
+                                                <th scope="col">연산자</th>
+                                                <th scope="col">기준값</th>
+                                                <th scope="col">논리연산자</th>
+                                                <th scope="col">적용시작일자</th>
+                                                <th scope="col">적용종료일자</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr onclick="openLayer('1')">
+                                                <td><input type="checkbox"></td>
+                                                <td>002</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>주피보험자</td>
+                                                <td>담보</td>
+                                                <td>ICIS담보</td>
+                                                <td>암관련진단비</td>
+                                                <td>사칙</td>
+                                                <td>*</td>
+                                                <td>AND</td>
+                                                <td>1</td>
+                                                <td>20211001</td>
+                                                <td>29991231</td>
+                                            </tr>
+                                            <tr onclick="openLayer('2')">
+                                                <td><input type="checkbox"></td>
+                                                <td>002</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>주피보험자</td>
+                                                <td>담보</td>
+                                                <td>ICIS담보</td>
+                                                <td>뇌혈관질환관련진단비</td>
+                                                <td>사칙</td>
+                                                <td>*</td>
+                                                <td>1</td>
+                                                <td>AND</td>
+                                                <td>20211001</td>
+                                                <td>29991231</td>
+                                            </tr>
+                                            <tr onclick="openLayer('3')">
+                                                <td><input type="checkbox"></td>
+                                                <td>002</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>주피보험자</td>
+                                                <td>담보</td>
+                                                <td>ICIS담보</td>
+                                                <td>심장질환관련진단비</td>
+                                                <td>사칙</td>
+                                                <td>*</td>
+                                                <td>1</td>
+                                                <td>AND</td>
+                                                <td>20211001</td>
+                                                <td>29991231</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </article>
+                            <!-- <aside class='pagination'><button type='button' class='btn_arrow first disabled'
+                                    title='첫 페이지'><i class='fa fa-angle-double-left'></i></button><button type='button'
+                                    class='btn_arrow prev disabled' title='이전 페이지'><i
+                                        class='fa fa-angle-left'></i></button><button type='button' class='page active'
+                                    onclick='movePage(1)'><span>1</span></button><button type='button'
+                                    onclick='movePage(2)'><span>2</span></button><button type='button'
+                                    onclick='movePage(3)'><span>3</span></button><button type='button'
+                                    onclick='movePage(4)'><span>4</span></button><button type='button'
+                                    onclick='movePage(5)'><span>5</span></button><button type='button'
+                                    class='btn_arrow next disabled' title='다음 페이지'><i
+                                        class='fa fa-angle-right'></i></button><button type='button'
+                                    class='btn_arrow last disabled' title='마지막 페이지'><i
+                                        class='fa fa-angle-double-right'></i></button></aside> -->
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- LIST// -->
+    </section>
+
+    </section>
+    </section>
+
+</body>
+
+</html>

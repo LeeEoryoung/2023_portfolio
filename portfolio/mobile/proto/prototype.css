@@ -1,0 +1,61 @@
+/* xeicon */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  font-size: 7em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.front {
+  background: url(ui.png) no-repeat center center;
+  background-size: 80%;
+  z-index: 1;
+}
+.back {
+  background: url(wireframe.png) no-repeat center center;
+  background-size: 80%;
+
+}
+.open-navi,
+.close-navi {
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.open-navi {
+  left: 0;
+}
+.open-navi.active {
+  left: -40px;
+}
+.close-navi {
+  right: -40px;
+}
+.close-navi.active {
+  right: 0;
+}

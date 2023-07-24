@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="../img/logo.png" />
+    <link rel="apple-touch-icon" href="../img/logo.png" />
+    <meta name="robots" content="ALL" />
+    <title>MAHA proj.</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+    <link rel="stylesheet" href="../css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="../css/right.solution.css" />
+    <!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+    <!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+    <script src="../js/jquery.min.js?v=3.6.0"></script>
+    <script src="../js/jquery.ui.js"></script>
+    <script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+    <script src="../js/jquery.form.min.js"></script>
+    <script src="../js/jquery.fileDownload.js"></script>
+    <script src="../js/right.solution.js"></script>
+    <script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+    <script src="../js/duallistbox.js"></script>
+</head>
+<body>
+    <section class="container_sec">
+
+        <script type="text/javascript">
+            function open403Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/forbidden'
+                });
+            }
+
+            function open404Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/404'
+                });
+            }
+
+            function open500Layer() {
+                $.fancybox({
+                    width: 800,
+                    type: 'iframe',
+                    href: '/test/internalError'
+                });
+            }
+        </script>
+        <section class="left_wing_sec">
+            <header class="left_wing_header">
+                <div class="logo_wrap">
+                    <h1><a href="/"><strong style="color:#ff4513;">MA</strong><strong
+                                style="color:#009792;">HA</strong></a></h1>
+                </div>
+            </header>
+            <section class="left_wing_body">
+                <article>
+                    <nav class="left_wing_nav">
+                        <ul>
+                            <li><a href="/"><i class="fa-fw fa fa-home"></i> 첫화면</a></li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계정 관리</a>
+                                <ul class="visible">
+                                    <li><a href="/account/employee/list"><i class="fa-fw fa fa-angle-right"></i>직원
+                                            관리</a></li>
+                                    <li><a href="/account/authority/list"><i class="fa-fw fa fa-angle-right"></i>권한
+                                            관리</a></li>
+                                    <li><a href="/account/menu"><i class="fa-fw fa fa-angle-right"></i>메뉴 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>고객관리</a>
+                                <ul class="visible">
+                                    <li><a href="/customer/customer/list"><i
+                                                class="fa-fw fa fa-angle-right"></i>고객관리</a></li>
+                                    <li><a href="/customer/analysis"><i class="fa-fw fa fa-angle-right"></i>분석 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>계약관리</a>
+                                <ul class="visible">
+                                    <li><a href="/contract/contract/list"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            리스트</a></li>
+                                    <li><a href="/contract/contract/info"><i class="fa-fw fa fa-angle-right"></i>계약
+                                            정보관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>상품관리</a>
+                                <ul class="visible">
+                                    <li><a href="/insurance/insurancelist"><i
+                                                class="fa-fw fa fa-angle-right"></i>상품리스트</a></li>
+                                    <li><a href="/insurance/uwprocess"><i class="fa-fw fa fa-angle-right"></i>U/W
+                                            PROCESS</a></li>
+                                    <li><a href="/insurance/coverage"><i class="fa-fw fa fa-angle-right"></i>담보 관리</a>
+                                    </li>
+                                    <li><a href="/insurance/score"><i class="fa-fw fa fa-angle-right"></i>SCORE관리</a>
+                                    </li>
+                                    <li><a href="/insurance/fee"><i class="fa-fw fa fa-angle-right"></i>수수료 관리</a></li>
+                                    <li><a href="/insurance/insuranceamount"><i class="fa-fw fa fa-angle-right"></i>보험료
+                                            관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>통계</a>
+                                <ul class="visible">
+                                    <li><a href="/test/list"><i class="fa-fw fa fa-angle-right"></i>설계사 실적 통계</a></li>
+                                    <li><a href="/test/edit"><i class="fa-fw fa fa-angle-right"></i> 매출 통계</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#folder"><i class="fa-fw fa fa-user-secret"></i>로그관리</a>
+                                <ul class="visible">
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>직원 로그 관리</a>
+                                    </li>
+                                    <li><a href="/test/forbidden"><i class="fa-fw fa fa-angle-right"></i>고객 로그 관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <hr class="hidden_box clearfix" />
+                    </nav>
+                </article>
+            </section>
+        </section>
+        <section class="right_wing_sec">
+            <aside class="right_white_bar">
+                <div class="left">
+                    <strong>tester</strong> 님, 환영합니다!
+                </div>
+                <div class="right">
+                    <button type="button" class="btns normal small" onclick="location.href='/logout'"><em
+                            class="fa-fw fas fa-running"></em>로그아웃</button>
+                    <button type="button" class="btns normal small" onclick=""><em
+                            class="fa-fw far fa-user"></em>마이페이지</button>
+                </div>
+            </aside>
+            <script type="text/javascript">
+                function movePage(page) {
+                    // GET 방식
+                    var frm = document.frmSearch;
+                    frm.page.value = page;
+                    frm.submit();
+                }
+
+                function openLayer(id) {
+                    $.fancybox({
+                        width: 800,
+                        type: 'iframe',
+                        href: '/account/employee/edit?employeeId=' + id
+                    });
+                }
+
+                function excelDownload() {
+                    $.fileDownload("/account/employee/excelDownload.act", {
+                        httpMethod: "post",
+                        prepareCallback: function (url) {
+                            call_layer_loader("body", "처리 중입니다.");
+                        },
+                        successCallback: function (url) {
+                            remove_layer_loader("body");
+                        },
+                        failCallback: function (responseHtml, url) {
+                            remove_layer_loader("body");
+                        }
+                    });
+                }
+            </script>
+            <section class="right_wing_contents" id="right_wing_contents">
+                <!-- //LIST -->
+                <h3>인수 지침 처리 결과 관리</h3>
+                <section class="box_wrap">
+                    <section class="sec_list_group">
+                        <section class="box_wrap search">
+                            <article class="art_search">
+                                <form id="frmSearch" name="frmSearch" onSubmit="movePage(1); return false;"
+                                    action="/account/employee/list" method="get">
+                                    <input id="page" name="page" type="hidden" value="1" />
+                                    <input id="recordSize" name="recordSize" type="hidden" value="15" />
+                                    <fieldset>
+                                        <legend class="hidden_box">인수 지침 처리 결과 관리화면</legend>
+                                        <p class="search_line">
+                                            <em>
+                                                <span class="line_inner">
+                                                    <select id="authority" name="authority" style="margin-right: 7px;">
+                                                        <option value="">회사명</option>
+                                                        <option value="1">한화손해보험</option>
+                                                        <option value="2">삼성손해보험</option>
+                                                    </select>
+                                                </span>
+                                                <span class="line_inner">
+                                                    <select id="authority" name="authority" style="margin-right: 7px;">
+                                                        <option value="">UW구분</option>
+                                                        <option value="1">공통</option>
+                                                        <option value="2">상품</option>
+                                                    </select>
+                                                </span>
+                                                <span class="line_inner">
+                                                    <select id="authority" name="authority" style="margin-right: 7px;">
+                                                        <option value="">상품 코드</option>
+                                                        <option value="1">2330</option>
+                                                        <option value="2">2331</option>
+                                                        <option value="3">2332</option>
+                                                        <option value="4">2333</option>
+                                                    </select>
+                                                </span>
+                                                <span class="line_inner">
+                                                    <select id="authority" name="authority" style="margin-right: 7px;">
+                                                        <option value="">플랜 코드</option>
+                                                        <option value="1">10</option>
+                                                        <option value="2">11</option>
+                                                        <option value="3">12</option>
+                                                        <option value="4">13</option>
+                                                    </select>
+                                                </span>
+                                                <span class="line_inner">
+                                                    <select id="authority" name="authority" style="margin-right: 7px;">
+                                                        <option value="">분류 코드</option>
+                                                        <option value="1">001</option>
+                                                        <option value="2">002</option>
+                                                        <option value="3">003</option>
+                                                        <option value="4">004</option>
+                                                    </select>
+                                                </span>
+                                                <span class="line_inner">
+                                                    <select id="authority" name="authority" style="margin-right: 7px;">
+                                                        <option value="">판정결과</option>
+                                                        <option value="1">통과</option>
+                                                        <option value="2">위배</option>
+                                                    </select>
+                                                </span>
+                                            </em>
+                                            <!-- 22.02.11 [start] 검색란 label 특약코드명 → 고객명으로 변경 -->
+                                            <em>
+                                                <span class="line_inner">
+                                                    <label>
+                                                        고객명
+                                                        <span>
+                                                            <input id="searchKeyword" name="searchKeyword"
+                                                                style="width: 150px; margin-left: 8px;" placeholder="검색"
+                                                                type="text" value="" maxlength="20" />
+                                                        </span>
+                                                    </label>
+                                                </span>
+                                            </em>
+                                            <!-- 22.02.11 [end] 검색란 label 특약코드명 → 고객명으로 변경 -->
+                                        </p>
+                                    </fieldset>
+                                    <aside class="btn_search_aside">
+                                        <button type="submit" class="btns green small"><i class="fa fa-search"></i>
+                                            조회</button>
+                                    </aside>
+                                </form>
+                            </article>
+                        </section>
+                        <section class=" list">
+                            <article class="art_reload_top_wrap">
+                                <div class="art_reload_top_box"> <!-- 어령 -->
+                                    <table class="tbl_sort_list list top_tb">
+                                        <caption class="hidden_box">목록</caption>
+                                        <colgroup>
+                                            <col width="20" />
+                                            <col width="20" />
+                                            <col width="20" />
+                                            <col width="20" />
+                                            <col width="20" />
+                                            <col width="20" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">고객ID</th>
+                                                <th scope="col">고객명</th>
+                                                <th scope="col">작업이력순서</th>
+                                                <th scope="col">작업시작일시</th>
+                                                <th scope="col">작업종료일시</th>
+                                                <th scope="col">최신여부</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr onclick="openLayer('1')">
+                                                <td>999999</td>
+                                                <td>홍길동</td>
+                                                <td>3</td>
+                                                <td>20211101 10:01</td>
+                                                <td>20211101 10:10</td>
+                                                <td>Y</td>
+                                            </tr>
+                                            <tr onclick="openLayer('2')">
+                                                <td>999999</td>
+                                                <td>홍길동</td>
+                                                <td>2</td>
+                                                <td>20211101 9:01</td>
+                                                <td>20211101 9:10</td>
+                                                <td>N</td>
+                                            </tr>
+                                            <tr onclick="openLayer('3')">
+                                                <td>999999</td>
+                                                <td>홍길동</td>
+                                                <td>1</td>
+                                                <td>20211101 8:01</td>
+                                                <td>20211101 8:10</td>
+                                                <td>N</td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </article>
+                            <!-- 22.02.15 [start] style 삽입 -->
+                            <article class="art_reload" style="width: 100%;">
+                            <!-- 22.02.15 [end] style 삽입 -->
+                            <!-- 22.02.15 [start] style 삽입 및 class명 변경 -->
+                                <div class="result_bt_box" style="width: 170%;">
+                            <!-- 22.02.15 [end] style 삽입 및 class명 변경 -->
+                                <!-- 어령 -->
+                                    <table class="tbl_sort_list list x-scroll">
+                                        <caption class="hidden_box">목록</caption>
+                                        <colgroup>
+                                            <!-- <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" />
+                                            <col width="auto" /> -->
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">고객ID</th>
+                                                <th scope="col">고객명</th>
+                                                <th scope="col">작업<br>이력순서</th>
+                                                <th scope="col">UW구분</th>
+                                                <th scope="col">회사코드</th>
+                                                <th scope="col">회사명</th>
+                                                <th scope="col">상품코드</th>
+                                                <th scope="col">상품명</th>
+                                                <th scope="col">플랜<br>코드</th>
+                                                <th scope="col">플랜명</th>
+                                                <th scope="col">분류코드</th>
+                                                <th scope="col">분류명</th>
+                                                <th scope="col">지침서열</th>
+                                                <th scope="col">사칙연산<br>포함구분</th>
+                                                <th scope="col">기준대상<br>구분</th>
+                                                <th scope="col">가능/불가</th>
+                                                <th scope="col">목적물<br>유형</th>
+                                                <th scope="col">항목명조합</th>
+                                                <th scope="col">처리<br>기준값</th>
+                                                <th scope="col">처리<br>대상값</th>
+                                                <th scope="col">연산자</th>
+                                                <th scope="col">결과식</th>
+                                                <th scope="col">심사권한</th>
+                                                <th scope="col">판정<br>결과</th>
+                                                <th scope="col">위배사유</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>999999</td>
+                                                <td>홍길동</td>
+                                                <td>3</td>
+                                                <td>공통</td>
+                                                <td>N17</td>
+                                                <td>하나손해보험</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>002</td>
+                                                <td>하나손보 방문검진대상자</td>
+                                                <td>1</td>
+                                                <td>미포함</td>
+                                                <td>기준</td>
+                                                <td>불가</td>
+                                                <td>주피보험자</td>
+                                                <td>보험연령</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    '26' >= '20' AND '26' <= '99' </td> <td>추천불가</td>
+                                                <td>통과</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr onclick="openLayer('2')">
+                                                <td>999999</td>
+                                                <td>홍길동</td>
+                                                <td>3</td>
+                                                <td>공통</td>
+                                                <td>N17</td>
+                                                <td>하나손해보험</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>002</td>
+                                                <td>하나손보 방문검진대상자</td>
+                                                <td>1</td>
+                                                <td>대상</td>
+                                                <td>대상</td>
+                                                <td>불가</td>
+                                                <td>주피보험자</td>
+                                                <td>
+                                                    뇌혈관질환관련진단비,심장질환관련진단비, 암관련진단비
+                                                </td>
+                                                <td></td>
+                                                <td>70000000</td>
+                                                <td> > </td>
+                                                <td>
+                                                    15000000*1 +50000000*1 +5500000*1 > 70000000
+                                                </td>
+                                                <td>추천불가</td>
+                                                <td>위배</td>
+                                                <td>
+                                                    15000000*1 +50000000*1 +5500000*1 > 70000000
+                                                </td>
+                                            </tr>
+                                            <tr onclick="openLayer('3')">
+                                                <td>999999</td>
+                                                <td>홍길동</td>
+                                                <td>3</td>
+                                                <td>공통</td>
+                                                <td>N17</td>
+                                                <td>하나손해보험</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>003</td>
+                                                <td>하나손보건강검진</td>
+                                                <td>1</td>
+                                                <td>미포함</td>
+                                                <td>기준</td>
+                                                <td>불가</td>
+                                                <td>주피보험자</td>
+                                                <td>성별</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    '2' = '1' OR '2' = '2'
+                                                </td>
+                                                <td>추천불가</td>
+                                                <td>통과</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr onclick="openLayer('4')">
+                                                <td>999999</td>
+                                                <td>홍길동</td>
+                                                <td>3</td>
+                                                <td>공통</td>
+                                                <td>N17</td>
+                                                <td>하나손해보험</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>009</td>
+                                                <td>하나손보 외국인가입제한</td>
+                                                <td>4</td>
+                                                <td>기준/대상<br>기준비교존재</td>
+                                                <td>기준</td>
+                                                <td>불가</td>
+                                                <td>주피보험자</td>
+                                                <td>성별</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>( '2' = '2' )</td>
+                                                <td>추천불가</td>
+                                                <td>통과</td>
+                                                <td></td>
+                                            </tr>
+                                            </tr>
+                                            <tr onclick="openLayer('5')">
+                                                <td>999999</td>
+                                                <td>홍길동</td>
+                                                <td>3</td>
+                                                <td>공통</td>
+                                                <td>N17</td>
+                                                <td>하나손해보험</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>009</td>
+                                                <td>하나손보 외국인가입제한</td>
+                                                <td>4</td>
+                                                <td>기준/대상<br>기준비교존재</td>
+                                                <td>기준/대상</td>
+                                                <td>불가</td>
+                                                <td>주피보험자</td>
+                                                <td>
+                                                    계약상태코드, 상해사망, 상해후유장해, 암사망, 질병사망
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td> > </td>
+                                                <td>( '1' = '1' ) AND ( 590000000 * 1 + 15000000 * 1 < 15000000 * 1 +
+                                                        15000000 * 1 ) </td> <td>추천불가</td>
+                                                <td>통과</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr onclick="openLayer('6')">
+                                                <td>999999</td>
+                                                <td>홍길동</td>
+                                                <td>3</td>
+                                                <td>공통</td>
+                                                <td>N17</td>
+                                                <td>하나손해보험</td>
+                                                <td>2330</td>
+                                                <td>운전자</td>
+                                                <td>10</td>
+                                                <td>기본형</td>
+                                                <td>005</td>
+                                                <td>하나손보 자사누적한도</td>
+                                                <td>1</td>
+                                                <td>기준</td>
+                                                <td>기준</td>
+                                                <td>불가</td>
+                                                <td>주피보험자</td>
+                                                <td>상해급수</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>'1' = '1'</td>
+                                                <td>추천불가</td>
+                                                <td>통과</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                            </article>
+                            <!-- <aside class='pagination'><button type='button' class='btn_arrow first disabled'
+                                    title='첫 페이지'><i class='fa fa-angle-double-left'></i></button><button type='button'
+                                    class='btn_arrow prev disabled' title='이전 페이지'><i
+                                        class='fa fa-angle-left'></i></button><button type='button' class='page active'
+                                    onclick='movePage(1)'><span>1</span></button><button type='button'
+                                    onclick='movePage(2)'><span>2</span></button><button type='button'
+                                    onclick='movePage(3)'><span>3</span></button><button type='button'
+                                    onclick='movePage(4)'><span>4</span></button><button type='button'
+                                    onclick='movePage(5)'><span>5</span></button><button type='button'
+                                    class='btn_arrow next disabled' title='다음 페이지'><i
+                                        class='fa fa-angle-right'></i></button><button type='button'
+                                    class='btn_arrow last disabled' title='마지막 페이지'><i
+                                        class='fa fa-angle-double-right'></i></button></aside> -->
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- LIST// -->
+    </section>
+
+    </section>
+    </section>
+
+</body>
+
+</html>

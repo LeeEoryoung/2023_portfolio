@@ -1,0 +1,401 @@
+/* google web font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700;900&display=swap');
+ /* xeicon */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* Defailt CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 26px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5em;
+  background-color: #000;
+}
+body.active {
+  overflow: hidden;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+* {
+  font-family: 'Noto Sans', sans-serif; 
+}
+
+/* common CSS */
+section {
+  border-bottom: 10px solid gray;
+  position: relative;
+}
+.getstarted {
+/*  border: 1px solid yellow;*/
+  position: relative;
+  display: inline-block;
+}
+.getstarted input {
+  height: 60px;
+  outline: none;
+  border: none;
+  vertical-align: middle;
+}
+.getstarted input[type=email] {
+  width: 450px;
+  height: 57px;
+  margin-right: -5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.getstarted input[type=button] {
+  width: 220px;
+  background-color: #E50914;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.getstarted input[type=email] + span {
+  color: #999;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: 0.25s;
+  pointer-events: none;
+}
+.getstarted input[type=email]:focus + span {
+  font-size: 14px;
+  color: #555;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+header {
+  overflow: hidden;
+  padding: 8px 35px;
+  padding-top: 10px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  width: 170px;
+}
+.signin {
+  float: right;
+}
+.signin button {
+  background-color: #E50914;
+  border: none;
+  font-size: 16px;
+  color:#fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  margin: 20px;
+  cursor: pointer;
+}
+/* section : welcome*/
+.welcome {
+  background: url(images/wellcomebackgrouond.jpg) no-repeat center center;
+  height: 80vh;
+  background-size: cover;
+}
+.welcome:before {
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.59);
+  top: 0;
+  left: 0;
+}
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 800px;
+}
+.heading h1 {
+/*  width: 600px;*/
+  font-size: 50px;
+  margin: 0;
+  margin: auto;
+  line-height: 1.2em;
+}
+.heading h5 {
+  margin: 10px;
+  font-weight: normal;
+  font-size: 26px;
+}
+.heading p {
+  font-size: 19.2px;
+  width: 100%;
+  font-weight: 400;
+}
+
+/* section : enjoy*/
+.enjoy,
+.download,
+.watch,
+.create {
+  height: 500px;
+}
+.inner{
+/*  border: 1px solid;*/
+  width: 1150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.inner > div {
+  float: left;
+  width: 50%
+}
+.desc h1 {
+  font-weight: 700;
+  font-size: 60px;
+  padding-top: 50px;
+  line-height: 1.2em;
+}
+.desc p {
+  margin: 0;
+}
+.preview {
+  text-align: center;
+  
+}
+.preview img {
+  height: 400px;
+}
+
+/* faq */
+.faq {
+
+}
+.faq .inner {
+  width: 815px;
+  position: static;
+  transform: translate(0,0);
+  margin: auto;
+}
+.faq h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.accordion {}
+input[name=faq] {
+  display: none;
+}
+input[name=faq] + label {
+  display: block;
+  background-color: #303030;
+  padding: 15px;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+input[name=faq] + label em {
+/*  border: 1px solid;*/
+/*  display: inline-block;*/
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 3px;
+  position: relative;
+  transition: 0.35s;
+}
+input[name=faq] + label em:before,
+input[name=faq] + label em:after {
+  content:'';
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+}
+input[name=faq] + label em:after {
+  transform: rotate(90deg);
+}
+
+.faq-content {
+  background-color: #303030;
+  margin-bottom: 10px;
+
+  box-sizing: border-box;
+/*  display: none;*/
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.faq aside {
+  text-align: center;
+}
+.faq aside p {
+  font-size: 26px;
+}
+/* faq checked function */
+input[name=faq]:checked + label + .faq-content {
+/*  display: block;*/
+  max-height: 500px;
+  padding: 15px;
+}
+
+input[name=faq]:checked + label em {
+  transform: rotate(45deg);
+}
+
+/* footer */
+.footer {
+  padding: 50px 0;
+  font-size: 12px;
+/*  line-height: 1.5em;*/
+  color: rgb(117, 117, 117);
+  
+}
+.footer-inner {
+  width: 900px;
+  margin: auto;
+  color: rgb(117, 117, 117);
+}
+.sitemap {
+  border-bottom: 1px solid #222;
+  padding-bottom: 30px;
+}
+.links {
+  width: 20%;
+  box-sizing: border-box;
+  float: left;
+}
+.sitemap h5 {
+  font-size: 16px;
+}
+.sitemap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+/*  border: 1px solid red;*/
+  display: inline-block;
+  width: 24%;
+  vertical-align: top;
+  line-height: 1em;
+} 
+.sitemap a {
+  color: rgb(117, 117, 117);
+  text-decoration: none;
+  font-size: 13px;
+}
+.sitemap a:hover {
+  text-decoration: underline;
+}
+
+/* copyright */
+.copyright  {
+  line-height: 0.8em;
+}
+.copyright h6 {
+  font-size: 13px;
+}
+.copyright p {
+  font-size: 12px;
+}
+
+/* modal login */
+.modal-login {
+  background-color: rgba(0, 0, 0, 0.07);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 100;
+}
+.modal-login.active {
+  opacity: 1;
+  visibility: visible;
+}
+.login {
+  position: absolute;
+  width: 450px;
+  height: 600px;
+  background-color: rgb(0, 0, 0);
+  padding: 60px;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: 300;
+}
+.btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 40px;
+  color: #777;
+  cursor: pointer;
+}
+.login input[type=text],
+.login input[type=password] {
+  background-color: #333;
+  font-size: 16px;
+  padding: 20px 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  box-sizing: border-box;
+  outline: none;
+}
+.login input[type=button] {
+  font-size: 16px;
+  padding: 20px 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #E50914;
+}
+.save-info {
+  overflow: hidden;
+}
+.save-info label {
+  float: left;
+}
+.save-info a{
+  color: #fff;
+  float: right;
+}
+.login p {
+  font-size: 13px;
+  line-height: 1.2em;
+}
+.login p a {
+  color: #336aff;
+}
+
+
+
+
+
+
+
+
+

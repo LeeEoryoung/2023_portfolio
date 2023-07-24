@@ -1,0 +1,145 @@
+/* google web font */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans&display=swap');
+
+/* default css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  color: #fff;
+}
+
+/* tab css */
+.tab-inner {
+  overflow: hidden;
+}
+.tabs {
+  width: 300%;
+  transition: 0.5s;
+  position: relative;
+}
+.tab {
+  height: 100vh;
+  float: left;
+  width: 33.333%;
+  display: flex;
+  justify-content: center;
+}
+.tab:nth-child(1) {
+  background: url(images/slide-01.jpg) no-repeat center center;
+  background-size: cover;
+}
+.tab:nth-child(2) {
+  background: url(images/slide-02.jpg) no-repeat center center;
+  background-size: cover;
+}
+.tab:nth-child(3) {
+  background: url(images/slide-03.jpg)  no-repeat center center;
+  background-size: cover;
+}
+.text {
+  text-align: center;
+  height: 500px;
+  margin-top: 20px;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.tab h1 {
+  font-size: 8em;
+  font-family: 'Abril Fatface', cursive;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+.tab p {
+  width: 30%;
+  margin-left: 35%;
+  margin-top: -55px;
+  font-size: 17px;
+  font-weight: normal;
+}
+.btn {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.747);
+  font-weight: 900;
+}
+.btn label {
+  display: inline-block;
+  color: gray;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.btn label:nth-child(1) {
+  margin-left: 30px;
+}
+.btn label:nth-child(2) {
+  margin-left:5px;
+}
+
+/* function */
+input[name=tabmenu] {
+  display: none;
+}
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+  color:#75A1E0;
+}
+
+input[id=tab1]:checked ~ .tabs {
+  transform: translateX(0);
+}
+input[id=tab2]:checked ~ .tabs {
+  transform: translateX(-33.3333%);
+}
+input[id=tab3]:checked ~ .tabs {
+  transform: translateX(-66.6666%);
+}
+
+input[id=tab1]:checked ~ .tabs .tab1 .text {
+  transform: translateY(0);
+  opacity: 1;
+}
+input[id=tab2]:checked ~ .tabs .tab2 .text {
+  transform: translateY(0);
+  opacity: 1;
+}
+input[id=tab3]:checked ~ .tabs .tab3 .text {
+  transform: translateY(0);
+  opacity: 1;
+} 
+
+
+
+
+
+
+/* Test */
+/* .text {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+input[id=tab1]:checked ~ .tabs .tab1 .text {
+  transform: translateY(0);
+  opacity: 1;
+}
+input[id=tab2]:checked ~ .tabs .tab2 .text {
+  transform: translateY(0);
+  opacity: 1;
+}
+input[id=tab3]:checked ~ .tabs .tab3 .text {
+  transform: translateY(0);
+  opacity: 1;
+} */

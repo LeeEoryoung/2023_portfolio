@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WNC</title>
+    <!-- swiper slider css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- favicon -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" sizes="16x16">
+    <!-- fontawesome 6.2 cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- main CSS -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="./responsive.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <div class="inner">
+                <nav>
+                    <div class="logo"></div>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#none">home</a>
+                            <div class="dropdown">
+                                <a href="#none">about WNC</a>
+                                <a href="#none">WNC recruitment</a>
+                                <a href="#none">WNC volunteer recruitment</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none">discover</a>
+                            <div class="dropdown">
+                                <a href="#none">forests</a>
+                                <a href="#none">oceans</a>
+                                <a href="#none">wild animals</a>
+                                <a href="#none">climate & energy</a>
+                                <a href="#none">food</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none">act</a>
+                            <div class="dropdown">
+                                <a href="#none">donate to WNC</a>
+                                <a href="#none">take action</a>
+                                <a href="#none">partner with WWF</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none">latest</a>
+                            <div class="dropdown">
+                                <a href="#none">latest updates</a>
+                                <a href="#none">press center</a>
+                                <a href="#none">success stories</a>
+                            </div>
+                        </li>
+                        <button class="login_btn">login</button>
+                        <button class="donate_btn">donate to wnc</button>
+                    </ul>
+                    <ul class="mo_gnb">
+                        <li>
+                            <a href="#none">home</u>
+                            <ul class="mo_dropdown">
+                                <li><a href="#none">about WNC</a></li>
+                                <li><a href="#none">WNC recruitment</a></li>
+                                <li><a href="#none">WNC volunteer recruitment</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">discover</a>
+                            <ul class="mo_dropdown">
+                                <li><a href="#none">forests</a></li>
+                                <li><a href="#none">oceans</a></li>
+                                <li><a href="#none">wild animals</a></li>
+                                <li><a href="#none">climate & energy</a></li>
+                                <li><a href="#none">food</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">act</a>
+                            <ul class="mo_dropdown">
+                                <li><a href="#none">donate to WNC</a></li>
+                                <li><a href="#none">take action</a></li>
+                                <li><a href="#none">partner with WWF</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">latest</a>
+                            <ul class="mo_dropdown">
+                                <li><a href="#none">latest updates</a></li>
+                                <li> <a href="#none">press center</a></li>
+                                <li> <a href="#none">success stories</a></li>
+                            </ul>
+                        </li>
+                        <button class="mo_login_btn">login</button>
+                        <button class="mo_donate_btn">donate to wnc</button>
+                    </ul>
+                    <div class="trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="welcome">
+            <div id="slideshow" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/slide_01.jpg" alt="이미지1">
+                        <div class="slide_text">
+                            <h1>harmony between man and nature</h1>
+                            <p>
+                                We create a harmonious future between people and nature
+                            </p>
+                            <button class="more">more</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide_02.jpg" alt="이미지2">
+                        <div class="slide_text">
+                            <h1>their life after leaving the zoo</h1>
+                            <p>
+                                Please support the lives of dolphins
+                            </p>
+                            <button class="more">more</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/slide_03.jpg" alt="이미지3">
+                        <div class="slide_text">
+                            <h1>Help areas destroyed by wildfires</h1>
+                            <p>
+                                Save lives destroyed by wildfires
+                            </p>
+                            <button class="more">more</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide page num -->
+                <div class="swiper-pagination"></div>
+                <!-- slide arrow button -->
+                <div class="slide_arrow">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- slide play pause button -->
+                <button id="pause" class="btn_pause"></button>
+            </div>
+        </section>
+        <section class="campaign">
+            <div class="inner">
+                <div class="title">
+                    <h1>wnc campaign</h1>
+                    <span>WNC campaign to save the planet</span>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <img src="./images/campaign_01.jpg" alt="polar bear protection project endangered polar bear">
+                        <span>polar bear protection</span>
+                        <p>
+                            project endangered <br> polar bear
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/campaign_02.jpg"
+                            alt="climate crisis the climate crisis is everyone's problem">
+                        <span>climate crisis</span>
+                        <p>
+                            the climate crisis is <br> everyone's problem
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/campaign_03.jpg" alt="wildfire service help animals dying from wildfires">
+                        <span>wildfire service</span>
+                        <p>
+                            help animals dying <br>from wildfires
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="donate">
+            <img src="./images/donate_banner.jpg" alt="">
+            <div class="donate_text">
+                <h1>change the <br>world together</h1>
+                <button class="donate_btn">donate<br>to wnc</button>
+            </div>
+        </section>
+        <section class="activity">
+            <div class="inner">
+                <div class="title">
+                    <h1>wnc field of activity</h1>
+                    <span>WNC wants nature and people to live i harmony</span>
+                </div>
+                <ul class="activity_list">
+                    <li>
+                        <div class="actvity_cont">
+                            <h1>forests</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="actvity_cont">
+                            <h1>oceans</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="actvity_cont">
+                            <h1>wild animals</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="actvity_cont">
+                            <h1>climate & energy</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="actvity_cont">
+                            <h1>food</h1>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="wnc_video">
+            <video width="100%" poster="./images/video_thumbnail.jpg" autoplay muted controls loop>
+                <source src="./images/video.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section class="news_letter">
+            <div class="inner">
+                <div class="title">
+                    <h1>wnc news letter</h1>
+                    <span>
+                        Subscribe to the WNC newsletter and stay up to date<br>
+                        You can receive the WNC newsletter at the email address you entered.
+                    </span>
+                </div>
+                <div class="news_cont">
+                    <img src="./images/newsletter.jpg" alt="newsletter image">
+                    <div class="news_info">
+                        <span>email</span>
+                        <label for="email"><input type="email" id="email" placeholder="Enter your e-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your e-mail'" /></label>
+                        <button>subscribe</button>
+                        <div class="sns">
+                            <span>follow us</span>
+                            <a href="#none"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#none"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="#none"><i class="fa-brands fa-square-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="inner">
+                <img src="./images/wnc_logo.png" alt="wnc logo">
+            </div>
+        </footer>
+    </div>
+    <a href="#" class="gototop"><i class="fa-solid fa-circle-chevron-up"></i>
+    </a>
+    <div class="modal_login">
+        <div class="login">
+            <button class="btn_close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h1>login</h1>
+            <input id="mail" type="text" placeholder="Enter your Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Email'" />
+            <div class="error" id="error_mail"></div>
+            <input id="pw" type="password" placeholder="Enter your password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your password'" />
+            <div class="error" id="error_pw"></div>
+            <div class="save_info">
+                <label for="save"><input id="save" type="checkbox">save ID</label>
+                <a href="#none">Find E-mail | password</a>
+            </div>
+            <div class="sign_up">
+                <input type="button" value="login" id="popup_login_btn">
+                <h3>sns login</h3>
+                <p>
+                    <a href="#none"><i class="fa-brands fa-apple"></i></a>
+                    <a href="#none"><i class="fa-brands fa-android"></i></a>
+                    <a href="#none"><i class="fa-brands fa-google"></i></a>
+                </p>
+            </div>
+            <a class="btn_signin" href="./signup/signup.html">Not a member yet?</a>
+        </div>
+    </div>
+
+
+    <!-- jquery -->
+    <script src="./jquery/jquery-3.6.1.min.js"></script>
+    <!-- swiper js cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- custom js -->
+    <script src="./main.js"></script>
+</body>
+
+</html>

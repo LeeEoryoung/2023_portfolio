@@ -1,0 +1,261 @@
+@media (max-width: 768px) {
+  header {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .outline {
+    width: 100%;
+  }
+  .header-outer {
+    height: 0;
+  }
+  .header-inner {
+    background-color: #fff;
+  }
+  .header-inner nav {
+    width: 100%;
+  }
+  .gnb {
+    float: none;
+    position: fixed;
+    background-color: #fff;
+    height: 100vh;
+    top: -30px;
+    right: -300px;
+    width: 70%;
+    /* display: none; */
+    transition: 0.5s;
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .gnb a {
+    display: block;
+    line-height: 4em;
+    /* border: 1px solid #000; */
+    margin-left: 30px;
+    transition: 0.5s;
+  }
+  .gnb a:nth-child(1) {
+    margin-top: 180px;
+  }
+  .trigger {
+    width: 30px;
+    height: 18px;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-right: 30px;
+  }
+  .trigger span {
+    background-color: #555;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    transition: 0.5s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0%;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  } 
+  .trigger.active span:nth-child(2) {
+    display: none;
+  } 
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  } 
+  .inner {
+    width: 100%;
+  }
+  .welcome {
+    width: 100%;
+  }
+  .slideshow img {
+    height: 400px;
+  }
+  .welcome .heading {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    text-align: center;
+  }
+  .welcome .heading h1 {
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .welcome .heading p {
+    font-size: 15px;
+    width: 300px;
+    margin-left: 40px;
+  }
+  .outlet {
+    padding-top: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+  .outlet-inner .title h1 {
+    font-size: 30px;
+    line-height: 1.3em;
+    margin-top: 50px;
+  }
+  .outlet-inner .title p {
+    font-size: 15px;
+  }
+  .outlet-inner .title p span {
+    font-size: 25px;
+  }
+  .outlet .photo img {
+    width: 100%;
+    margin-top: 80px;
+  }
+  .outlet .view-more {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  .offline {
+    width: 100%;
+    flex-direction: column;
+  }
+  .offline .item {
+    line-height: 1.2em;
+  }
+  .offline .item h1 {
+    font-size: 15px;
+  }
+  .offline .item p {
+    font-size: 13px;
+    line-height: 1.2em;
+  }
+  .offline .item p  span {
+    font-size: 13px;
+  }
+  .best {
+    width: 100%;
+  }
+  .best h1 {
+    font-size: 23px;
+  }
+  .best .desc {
+    
+  }
+  .delivery-inner {
+    width: 100%;
+  }
+  .delivery-inner .fa {
+    font-size: 100px;
+    margin-left: 30px;
+  }
+  .delivery-inner h1 {
+    font-size: 46px;
+  }
+  .delivery-inner p {
+    font-size: 30px;
+    line-height: 1.6em;
+  }
+  .repair-inner {
+    width: 100%;
+  }
+  .repair-inner h1 { 
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .repair-inner p {
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .reviews {
+    width: 100%;
+  }
+  .reviews-inner {
+  }
+  .reviews-inner .buyer {
+    text-align: center;
+  }
+  .reviews-inner .buyer > img {
+    float: none;
+  }
+  .reviews-inner .user {
+    width:100%;
+    float: none;
+  }
+  .reviews-inner .buyer:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviews-inner .buyer:nth-child(2) .user {
+    order: 2;
+  }
+  .reviews-inner .buyer:nth-child(2) img {
+    margin: auto;
+    order: 1;
+  }
+  .reviews-inner .buyer:nth-child(2) .user {
+    width:100%;
+    text-align: center;
+  }
+  footer {
+    width: 100%;
+  } 
+  .footer-inner {
+    width: 100%;
+  }
+  .inner .copyright p {
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 0;
+  }
+  .inner .copyright .btns {
+    width: 100%;
+    display: flex;
+  }
+  .inner .copyright .btn {
+    font-size: 15px;
+    /* width: 130px; */
+    border: 1px solid #000;
+    margin: 0;
+  }
+  .inner .copyright .btn.top {
+    flex: 1;
+  }
+  .inner .copyright .btn.Bottom {
+    flex: 1;
+  }
+  .sitemap {
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .sitemap ul {
+    font-size: 15px;
+  }
+  .sitemap li {
+    font-size: 12px;
+  }
+  .sitemap span {
+    font-size: 16px;
+  }
+  .sub-sitemap {
+    text-align: center;
+  }
+  .sub-sitemap p {
+    width: 100%;
+    float: none;
+    font-size: 11px;
+  }
+  .sub-sitemap .sns {
+    float: none;
+  }
+  .sub-sitemap .sns a {
+    font-size: 20px;
+  }
+}

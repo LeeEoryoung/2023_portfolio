@@ -1,0 +1,46 @@
+body {
+  background-color: pink;
+}
+.app-outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.app {
+  width: 230px;
+  height: 450px;
+  position: relative;
+  transform: rotate(-30deg) skewX(20deg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background-color: #ddd;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+.app img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.app:hover img:nth-child(1) {
+  transform: translate(30px, -30px);
+}
+.app:hover img:nth-child(2) {
+  transform: translate(60px, -60px);
+}
+.app:hover img:nth-child(3) {
+  transform: translate(90px, -90px);
+}
+.app:hover img:nth-child(4) {
+  transform: translate(120px, -120px);
+}
+.app:hover {
+  box-shadow: -40px 100px 70px rgba(0, 0, 0, 0.22);
+}

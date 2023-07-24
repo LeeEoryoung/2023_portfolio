@@ -1,0 +1,645 @@
+/* google web font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* Font Awesome 4.7.0 CND */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* default css */
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    max-width: 720px;
+    background-color: lightgray;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    line-height: 1.6em;
+    font-size: 15px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    ;
+}
+
+.member {
+    background-color: #f8f8f8;
+    width: 100%;
+}
+
+/*--------- [ start :: 공통 css ] ----------*/
+section,
+.header_inner,
+.footer_inner {
+    width: 660px
+}
+
+/*========= [ end :: 공통 css ] =========*/
+
+/*----------- [start :: header] -----------*/
+
+header {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.header_inner {
+    overflow: hidden;
+    margin: auto;
+}
+
+.header_inner .logo {
+    float: left;
+    margin-top: 10px;
+}
+
+.header_inner .gnb {
+    float: right;
+}
+
+.lnb {
+    float: right;
+    margin-top: 5px;
+}
+
+.trigger {
+    width: 30px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transform: translateY(5px);
+    margin-top: 5px;
+}
+
+.trigger span {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    transition: 0.5s;
+    background-color: #999;
+}
+
+.trigger span:nth-child(1) {
+    top: 0;
+}
+
+.trigger span:nth-child(2) {
+    top: 50%;
+}
+
+.trigger span:nth-child(3) {
+    top: 100%;
+}
+
+.trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.trigger.active span:nth-child(2) {
+    display: none;
+}
+
+.trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+.gnb {
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    height: 500px;
+    top: 50px;
+    right: -380px;
+    width: 375px;
+    transition: 0.5s;
+}
+
+.gnb.active {
+    right: 0;
+}
+
+.dropdown-navi {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 2.5em;
+    padding-left: 20px;
+}
+
+.dropdown-navi i {
+    float: right;
+    margin-top: 14px;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+
+.dropdown-navi.active i {
+    transform: rotate(180deg);
+}
+
+.dropdown-navi.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.dropdown-navi:nth-child(1) {
+    margin-top: 30px;
+}
+
+.dropdown-navi:last-child {
+    font-size: 17.5px;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-content a {
+    border-bottom: 1px solid #ccc;
+    display: block;
+    left: 2em;
+    background-color: #fff;
+    color: #000;
+    text-transform: uppercase;
+    padding: 10px;
+    padding-left: 20px;
+    width: 100%;
+    font-size: 13px;
+}
+
+/*=============== [end :: header] ==============*/
+
+/*--------------- [start :: esm] --------------*/
+.mo_esm_banner {
+    position: relative;
+}
+
+section .mo_esm_banner image {
+    border: 1px solid #000;
+    position: absolute;
+}
+.mo_esm_heading {
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    color: #fff;
+    text-align: center;
+    width: 660px;
+}
+
+.mo_esm_heading h1 {
+    font-size: 58px;
+    font-weight: 700;
+}
+
+.mo_esm_heading p {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+/*=============== [end :: esm] ===============*/
+/*------------- [start :: main] ------------*/
+.mo_main {
+    position: relative;
+    z-index: 1;
+    width: 720px;
+}
+
+.mo_main .mo_main_heading {
+    position: absolute;
+    top: 9%;
+    left: 4%;
+    text-align: center;
+    width: 660px;
+}
+
+.mo_main_heading h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3em;
+}
+
+.mo_main_heading p {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #fff;
+}
+
+.slideshow {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+}
+
+.slick-prev:before {
+    content: '';
+}
+
+.slick-next:before {
+    content: '';
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 20px;
+    line-height: 0;
+    position: absolute;
+    top: 93%;
+    display: block;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.slick-prev {
+    left: 9%;
+    z-index: 1;
+    bottom: 0;
+    transform: translate(0px, 0px);
+}
+
+.slick-next {
+    right: 80.2%;
+    bottom: 0;
+    transform: translate(0px, 0px);
+}
+
+.slick-prev i,
+.slick-next i {
+    color: #fff
+}
+
+.slick-prev button,
+.slick-next button {
+    background-color: rgba(0, 0, 0, 0.644);
+    border: none;
+    padding: 5px 9px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #999;
+}
+
+/*=============== [end :: main] ===============*/
+/*------------- [start :: member login] ------------*/
+.mo_login h1 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.mo_login .mo_login_inner {
+    width: 660px;
+    background-color: #fff;
+    border-top: 4px solid #0ca950;
+    margin: auto;
+    padding: 30px;
+}
+
+.mo_login .mo_login_inner label {
+    font-size: 22px;
+    color: #666;
+    font-weight: 500;
+}
+
+.mo_login .mo_login_inner input[type=text],
+.mo_login .mo_login_inner input[type=password] {
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    padding-top: 18px;
+    font-size: 26px;
+    margin: 15px 0 20px 0;
+}
+
+.mo_login .mo_login_inner input[type=checkbox] {
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    padding: 10px;
+    margin-right: 12px;
+    margin-top: 0;
+}
+.mo_login_inner label:nth-child(4) {
+    /* border: 1px solid #000; */
+    font-weight: 400px;
+}
+.login_btn {
+    display: block;
+    width: 100%;
+    height: 80px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #014282;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.mo_login .mo_login_inner div {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.mo_login .mo_login_inner div a {
+    color: #00c950;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.mo_login .mo_login_inner div a:nth-child(1):after {
+    content: " | ";
+    color: #999;
+}
+
+/*============= [end :: member login] =============*/
+/*------------- [start :: member join] ------------*/
+.mo_join h1 {
+    font-size: 58px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 40px;
+}
+.mo_join_inner {
+    width: 660px;
+    background-color: #fff;
+    margin: auto;
+    border-top: 4px solid #00c950;
+    padding: 40px;
+}
+.mo_join_inner p span {
+    font-weight: 700;
+    font-size: 32px;
+    color: #333;
+}
+.mo_join_inner p {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.5em;
+    color: #666;
+}
+.mo_join_inner label {
+    font-size: 22px;
+    font-weight: 500;
+    color: #666;
+}
+.mo_join_inner input[type=text],
+.mo_join_inner input[type=password],
+.mo_join_inner input[type=tel],
+.mo_join_inner input[type=file] {
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    margin: 15px 0;
+    font-size: 26px;
+    color: #999;
+    border: 3px solid #333;
+    border-radius: 5px;
+}
+.mo_join_inner input[type=checkbox] {
+    display: inline-block;
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    padding: 10px;
+    margin-right: 12px;
+    margin-top: 0;
+}
+.join_ckbox_01,
+.join_ckbox_02 {
+    margin: 15px;
+    margin-left: 0;
+}
+.join_ckbox_01 {
+    margin-top: 20px;
+}
+.join_ckbox_01 label a,
+.join_ckbox_02 label a {
+    border-bottom: 1px solid #333;
+    padding-bottom: 3px;
+}
+.join_ckbox_01 label ,
+.join_ckbox_02 label {
+    color: #333;
+}
+.mo_join_inner small {
+    display: block;
+    color: #ff3600;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.mo_join_inner strong {
+    color: #ff3600;
+    padding-left: 5px;
+}
+.mo_join_inner button {
+    background-color: #014282;
+    color: #fff;
+    font-size: 28px;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+/*============= [end ::  member join] =============*/
+/*----------[ start :: member join input file ] ------------*/
+.filebox {
+    position: relative;
+}
+.filebox span {
+    font-weight: 500;
+    font-size: 22px;
+    display: block;
+    color: #666;
+}
+
+.filebox .upload-name {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 5px 0;
+    vertical-align: middle;
+    border: 3px solid #333;
+    color: #999999;
+    border-radius: 3px;
+    width: 78.5%;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.filebox label {
+    display: inline-block;
+    padding: 15.3px 20px;
+    color: #333;
+    vertical-align: middle;
+    background-color: #e9ecef;
+    cursor: pointer;
+    margin-left: 0;
+    margin-top: 10px;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 29px;
+    right: 7px;
+    border: 3px solid #000;
+}
+
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    opacity: 0;
+}
+
+/*=========== [ end :: member join input file ] ===========*/
+/*------------- [start :: member mypage] ------------*/
+.mo_mypage h1 {
+    font-size: 58px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 30px;
+}
+.mo_mypage_inner {
+    width: 660px;
+    background-color: #fff ;
+    margin: auto;
+    border-top: 4px solid #00c950;
+    padding: 40px;
+}
+.mo_mypage_inner label {
+    font-size: 22px;
+    font-weight: 500;
+    color: #666;
+}
+.mo_mypage_inner input[type=text],
+.mo_mypage_inner input[type=password],
+.mo_mypage_inner input[type=tel],
+.mo_mypage_inner input[type=file] {
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    margin: 15px 0;
+    font-size: 26px;
+    color: #999;
+    border: 3px solid #333;
+    border-radius: 5px;
+}
+.mo_mypage_inner input[type=checkbox] {
+    display: inline-block;
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    padding: 10px;
+    margin-right: 12px;
+    margin-top: 0;
+}
+.mo_mypage_inner small {
+    display: block;
+    color: #ff3600;
+    font-size: 22px;
+    margin: 15px 0;
+}
+.mo_mypage_inner strong {
+    color: #ff3600;
+    padding-left: 5px;
+}
+.mo_mypage_inner button {
+    background-color: #014282;
+    color: #fff;
+    font-size: 28px;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+/*============= [end :: member mypage] =============*/
+/*------------- [start :: footer] ------------*/
+footer {
+    background-color: #2d2d2d;
+    padding: 30px 0;
+    padding-bottom: 40px;
+}
+
+.footer_inner {
+    margin: auto;
+    color: #fff;
+}
+
+.footer_inner .footer_top h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #a5a5a5;
+}
+
+.footer_inner .footer_top span {
+    color: #00c756;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.footer_inner .footer_top p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer_inner .footer_bottom p {
+    color: #a5a5a5;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer_inner .footer_bottom a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.footer_inner .footer_bottom a::before {
+    content: ' | ';
+    margin-bottom: 5px;
+}
+
+.footer_inner .footer_bottom a:nth-child(2)::before {
+    content: '';
+}
+
+/*========== [end :: footer] ===========*/

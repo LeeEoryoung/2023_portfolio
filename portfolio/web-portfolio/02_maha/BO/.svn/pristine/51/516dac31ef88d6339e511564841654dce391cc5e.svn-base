@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" href="../img/logo.png" />
+	<link rel="apple-touch-icon" href="../img/logo.png" />
+	<meta name="robots" content="ALL" />
+	<title>MAHA proj.</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+	<link rel="stylesheet" href="../css/fontawesome.all.min.css" />
+	<link rel="stylesheet" href="../css/jquery.fancybox.css" />
+	<link rel="stylesheet" href="../css/right.solution.css" />
+	<!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+	<!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+	<script src="../js/jquery.min.js?v=3.6.0"></script>
+	<script src="../js/jquery.ui.js"></script>
+	<script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+	<script src="../js/jquery.form.min.js"></script>
+	<script src="../js/jquery.fileDownload.js"></script>
+	<script src="../js/right.solution.js"></script>
+	<script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+	<script src="../js/duallistbox.js"></script>
+</head>
+
+<body>
+	<section class="container_sec">
+		<section class="right_wing_sec">
+			<script type="text/javascript">
+				function open403Layer() {
+					$.fancybox({
+						width: 800,
+						type: 'iframe',
+						href: '/test/forbidden'
+					});
+				}
+
+				function open404Layer() {
+					$.fancybox({
+						width: 800,
+						type: 'iframe',
+						href: '/test/404'
+					});
+				}
+
+				function open500Layer() {
+					$.fancybox({
+						width: 800,
+						type: 'iframe',
+						href: '/test/internalError'
+					});
+				}
+			</script>
+			<!-- 윗단은 가급적 수정하지 말아주세요~ -->
+			<!-- header.jsp 영역// -->
+
+			<!-- //실제contents영역 -->
+			<section class="right_wing_contents" id="right_wing_contents">
+				<section class="box_wrap"
+					style="width:45%; margin:auto; margin-top: 15%; padding: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);">
+					<form name="frm" onsubmit="return frmVerify(this);">
+						<fieldset class="box_wrap" style="border: none;">
+							<div class="login">
+								<h1>로그인</h1>
+								<div>
+									<label>ID <input class="id" type="text" placeholder="ID를 입력해주세요."
+											onfocus="this.placeholder = ''" /></label>
+								</div>
+								<div>
+									<label>PW <input class="password" type="password" placeholder="비밀번호를 입력해주세요."
+											onfocus="this.placeholder = ''" /></label>
+								</div>
+								<div><label><input type="checkbox">ID 저장</label></di>
+							</div>
+							</div>
+						</fieldset>
+						<div class="btn_pop_wrap pt0">
+							<div class="a_c" style="margin-top: 10px;">
+								<button type="submit" class="btns darkgray"
+									style="width: 100px; margin: 0 10px;">로그인</button>
+								<button type="submit" class="btns darkgray" style="width: 100px; margin: 0 10px;">비밀번호
+									찾기</button>
+							</div>
+						</div>
+					</form>
+				</section>
+				<!-- LOGIN// -->
+			</section>
+			<script type="text/javascript">
+				//로그인
+				function frmVerify(fr) {
+					alert('어흥');
+					return false;
+				}
+
+				//리스트
+				init_sort_list($("#list-sort"));
+				load_button_action($("#list-sort"));
+
+				function load_basic_list() {
+					reload_basic_list($("#list-sort"));
+				}
+
+				function load_button_action(e) { //화면 새로고침 후 콜백
+					$(e).find(".tbl_sort_list tbody td:not(.nc, .nodata)").on("click", function () {
+						console.log($(this).parent().attr("code"));
+					});
+				}
+
+				function fnc_mod(idx) {
+					$.fancybox({
+						width: 800,
+						type: 'iframe',
+						href: '/account/employee/edit?idx=' + idx
+					});
+					// 	var layer_html = '<section class="pop_total_wrap bgFFF">'+ $("#layer-popup").html() +'</section>';
+					// 	$.fancybox(layer_html,{ autoSize:false, width:800, height:'auto', type:'inline' });
+				}
+
+				//분리형
+				//sortable
+				$("#tbl_code_detail tbody").sortable({
+					tolerance: 'pointer',
+					handle: '.move',
+					axis: 'y',
+					containment: 'parent',
+				});
+			</script>
+			<script>
+				//layout용 함수
+				$(window).on("load", function () {
+					$(".left_wing_nav > ul > li").eq(0).trigger("click");
+
+
+				});
+			</script>
+			<!-- 실제contents영역// -->
+
+			<!-- 아랫단은 가급적 수정하지 말아주세요~ -->
+			<!-- //footer.jsp 영역 -->
+		</section>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" >
+    <title>SSOM O&M</title>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <!-- custom CSS -->
+    <script src="js/right.solution.sort.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <div class="header_inner">
+                <div class="logo"><img src="mo_images/logo.png" alt=""></div>
+                <div class="lnb">
+                    <div class="trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="gnb">
+                    <div class="dropdown-navi">공동구매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">공동구매 리스트</a>
+                    </div>
+                    <div class="dropdown-navi">발전소 매매<i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#none">발전소 매매 물건</a>
+                        <a href="#none">최근 거래 완료 매물</a>
+                    </div>
+                    <div class="dropdown-navi">ESM 관리<i class="xi-angle-down"></i></div>
+                    <div class="dropdown-navi">공지사항<i class="xi-angle-down"></i></div>
+                    <div class="gnb_inner">
+                        <a href="#none">로그인</a>
+                        <a href="#none">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <section class="mo_main">
+            <div class="mo_main_slide">
+                <div class="slideshow">
+                    <img src="mo_images/mo_main_slide02.jpg" alt="">
+                    <img src="mo_images/mo_main_slide03.jpg" alt="">
+                    <img src="mo_images/mo_main_slide04.jpg" alt="">
+                    <img src="mo_images/mo_main_slide05.jpg" alt="">
+                    <img src="mo_images/mo_main_slide06.jpg" alt="">
+                </div>
+                <div class="mo_main_heading">
+                    <h1>
+                        인버터 공동구매, 태양광 발전소 <br>
+                        매매 서비스를 제공받을 수 <br> 있습니다.
+                    </h1>
+                    <p>
+                        SSOM O&M Platform을 통한 <br>
+                        발전소 매매 비교 견적 및 서비스 신청을 하실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="main_contents">
+                <h1>태양광 발전의 핵심 유지관리</h1>
+                <p>
+                    태양광 발전소의 효율 향상을 위한<br>
+                    6가지 O&M 서비스<br>
+                    SSOM이 제공하겠습니다.
+                </p>
+                <div class="service_list">
+                    <div class="service_box">
+                        <img src="mo_images/service_list_01.png" alt="">
+                        <h3>O&M 라이더 서비스</h3>
+                        <p>
+                            패널 청소, 제초작업 등<br>
+                            O&M 라이더 서비스
+                        </p>
+                    </div>
+                    <div class="service_box">
+                        <img src="mo_images/service_list_02.png" alt="">
+                        <h3>드론 열화상 진단 서비스</h3>
+                        <p>
+                            열화상 패널 상태진단<br>
+                            Hot Spot 검출 서비스
+                        </p>
+                    </div>
+                    <div class="service_box">
+                        <img src="mo_images/service_list_03.png" alt="">
+                        <h3>발전량 예측 서비스</h3>
+                        <p>
+                            실제 발전량 예측을<br>
+                            활용한 서비스
+                        </p>
+                    </div>
+                    <div class="service_box">
+                        <img src="mo_images/service_list_04.png" alt="">
+                        <h3>O&M 플랫폼 서비스</h3>
+                        <p>
+                            6개의 모듈을 하나의 플랫폼에서 행할 수 있는<br>
+                            O&M 플랫폼 서비스
+                        </p>
+                    </div>
+                    <div class="service_box">
+                        <img src="mo_images/service_list_05.png" alt="">
+                        <h3>모바일 안전점검 서비스</h3>
+                        <p>
+                            모바일 앱을 활용한 태양광 발전소<br>
+                            안전점검, 보고서 공유 서비스
+                        </p>
+                    </div>
+                    <div class="service_box">
+                        <img src="mo_images/service_list_06.png" alt="">
+                        <h3>공동구매 서비스</h3>
+                        <p>
+                            태양광 발전소 부품/자재<br>
+                            공동구매 서비스
+                        </p>
+                    </div>
+                    <div class="service_box">
+                        <img src="mo_images/service_list_07.png" alt="">
+                        <h3>발전소 매매 서비스</h3>
+                        <p>
+                            태양광 발전소<br>
+                            매매 거래 서비스
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="footer_inner">
+                <div class="footer_top">
+                    <h3>SSOM 고객센터</h3>
+                    <span>061-123-4567</span>
+                    <p>평일 09:00~18:00 (중식 시간 12:00~13:00)<br>(주말, 공휴일, 대체휴일 제외)</p>
+                </div>
+                <div class="footer_bottom">
+                    <p>
+                        Copyright ⓒ SSOM Inc. All Rights Reserved.<br>
+                        주식회사 쏨 | 대표이사 : 정인화 | 사업자번호 123-45-67890<br>
+                        Tel. 061-123-4567 | Fax. 061-234-5678<br>
+                        본사 : 전남 나주시 교육길 13, 스마트파크 F동 401호<br>
+                    </p>
+                    <a href="#none">이용약관</a>
+                    <a href="#none">개인정보취급방침</a>
+                    <a href="#none">공지사항</a>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

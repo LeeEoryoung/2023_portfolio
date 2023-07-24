@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" href="../img/logo.png" />
+	<link rel="apple-touch-icon" href="../img/logo.png" />
+	<meta name="robots" content="ALL" />
+	<title>MAHA proj.</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" />
+	<link rel="stylesheet" href="../css/fontawesome.all.min.css" />
+	<link rel="stylesheet" href="../css/jquery.fancybox.css" />
+	<link rel="stylesheet" href="../css/right.solution.css" />
+	<!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><![endif]-->
+	<!--[if IE]><script type="text/javascript">var console = { log: function(){} };</script><![endif]-->
+
+	<script src="../js/jquery.min.js?v=3.6.0"></script>
+	<script src="../js/jquery.ui.js"></script>
+	<script src="../js/jquery.fancybox.js?v=2.1.5"></script>
+	<script src="../js/jquery.form.min.js"></script>
+	<script src="../js/jquery.fileDownload.js"></script>
+	<script src="../js/right.solution.js"></script>
+	<script src="../js/right.solution.sort.js"></script><!-- 리스트가 있는 페이지에서만 사용 -->
+	<script src="../js/duallistbox.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+
+	<script type="text/javascript">
+		function frmSubmit() {
+			if (!confirm("직원 정보 변경사항을\n저장하시겠습니까?")) return;
+
+			$.ajax({
+				url: "/account/employee/excuteEmployee.act",
+				async: true,
+				type: "post",
+				data: $("form[name=frm]").serialize(),
+				dataType: 'json',
+				success: function (res, textStatus) {
+					var resultMsg = res.resultMsg;
+					if (resultMsg == "success") {
+						var paramVo = res.paramVo;
+						alert("저장되었습니다.");
+						parent.location.reload();
+						return;
+					}
+				}
+			});
+		}
+
+		// function del(employeeId) {
+		// 	if(!confirm("삭제하시겠습니까?")) return;
+
+		// 	$.ajax({
+		// 		url: "/account/employee/delEmployee.act",
+		// 		async: true,
+		// 		type: "post",
+		// 		data: $("form[name=frm]").serialize(),
+		// 		dataType: 'json',
+		// 		success: function (res, textStatus) {
+		// 			var resultMsg = res.resultMsg;
+		// 			if (resultMsg == "success") {
+		// 				var paramVo = res.paramVo;
+		// 				alert("저장되었습니다.");
+		// 				parent.location.reload();
+		// 				return;
+		// 			}
+		// 		}
+		// 	});
+		// }
+	</script>
+
+	<section class="pop_total_wrap">
+		<h2><strong>상품 특약 수정 및 신규등록
+			</strong></h2>
+		<form id="frm" name="frm" action="/account/employee/edit?employeeId=" method="post"
+			onsubmit="frmSubmit(); return false;">
+			<input id="employeeId" name="employeeId" type="hidden" value="" />
+			<fieldset class="p5">
+				<legend class="hidden_box">상품 특약 수정 및 신규 등록
+				</legend>
+				<!-- 22.02.11 [start] 종형코드,성별사용여부,연령사용여부,상해급수사용여부,운전형태사용여부 입력항목 추가 -->
+				<table class="tbl_update">
+					<colgroup>
+						<col width="150" />
+						<col width="" />
+						<col width="150" />
+						<col width="" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row"><label for="url">회사<strong>*</strong></label></th>
+							<td>
+								<select name="companyname" id="companyname">
+									<option value="">선택해주세요</option>
+									<option value="1">하나손해보험</option>
+									<option value="2">둘손해보험</option>
+									<option value="3">셋손해보험</option>
+								</select>
+							</td>
+							<th scope="row"><label for="url">상품<strong>*</strong></label></th>
+							<td>
+								<select name="companyname" id="companyname">
+									<option value="">선택해주세요</option>
+									<option value="1">보험</option>
+									<option value="2">담보</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="menu_nm">특약코드<strong>*</strong></label></th>
+							<td><input id="menu_nm" name="menu_nm" required="required" type="text" value=""
+									maxlength="100" placeholder="입력해주세요" /></td>
+							<th scope="row"><label for="menu_nm">특약명<strong>*</strong></label></th>
+							<td><input id="menu_nm" name="menu_nm" required="required" type="text" value=""
+									maxlength="100" placeholder="입력해주세요" /></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="menu_nm">신정원특약코드<strong>*</strong></label></th>
+							<td><input id="menu_nm" name="menu_nm" required="required" type="text" value=""
+									maxlength="100" placeholder="입력해주세요" /></td>
+							<th scope="row"><label for="menu_nm">최소금액<strong>*</strong></label></th>
+							<td><input id="menu_nm" name="menu_nm" required="required" type="text" value=""
+									maxlength="100" placeholder="입력해주세요" /></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="menu_nm">25%금액<strong>*</strong></label></th>
+							<td><input id="menu_nm" name="menu_nm" required="required" type="text" value=""
+									maxlength="100" placeholder="입력해주세요" /></td>
+							<th scope="row"><label for="menu_nm">평균금액<strong>*</strong></label></th>
+							<td><input id="menu_nm" name="menu_nm" required="required" type="text" value=""
+									maxlength="100" placeholder="입력해주세요" /></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="menu_nm">75%금액<strong>*</strong></label></th>
+							<td><input id="menu_nm" name="menu_nm" required="required" type="text" value=""
+									maxlength="100" placeholder="입력해주세요" /></td>
+							<th scope="row"><label for="menu_nm">최대금액<strong>*</strong></label></th>
+							<td><input id="menu_nm" name="menu_nm" required="required" type="text" value=""
+									maxlength="100" placeholder="입력해주세요" /></td>
+						</tr>
+						<tr>
+							<th>항목코드_01</th>
+							<td>
+								<input id="searchKeyword" name="searchKeyword" placeholder="검색" type="text" value=""
+									maxlength="20" />
+							</td>
+							<th>항목코드_02</th>
+							<td>
+								<input id="searchKeyword" name="searchKeyword" placeholder="검색" type="text" value=""
+									maxlength="20" />
+							</td>
+						</tr>
+						<tr>
+							<th>항목코드_03</th>
+							<td>
+								<input id="searchKeyword" name="searchKeyword" placeholder="검색" type="text" value=""
+									maxlength="20" />
+							</td>
+							<th>항목코드_04</th>
+							<td>
+								<input id="searchKeyword" name="searchKeyword" placeholder="검색" type="text" value=""
+									maxlength="20" />
+							</td>
+						</tr>
+						<tr>
+							<th>항목코드_05</th>
+							<td>
+								<input id="searchKeyword" name="searchKeyword" placeholder="검색" type="text" value=""
+									maxlength="20" />
+							</td>
+							<th scope="row"><label for="ic_cd">종형코드<strong>*</strong></label></th>
+							<td>
+								<select name="companyname" id="companyname">
+									<option value="">선택해주세요</option>
+									<option value="1">01</option>
+									<option value="2">02</option>
+									<option value="3">03</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="ic_cd">성별사용여부<strong>*</strong></label></th>
+							<td>
+								<select name="companyname" id="companyname">
+									<option value="">선택해주세요</option>
+									<option value="1">사용</option>
+									<option value="2">미사용</option>
+								</select>
+							</td>
+							<th scope="row"><label for="ic_cd">연령사용여부<strong>*</strong></label></th>
+							<td>
+								<select name="companyname" id="companyname">
+									<option value="">선택해주세요</option>
+									<option value="1">사용</option>
+									<option value="2">미사용</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="ic_cd">상해급수사용여부<strong>*</strong></label></th>
+							<td>
+								<select name="companyname" id="companyname">
+									<option value="">선택해주세요</option>
+									<option value="1">사용</option>
+									<option value="2">미사용</option>
+								</select>
+							</td>
+							<th scope="row"><label for="ic_cd">운전형태사용여부<strong>*</strong></label></th>
+							<td>
+								<select name="companyname" id="companyname">
+									<option value="">선택해주세요</option>
+									<option value="1">사용</option>
+									<option value="2">미사용</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="ic_cd">사용여부<strong>*</strong></label></th>
+							<td>
+								<select name="companyname" id="companyname">
+									<option value="">선택해주세요</option>
+									<option value="1">사용</option>
+									<option value="2">미사용</option>
+								</select>
+							</td>
+							<th></th>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- 22.02.11 [end] 종형코드,성별사용여부,연령사용여부,상해급수사용여부,운전형태사용여부 입력항목 추가 -->
+			</fieldset>
+			<aside class="btn_pop_wrap">
+
+				<div class="f_r">
+					<button type="submit" class="btns darkgray"><i class="fa fa-fw fa-save"></i>수정</button>
+					<button type="button" class="btns red ml5 btn_parent_fancy_close"
+						onclick="parent.$.fancybox.close()"><i class="fa fa-fw fa-times"></i> 취소</button>
+				</div>
+			</aside>
+		</form>
+	</section>
+
+</body>
+
+</html>
