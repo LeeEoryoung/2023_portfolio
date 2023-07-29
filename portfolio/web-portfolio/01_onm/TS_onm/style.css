@@ -206,7 +206,7 @@ nav {
     position: absolute;
     width: 623px;
     height: 210px;
-    top: 50px;
+    top: 15px;
     left: 20%;
     text-align: left;
     padding: 20px;
@@ -230,7 +230,7 @@ nav {
 
 .slideshow {
     width: 100%;
-    height: 400px;
+    height: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -243,6 +243,9 @@ nav {
 /*============================ [ end :: main welcome ] ============================*/
 
 /*---------------------------- [ start :: main - slick ] ----------------------------*/
+.slick-slide {
+    height: 500px;
+}
 
 .slick-prev:before {
     content: '';
@@ -256,10 +259,9 @@ nav {
 .slick-next {
     line-height: 0;
     position: absolute;
-    top: 91.1%;
+    top: 230px;
     display: block;
     width: 30px;
-    /* height: 45px; */
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -271,14 +273,14 @@ nav {
 }
 
 .slick-prev {
-    left: 20%;
+    left: 275px;
     z-index: 1;
     bottom: 0;
     transform: translate(0px, 0px);
 }
 
 .slick-next {
-    right: 76.5%;
+    left: 311px;
     bottom: 0;
     transform: translate(0px, 0px);
 }
@@ -288,6 +290,7 @@ nav {
     font-size: 16px;
     color: #fff
 }
+
 .slick-prev button,
 .slick-next button {
     background-color: rgba(0, 0, 0, 0.5);
@@ -296,17 +299,22 @@ nav {
     padding: 7px 10px 6px 10px;
     cursor: pointer;
 }
+
 .num-box {
     position: absolute;
-    top: 91%;
-    left: 23.8%;
+    top: 230px;
+    left: 347px;
     background-color: rgba(0, 0, 0, 0.5);
     display: inline-block;
     padding: 4px 10px;
     font-size: 15px;
     color: #fff;
 }
+
 .welcome .play {
+    position: absolute;
+    top: 230px;
+    left: 398px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
@@ -314,22 +322,21 @@ nav {
     font-size: 16px;
     margin: none;
     cursor: pointer;
-    position: absolute;
-    top: 91%;
+    
 }
-.welcome .play {
-    left: 26.5%;
-}
+
 .play:after {
     content: '\f04b';
     font-family: "fontAwesome";
     display: block;
 }
+
 .play.on:after {
     content: '\f04c';
     font-family: "fontAwesome";
     display: block;
 }
+
 /*============================ [ end :: main - slick ] ============================*/
 
 /*---------------------------- [ start :: main service section ] ----------------------------*/
@@ -418,19 +425,23 @@ nav {
     font-weight: 500;
     margin-top: 11%;
 }
+
 .sv_list_item {
     position: relative;
 }
+
 .sv_list_item:hover {
     border: none;
     transition: 0.5s;
 }
+
 .sv_list_item:hover .caption,
 .sv_list_item:hover .caption01,
 .sv_list_item:hover .caption02 {
     opacity: 1;
     transition: 0.5s;
 }
+
 .sv_list_item .caption {
     position: absolute;
     top: -15px;
@@ -444,6 +455,7 @@ nav {
     text-align: center;
     padding: 40px;
 }
+
 .sv_list_item .caption01 {
     position: absolute;
     top: -15px;
@@ -457,6 +469,7 @@ nav {
     text-align: center;
     padding: 25px;
 }
+
 .sv_list_item .caption span,
 .sv_list_item .caption01 span,
 .sv_list_item .caption02 span {
@@ -466,9 +479,11 @@ nav {
     font-size: 20px;
     color: #0ca950;
 }
+
 .caption:nth-child(2) {
     color: red;
 }
+
 /*============================ [ end :: main service section ] ============================*/
 /*---------------------------- [ start :: esm banner ] ----------------------------*/
 
@@ -505,19 +520,23 @@ nav {
     width: 1140px;
     margin: 30px auto;
 }
+
 .esm_cont .esm_cont_left {
     float: left;
     width: 62.5%;
     margin-top: 70px;
 }
+
 .esm_cont .esm_cont_left img {
     display: block;
 }
+
 .esm_cont .esm_cont_left h1 {
     font-size: 40px;
     font-weight: 700;
     margin: 40px 0 30px 0;
 }
+
 .esm_cont .esm_cont_left p {
     font-weight: 700;
     font-size: 26px;
@@ -525,17 +544,21 @@ nav {
     letter-spacing: -1.7px;
     margin-bottom: 20px;
 }
+
 .esm_cont .esm_cont_left span {
     font-weight: 500;
     font-size: 16px;
 }
+
 .esm_cont a {
     margin: 0;
 }
-.esm_cont a > img {
+
+.esm_cont a>img {
     margin: 0;
     margin-top: 70px;
 }
+
 .esm_cont .esm_cont_right {
     float: right;
 }
@@ -1215,6 +1238,7 @@ nav {
     margin-top: 27px;
     cursor: pointer;
 }
+
 .gb_dt_top_right button a {
     color: #fff;
 }

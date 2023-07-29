@@ -74,3 +74,5 @@ const SwiperContainer = new Swiper(".swiper_container", {
         clickable: true,
     },
 });
+
+console.log('test')
