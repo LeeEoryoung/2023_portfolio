@@ -13,13 +13,15 @@
 }
 
 .container {
+    overflow: hidden;
+    width: 100%;
     background-color: #f0f0e0;
 }
 
 /* custom css */
 /*------[start] gototop --------*/
 .gototop {
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     bottom: 20px;
     right: -50px;
@@ -42,7 +44,7 @@
 
 header {
     width: 100%;
-    height: 20%;
+    height: auto;
     position: sticky;
     top: 0;
     left: 0;
@@ -53,15 +55,13 @@ header {
     visibility: hidden;
 }
 
-header:hover {
+header.active {
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
     background-color: #fff;
     box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
     -webkit-box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
-}
-
-header.active {
-    opacity: 1;
-    visibility: visible;
 }
 
 .header_inner nav {
@@ -152,7 +152,7 @@ nav .gnb li:hover::after {
 }
 
 .welcome_page h1 {
-    font-size: 7rem;
+    font-size: 6.5vw;
     width: 800px;
     position: absolute;
     bottom: 0%;
@@ -568,19 +568,19 @@ nav .gnb li:hover::after {
     margin: 70px;
 }
 
-#GI1 .gallery_item:nth-child(odd) {
+.gi1 .gallery_item:nth-child(odd) {
     margin-right: 40%;
 }
 
-#GI1 .gallery_item:nth-child(even) {
+.gi1 .gallery_item:nth-child(even) {
     margin-left: 40%;
 }
 
-#GI2 .gallery_item:nth-child(odd) {
+.gi2 .gallery_item:nth-child(odd) {
     margin-left: 40%;
 }
 
-#GI2 .gallery_item:nth-child(even) {
+.gi2 .gallery_item:nth-child(even) {
     margin-right: 40%;
 }
 
@@ -810,22 +810,33 @@ nav .gnb li:hover::after {
 
 /*######### [start] responsive css ###########*/
 /* tablet ver */
-@media all and (min-width:768px) and (max-width:1023px) {
+@media screen and (max-width: 1024px) {
 
+    /* responsive gototop */
+    .gototop {
+        right: -50px;
+        font-size: 2.4rem;
+    }
+    
+    .gototop.active {
+        right: 20px;
+    }
+    
+    .gototop:hover {
+        animation: none;
+    }
     /* responsive header */
     header {
         width: 30%;
         height: 0;
         position: fixed;
+        visibility: visible;
     }
-    
-    header:hover {
-        background-color: none;
-        box-shadow: none;
-    }
+
     .header_inner .logo {
         display: none;
     }
+
     .header_inner nav {
         width: 30%;
         height: 100vh;
@@ -834,21 +845,27 @@ nav .gnb li:hover::after {
         top: 0;
         left: -50%;
         background-color: #f2f2f2;
-        z-index: 101;
+        z-index: 150;
         transition: all 0.6s;
-    }    
+    }
+
     nav.active {
         left: 0;
     }
+
     nav .gnb {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
     }
-    
+
     .gnb .gnb_menu {
-        height: 90%;
         width: 100%;
+        margin: 150px 0 0 15px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -858,33 +875,37 @@ nav .gnb li:hover::after {
         text-transform: uppercase;
         font-weight: 900;
     }
-    
+
     .gnb_menu li {
         position: inherit;
         transition: 0.3s;
         text-align: left;
-        width: 100%;
-        padding-left: 30px;
-
+        width: 80%;
+        padding-bottom: 10px;
     }
-    
+    nav .gnb li a {
+        color: #4080A0;
+        text-shadow: 0 2px 2px #40404064;
+    }
     nav .gnb li::after {
         display: none;
     }
-    
+
     nav .gnb li:hover a {
-        color: #385E81;
+        color: inherit;
     }
-    
+
     nav .gnb li:hover::after {
         opacity: 0;
     }
+    
     .trigger {
         display: block;
         position: relative;
         width: 30px;
         height: 20px;
-        z-index: 102;
+        z-index: 350;
+        margin: 13.5px 0 0 20px;
     }
 
     .trigger>span {
@@ -930,7 +951,7 @@ nav .gnb li:hover::after {
     .welcome_page h6 {
         width: 150px;
         position: absolute;
-        top: -3%;
+        top: 0;
         left: 0;
         padding: 15px 0 0 15px;
         font-size: 0.8rem;
@@ -1141,6 +1162,8 @@ nav .gnb li:hover::after {
 
     .slide_text .slide_btns {
         gap: 20px;
+        align-items: center;
+        justify-content: center;
     }
 
     .slide_img .one_img_app {
@@ -1156,6 +1179,7 @@ nav .gnb li:hover::after {
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
         bottom: 15px !important;
+        z-index: 100 !important;
     }
 
     /* responsive contact */
@@ -1192,7 +1216,17 @@ nav .gnb li:hover::after {
 }
 
 /* moblie ver */
-@media all and (min-width:320px) and (max-width:767px) {
+@media screen and (max-width: 768px) {
+
+    /* responsive header */
+    .header_inner nav {
+        width: 50%;
+        left: -50%;
+    }
+
+    nav.active {
+        left: 0;
+    }
 
     /* responsive  welcome page */
     .welcome_page h6 {
@@ -1344,19 +1378,19 @@ nav .gnb li:hover::after {
         font-size: 5rem;
     }
 
-    #GI1 .gallery_item:nth-child(odd) {
+    .gi1 .gallery_item:nth-child(odd) {
         margin-right: 0%;
     }
 
-    #GI1 .gallery_item:nth-child(even) {
+    .gi1 .gallery_item:nth-child(even) {
         margin-left: 0%;
     }
 
-    #GI2 .gallery_item:nth-child(odd) {
+    .gi2 .gallery_item:nth-child(odd) {
         margin-left: 0%;
     }
 
-    #GI2 .gallery_item:nth-child(even) {
+    .gi2 .gallery_item:nth-child(even) {
         margin-right: 0%;
     }
 

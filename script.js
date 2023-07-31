@@ -1,3 +1,13 @@
+// header
+$("body").on("mousewheel", function (e) {
+    var wheel = e.originalEvent.wheelDelta;
+
+    if (wheel > 0) {
+        $('header').removeClass('active');
+    } else {
+        $('header').addClass('active');
+    }
+});
 // trigger
 $(function () {
     $('.trigger').click(function () {
@@ -13,22 +23,22 @@ $(function () {
         $('.trigger').toggleClass("active");
     })
 })
+// gototop
+$(function () {
+    $(window).scroll(function () {
+        var scrollPosition = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var gototop = $(".gototop");
 
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 800) {
-        $('header').addClass('active')
-    } else {
-        $('header').removeClass('active')
-    }
+        if (scrollPosition > windowHeight / 2) {
+            gototop.addClass("active");
+        } else {
+            gototop.removeClass("active");
+        }
+    })
 });
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 1000) {
-        $('.gototop').addClass('active')
-    } else {
-        $('.gototop').removeClass('active')
-    }
-});
-$(window).scrollTop()
+
+
 
 $(function () {
     $('#Skill01').click(function () {
@@ -75,4 +85,15 @@ const SwiperContainer = new Swiper(".swiper_container", {
     },
 });
 
-console.log('test')
+
+
+
+// $(window).scroll(function () { 
+// 	var scrollValue = $(document).scrollTop(); 
+//     var gi1 = $('.gi1').offset().top
+//     var windowHight = $(window).height();
+//     console.log(scrollValue);
+//     if( item1 - windowHight <= scrollValue){
+//         $('.gi1').addClass('on')
+//     }
+// });
