@@ -122,7 +122,8 @@ nav .gnb li:hover::after {
     opacity: 1;
 }
 
-.header_inner .trigger {
+.header_inner .trigger,
+.trigger .trigger_bg {
     display: none;
 }
 
@@ -567,6 +568,25 @@ nav .gnb li:hover::after {
 .gallery_items .gallery_item {
     margin: 70px;
 }
+/* [start] gallery item slide css */
+.gallery_items #Gitem1 {
+    transform: translateX(70%);
+    transition: all 0.5s;
+}
+.gallery_items #Gitem1.on {
+    transform: translateX(10%);
+}
+
+.gallery_items #Gitem2 {
+    transform: translateX(-70%);
+    transition: all 0.5s;
+}
+.gallery_items #Gitem2.on {
+    transform: translateX(-10%);
+}
+/* [end] gallery item slide css */
+
+
 
 .gi1 .gallery_item:nth-child(odd) {
     margin-right: 40%;
@@ -817,14 +837,15 @@ nav .gnb li:hover::after {
         right: -50px;
         font-size: 2.4rem;
     }
-    
+
     .gototop.active {
         right: 20px;
     }
-    
+
     .gototop:hover {
         animation: none;
     }
+
     /* responsive header */
     header {
         width: 30%;
@@ -851,6 +872,8 @@ nav .gnb li:hover::after {
 
     nav.active {
         left: 0;
+        box-shadow: 12px 0px 15px 0px rgba(0, 0, 0, 0.27);
+        -webkit-box-shadow: 12px 0px 15px 0px rgba(0, 0, 0, 0.27);
     }
 
     nav .gnb {
@@ -883,10 +906,12 @@ nav .gnb li:hover::after {
         width: 80%;
         padding-bottom: 10px;
     }
+
     nav .gnb li a {
         color: #4080A0;
         text-shadow: 0 2px 2px #40404064;
     }
+
     nav .gnb li::after {
         display: none;
     }
@@ -898,7 +923,18 @@ nav .gnb li:hover::after {
     nav .gnb li:hover::after {
         opacity: 0;
     }
-    
+
+    .trigger_wrap {
+        width: 350%;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
+        -webkit-box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
+    }
+
     .trigger {
         display: block;
         position: relative;
@@ -911,7 +947,7 @@ nav .gnb li:hover::after {
     .trigger>span {
         position: absolute;
         width: 100%;
-        height: 3px;
+        height: 4px;
         right: 0;
         background-color: #4080A0;
         border-radius: 10px;
@@ -1006,7 +1042,7 @@ nav .gnb li:hover::after {
     }
 
     .profile_img h6 {
-        width: 25%;
+        width: 100%;
         font-size: 1.2rem;
         text-transform: uppercase;
         line-height: 2rem;
@@ -1179,7 +1215,7 @@ nav .gnb li:hover::after {
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
         bottom: 15px !important;
-        z-index: 100 !important;
+        z-index: 2 !important;
     }
 
     /* responsive contact */
@@ -1353,7 +1389,7 @@ nav .gnb li:hover::after {
 
     .modal_text .close_btn {
         color: #ff0000;
-        cursor: pointer;
+        cursor: inherit;
     }
 
     .mycareer {

@@ -86,14 +86,23 @@ const SwiperContainer = new Swiper(".swiper_container", {
 });
 
 
+$(window).scroll(function () { 
+    var scrollValue = $(document).scrollTop(); 
+    var Gitem1 = $('#Gitem1').offset().top;
+    var Gitem2 = $('#Gitem2').offset().top;
 
+    var windowHight = $(window).height();
+    
+    if (Gitem1 - windowHight <= scrollValue) {
+        $('#Gitem1').addClass('on');
+    } else {
+        $('#Gitem1').removeClass('on');
+    }
+    if (Gitem2 - windowHight <= scrollValue) {
+        $('#Gitem2').addClass('on');
+    } else {
+        $('#Gitem2').removeClass('on');
+    }
+    
+});
 
-// $(window).scroll(function () { 
-// 	var scrollValue = $(document).scrollTop(); 
-//     var gi1 = $('.gi1').offset().top
-//     var windowHight = $(window).height();
-//     console.log(scrollValue);
-//     if( item1 - windowHight <= scrollValue){
-//         $('.gi1').addClass('on')
-//     }
-// });
