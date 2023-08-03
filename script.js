@@ -90,6 +90,16 @@ $(window).scroll(function () {
     var scrollValue = $(document).scrollTop(); 
     var Gitem1 = $('#Gitem1').offset().top;
     var Gitem2 = $('#Gitem2').offset().top;
+    var Gitem3 = $('#Gitem3').offset().top;
+    var Gitem4 = $('#Gitem4').offset().top;
+    var Gitem5 = $('#Gitem5').offset().top;
+    var Gitem6 = $('#Gitem6').offset().top;
+    var Gitem7 = $('#Gitem7').offset().top;
+    var Gitem8 = $('#Gitem8').offset().top;
+    var Gitem9 = $('#Gitem9').offset().top;
+    var Gitem10 = $('#Gitem10').offset().top;
+    var Gitem11 = $('#Gitem11').offset().top;
+    var Gitem12 = $('#Gitem12').offset().top;
 
     var windowHight = $(window).height();
     
@@ -103,6 +113,55 @@ $(window).scroll(function () {
     } else {
         $('#Gitem2').removeClass('on');
     }
-    
+    if (Gitem3 - windowHight <= scrollValue) {
+        $('#Gitem3').addClass('on');
+    } else {
+        $('#Gitem3').removeClass('on');
+    }
+    if (Gitem4 - windowHight <= scrollValue) {
+        $('#Gitem4').addClass('on');
+    } else {
+        $('#Gitem4').removeClass('on');
+    }
+    if (Gitem5 - windowHight <= scrollValue) {
+        $('#Gitem5').addClass('on');
+    } else {
+        $('#Gitem5').removeClass('on');
+    }
+    if (Gitem6 - windowHight <= scrollValue) {
+        $('#Gitem6').addClass('on');
+    } else {
+        $('#Gitem6').removeClass('on');
+    }
+    if (Gitem7 - windowHight <= scrollValue) {
+        $('#Gitem7').addClass('on');
+    } else {
+        $('#Gitem7').removeClass('on');
+    }
+    if (Gitem8 - windowHight <= scrollValue) {
+        $('#Gitem8').addClass('on');
+    } else {
+        $('#Gitem8').removeClass('on');
+    }
+    if (Gitem9 - windowHight <= scrollValue) {
+        $('#Gitem9').addClass('on');
+    } else {
+        $('#Gitem9').removeClass('on');
+    }
+    if (Gitem10 - windowHight <= scrollValue) {
+        $('#Gitem10').addClass('on');
+    } else {
+        $('#Gitem10').removeClass('on');
+    }
+    if (Gitem11 - windowHight <= scrollValue) {
+        $('#Gitem11').addClass('on');
+    } else {
+        $('#Gitem11').removeClass('on');
+    }
+    if (Gitem12 - windowHight <= scrollValue) {
+        $('#Gitem12').addClass('on');
+    } else {
+        $('#Gitem12').removeClass('on');
+    }
 });
 

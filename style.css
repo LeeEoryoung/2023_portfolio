@@ -569,19 +569,41 @@ nav .gnb li:hover::after {
     margin: 70px;
 }
 /* [start] gallery item slide css */
-.gallery_items #Gitem1 {
+/* 홀 */
+.gallery_items #Gitem1,
+.gallery_items #Gitem3,
+.gallery_items #Gitem5,
+.gallery_items #Gitem7,
+.gallery_items #Gitem9,
+.gallery_items #Gitem11 {
     transform: translateX(70%);
-    transition: all 0.5s;
+    transition: all 0.8s;
 }
-.gallery_items #Gitem1.on {
+.gallery_items #Gitem1.on,
+.gallery_items #Gitem3.on,
+.gallery_items #Gitem5.on,
+.gallery_items #Gitem7.on,
+.gallery_items #Gitem9.on,
+.gallery_items #Gitem11.on {
     transform: translateX(10%);
 }
 
-.gallery_items #Gitem2 {
-    transform: translateX(-70%);
-    transition: all 0.5s;
+/* 짝 */
+.gallery_items #Gitem2,
+.gallery_items #Gitem4,
+.gallery_items #Gitem6,
+.gallery_items #Gitem8,
+.gallery_items #Gitem10,
+.gallery_items #Gitem12 {
+    transform: translateX(-140%);
+    transition: all 0.8s;
 }
-.gallery_items #Gitem2.on {
+.gallery_items #Gitem2.on,
+.gallery_items #Gitem4.on,
+.gallery_items #Gitem6.on,
+.gallery_items #Gitem8.on,
+.gallery_items #Gitem10.on,
+.gallery_items #Gitem12.on {
     transform: translateX(-10%);
 }
 /* [end] gallery item slide css */
