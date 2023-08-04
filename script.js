@@ -85,7 +85,7 @@ const SwiperContainer = new Swiper(".swiper_container", {
     },
 });
 
-
+// gallery image slide
 // $(window).scroll(function () { 
 //     var scrollValue = $(document).scrollTop(); 
 //     var Gitem1 = $('#Gitem1').offset().top;
