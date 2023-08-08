@@ -962,7 +962,7 @@ nav .gnb li:hover::after {
 
     .trigger {
         display: block;
-        position: relative !important;
+        position: fixed !important;
         width: 30px;
         height: 20px;
         z-index: 350;
