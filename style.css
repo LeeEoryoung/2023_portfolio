@@ -122,8 +122,8 @@ nav .gnb li:hover::after {
     opacity: 1;
 }
 
-.header_inner .trigger,
-.trigger .trigger_bg {
+.trigger_wrap,
+.trigger {
     display: none;
 }
 
@@ -951,9 +951,10 @@ nav .gnb li:hover::after {
     .trigger_wrap {
         width: 350%;
         height: 50px;
-        position: absolute;
+        position: absolute !important;
         top: 0;
         left: 0;
+        display: block;
         background-color: #fff;
         box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
         -webkit-box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
@@ -961,7 +962,7 @@ nav .gnb li:hover::after {
 
     .trigger {
         display: block;
-        position: relative;
+        position: relative !important;
         width: 30px;
         height: 20px;
         z-index: 350;
