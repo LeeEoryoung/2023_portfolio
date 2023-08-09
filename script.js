@@ -38,8 +38,7 @@ $(function () {
     })
 });
 
-
-
+// skill modal
 $(function () {
     $('#Skill01').click(function () {
         $('.modal_html').addClass('active');
@@ -68,28 +67,11 @@ $(function () {
     });
 });
 
-// swiper slide
-const SwiperContainer = new Swiper(".swiper_container", {
-    slidePerView: 1,
-    speed: 500,
-    loop: true,
-    centeredSlides: true,
-    spaceBetween: 70,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-
 // gallery image slide
-$(window).scroll(function () { 
-    var scrollValue = $(document).scrollTop(); 
+$(window).scroll(function () {
+    var scrollValue = $(document).scrollTop();
     var windowHight = $(window).height();
-    
+
     var itemOffsets = [
         $('#Gitem1').offset().top,
         $('#Gitem2').offset().top,
@@ -115,6 +97,19 @@ $(window).scroll(function () {
         }
     }
 });
-
-
-
+// swiper slide
+const SwiperContainer = new Swiper(".swiper_container", {
+    slidePerView: 1,
+    speed: 500,
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 70,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});

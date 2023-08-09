@@ -154,13 +154,14 @@ nav .gnb li:hover::after {
 
 .welcome_page h1 {
     font-size: 6.5vw;
-    width: 800px;
+    width: 45%;
     position: absolute;
     bottom: 0%;
-    right: -8%;
+    right: 0%;
     transform: translateY(-20%);
     text-shadow: 0 4px 4px rgba(114, 114, 114, 0.576);
 }
+
 
 /*============ [end] welcome section ============*/
 
@@ -1021,15 +1022,6 @@ nav .gnb li:hover::after {
         text-shadow: 0 2px 2px rgba(114, 114, 114, 0.576);
     }
 
-    .welcome_page h1 {
-        font-size: 5rem;
-        width: 500px;
-        bottom: 3%;
-        right: 0;
-        transform: translateY(-20%);
-        text-shadow: 0 4px 4px rgba(114, 114, 114, 0.576);
-    }
-
     /* responsive  profile page */
     .profile_page h1 {
         font-size: 1.6rem;
@@ -1301,7 +1293,24 @@ nav .gnb li:hover::after {
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        animation: Textdown 0.7s ease-in-out;
     }
+    .welcome_page h1 span {
+        font-weight: 300;
+    }
+
+    @keyframes Textdown {
+        from {
+            top: -50%;
+            opacity: 0;
+        }
+        to {
+            top: 50%;
+            opacity: 1;
+        }
+
+    }
+
 
     /* responsive  profile page */
     .profile_page h1 {
