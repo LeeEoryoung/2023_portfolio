@@ -42,28 +42,43 @@ $(function () {
 $(function () {
     $('#Skill01').click(function () {
         $('.modal_html').addClass('active');
+        $('.modal_background').addClass('active');
     });
     $('#Skill02').click(function () {
         $('.modal_css').addClass('active');
+        $('.modal_background').addClass('active');
     });
     $('#Skill03').click(function () {
         $('.modal_js').addClass('active');
+        $('.modal_background').addClass('active');
     });
     $('#Skill04').click(function () {
         $('.modal_cafe24').addClass('active');
+        $('.modal_background').addClass('active');
     });
     $('#Skill05').click(function () {
         $('.modal_adoby').addClass('active');
+        $('.modal_background').addClass('active');
     });
     $('#Skill06').click(function () {
         $('.modal_zeplin').addClass('active');
+        $('.modal_background').addClass('active');
     });
     $('#Skill07').click(function () {
         $('.modal_figma').addClass('active');
+        $('.modal_background').addClass('active');
     });
 
     $('.close_btn').click(function () {
         $('.modal').removeClass('active');
+        $('.modal_background').removeClass('active');
+    });
+
+    $('.modal_background').click(function (event) {
+        if ($(event.target).hasClass('modal_background')) {
+            $('.modal').removeClass('active');
+            $('.modal_background').removeClass('active');
+        }
     });
 });
 
