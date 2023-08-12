@@ -8,6 +8,7 @@ $("body").on("mousewheel", function (e) {
         $('header').addClass('active');
     }
 });
+
 // trigger
 $(function () {
     $('.trigger').click(function () {
@@ -23,6 +24,7 @@ $(function () {
         $('.trigger').toggleClass("active");
     })
 })
+
 // gototop
 $(function () {
     $(window).scroll(function () {
@@ -112,6 +114,7 @@ $(window).scroll(function () {
         }
     }
 });
+
 // swiper slide
 const SwiperContainer = new Swiper(".swiper_container", {
     slidePerView: 1,
