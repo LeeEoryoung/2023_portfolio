@@ -40,6 +40,24 @@ $(function () {
     })
 });
 
+// welcome typing animation
+const content = "lee eo ryoung\nportfolio"
+const text = document.querySelector(".typing");
+let index = 0;
+
+function TypingAnimation(){
+    text.textContent += content[index++];
+    if(index > content.length){
+        text.textContent = "";
+        index = 0;
+    }
+}
+
+setInterval(TypingAnimation, 250);
+
+
+
+
 // skill modal
 $(function () {
     $('#Skill01').click(function () {
@@ -86,7 +104,7 @@ $(function () {
 
 // gallery image slide
 $(window).scroll(function () {
-    var scrollValue = $(document).scrollTop();
+    var scrollPosition = $(document).scrollTop();
     var windowHight = $(window).height();
 
     var itemOffsets = [
@@ -107,7 +125,7 @@ $(window).scroll(function () {
     for (var i = 0; i < itemOffsets.length; i++) {
         var item = $('#Gitem' + (i + 1));
 
-        if (itemOffsets[i] - windowHight <= scrollValue) {
+        if (itemOffsets[i] - windowHight <= scrollPosition) {
             item.addClass('on');
         } else {
             item.removeClass('on');
@@ -123,7 +141,7 @@ const SwiperContainer = new Swiper(".swiper_container", {
     centeredSlides: true,
     spaceBetween: 70,
     autoplay: {
-        delay: 5000,
+        delay: 7000,
         disableOnInteraction: false,
     },
     pagination: {

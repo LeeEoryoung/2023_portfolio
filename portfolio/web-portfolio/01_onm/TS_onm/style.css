@@ -273,14 +273,14 @@ nav {
 }
 
 .slick-prev {
-    left: 275px;
+    left: 325px;
     z-index: 1;
     bottom: 0;
     transform: translate(0px, 0px);
 }
 
 .slick-next {
-    left: 311px;
+    left: 361px;
     bottom: 0;
     transform: translate(0px, 0px);
 }
@@ -296,14 +296,14 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 16px;
     border: none;
-    padding: 7px 10px 6px 10px;
+    padding: 7px 10px 7px 10px;
     cursor: pointer;
 }
 
 .num-box {
     position: absolute;
     top: 230px;
-    left: 347px;
+    left: 397px;
     background-color: rgba(0, 0, 0, 0.5);
     display: inline-block;
     padding: 4px 10px;
@@ -314,7 +314,7 @@ nav {
 .welcome .play {
     position: absolute;
     top: 230px;
-    left: 398px;
+    left: 448px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
@@ -322,7 +322,7 @@ nav {
     font-size: 16px;
     margin: none;
     cursor: pointer;
-    
+
 }
 
 .play:after {
