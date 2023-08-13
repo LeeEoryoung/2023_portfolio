@@ -154,6 +154,8 @@ nav .gnb li:hover::after {
     text-shadow: 0 4px 4px rgba(114, 114, 114, 0.576);
 }
 
+
+
 /*============ [end] welcome section ============*/
 
 /************* [start] profile section **********/
@@ -162,17 +164,55 @@ nav .gnb li:hover::after {
     position: relative;
 }
 
-.profile_page h1 {
-    text-align: center;
-    font-size: 2rem;
+.profile_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     padding-top: 30px;
-    letter-spacing: .0313rem;
+    font-size: 2.26rem;
 }
 
-.profile_page h1 span {
+.r_animation {
+    overflow: hidden;
+    margin-left: 0.5rem;
+}
+
+.r_animation .rolling1 div {
+    animation: TextRolling1 2s ease infinite;
+}
+
+.r_animation .rolling2 div {
+    animation: TextRolling2 2s ease infinite;
+}
+
+.profile_title .r_animation div {
     font-size: 2.3rem;
     color: #385E81;
     letter-spacing: .0313rem;
+}
+
+@keyframes TextRolling1 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes TextRolling2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+.profile_title p {
+    margin: 0;
 }
 
 .profile_page .profile_wrap {
@@ -181,7 +221,7 @@ nav .gnb li:hover::after {
     align-items: center;
 }
 
-/*------- progile img -------*/
+/*------- profile img -------*/
 .profile_wrap .profile_img {
     width: 50%;
 }
@@ -1079,11 +1119,11 @@ nav .gnb li:hover::after {
     }
 
     /* responsive  profile page */
-    .profile_page h1 {
+    .profile_page .profile_title {
         font-size: 1.6rem;
     }
 
-    .profile_page h1 span {
+    .profile_title .r_animation div {
         font-size: 1.9rem;
     }
 
@@ -1353,11 +1393,12 @@ nav .gnb li:hover::after {
     }
 
     /* responsive  profile page */
-    .profile_page h1 {
+    .profile_page .profile_title {
         font-size: 1.1rem;
+        padding-top: 40px;
     }
 
-    .profile_page h1 span {
+    .profile_title .r_animation div {
         font-size: 1.3rem;
     }
 
@@ -1619,4 +1660,14 @@ nav .gnb li:hover::after {
     }
 }
 
+/* mibile s size */
+@media screen and (max-width: 425px) {
+    .profile_page .profile_title {
+        justify-content: space-around;
+        font-size: 0.8rem;
+    }
+    .profile_title .r_animation div {
+        font-size: 0.9rem;
+    }
+}
 /*########## [end] responsive css ########## */
