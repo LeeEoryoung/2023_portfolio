@@ -144,14 +144,19 @@ nav .gnb li:hover::after {
     text-align: center;
 }
 
-.welcome_page .typing {
+
+.welcome_page h1{
     font-size: 6.5vw;
     width: 45%;
     position: absolute;
-    bottom: 0%;
-    right: 0%;
+    bottom: 0;
+    right: -50%;
     transform: translateY(-20%);
     text-shadow: 0 4px 4px rgba(114, 114, 114, 0.576);
+    transition: all 0.7s ease-in-out;
+}
+.welcome_page h1.active{
+    right: 0;
 }
 
 
@@ -1377,7 +1382,7 @@ nav .gnb li:hover::after {
         display: none;
     }
 
-    .welcome_page .typing {
+    .welcome_page h1 {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1385,11 +1390,15 @@ nav .gnb li:hover::after {
         width: 100%;
         font-size: 3rem;
         padding: 15px;
-        top: 50%;
+        top: -50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
         box-sizing: border-box;
+        transition: 0.8s ease-in-out;
+    }
+    .welcome_page h1.active {
+        top: 50%;
     }
 
     /* responsive  profile page */

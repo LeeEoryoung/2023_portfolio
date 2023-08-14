@@ -40,20 +40,23 @@ $(function () {
     })
 });
 
-// welcome typing animation
-const content = "lee eo ryoung\nportfolio"
-const text = document.querySelector(".typing");
-let index = 0;
+// welcome fade in animation
+$(function () {
+    var welcomeTitle = $(".welcome_page h1");
 
-function TypingAnimation(){
-    text.textContent += content[index++];
-    if(index > content.length){
-        text.textContent = "";
-        index = 0;
-    }
-}
+    welcomeTitle.addClass("active");
 
-setInterval(TypingAnimation, 250);
+    $(window).scroll(function () {
+        var scrollPosition = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        if (scrollPosition <= 0) {
+            welcomeTitle.addClass("active");
+        } else if (scrollPosition > windowHeight) {
+            welcomeTitle.removeClass("active");
+        }
+    });
+});
 
 
 
