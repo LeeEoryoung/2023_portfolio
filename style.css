@@ -513,37 +513,27 @@ nav .gnb li:hover::after {
 }
 
 /* skill modal */
+
 .modal {
-    width: 45%;
-    position: absolute;
+    width: 50%;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 100;
-}
-
-.modal.active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 100;
-}
-
-
-.modal_wrap .modal_text {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 30px 50px 50px 50px;
     line-height: 1.5rem;
-    background-color: #fff;
     border-radius: 30px;
-    text-align: center;
+    background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: none;
+    z-index: 99;
+}
+.modal.active {
+    display: block;
+}
+
+.modal .modal_text {
+    padding: 20px;
+    text-align: center;
 }
 
 .modal_text .close_btn {
@@ -1238,8 +1228,9 @@ nav .gnb li:hover::after {
 
     /* responsive skill modal */
     .modal {
-        top: 60%;
-        transform: translate(-50%, -50%);
+        width: 60%;
+        max-height: 90%;
+        overflow: scroll;
     }
 
     .modal_text .close_btn {
@@ -1510,13 +1501,12 @@ nav .gnb li:hover::after {
 
     /* skill modal */
     .modal {
-        top: 60%;
-        transform: translate(-50%, -50%);
+        width: 70%;
     }
 
     .modal_text {
-        font-size: 0.95rem;
-        line-height: 1.2rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 
     .modal_text .close_btn {

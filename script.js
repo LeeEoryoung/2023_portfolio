@@ -10,20 +10,24 @@ $("body").on("mousewheel", function (e) {
 });
 
 // trigger
-$(function () {
-    $('.trigger').click(function () {
+$(document).ready(function () {
+    var trigger = $('.trigger');
+    var nav = $('nav');
 
+    trigger.click(function () {
         $(this).toggleClass("active");
-        $('nav').toggleClass("active");
-    })
-});
-$(function () {
-    $('.gnb_menu > a').click(function () {
+        nav.toggleClass("active");
+    });
 
-        $('nav').toggleClass("active");
-        $('.trigger').toggleClass("active");
-    })
-})
+    $(document).click(function (e) {
+        if (!trigger.is(e.target) && trigger.has(e.target).length === 0 &&
+            !nav.is(e.target) && nav.has(e.target).length === 0) {
+            trigger.removeClass("active");
+            nav.removeClass("active");
+        }
+    });
+});
+
 
 // gototop
 $(function () {
