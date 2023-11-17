@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-normal.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-normal.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-normal.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-normal.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-normal.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YouandiModernTR';
+    src: url('../font/YouandiModernTR.ttf');
+}
+
+@font-face {
+    font-family: 'YouandiBlack';
+    src: url('../font/Youandi-Black.ttf');
+}

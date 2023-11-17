@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vinyl & plastic</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/style/index.css">
+    <!-- slick css cdn -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- swiper slide cs cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- aos css cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="header_inner">
+                <a class="logo" href="./main.html">
+                    <img src="../images/common/white_logo.png" alt="logo">
+                </a>
+                <nav>
+                    <div class="gnb">
+                        <a href="./place.html">공간소개</a> 
+                        <a href="./login.html">로그인</a>
+                        <a onclick="return false;">장바구니1</a>
+                        <a id="search">검색</a>
+                    </div>
+                </nav>
+                <div class="trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mo_gnb">
+                    <a>
+                        <div class="search_wrap">
+                            <input type="text" placeholder="검색어를 입력해주세요." onfocus="this.placeholder=''"
+                                onblur="this.placeholder='검색어를 입력해주세요.'">
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </a>
+                    <a href="./place.html">공간소개</a>
+                    <a onclick="return false;">장바구니</a>
+                    <a href="./login.html">로그인</a>
+                    
+                </div>
+            </div>
+        </header>
+        <section class="prod_detail">
+            <div class="inner">
+                <section class="detail_top">
+                    <div class="detail_img">
+                        <img src="./images/items/k_album_1.jpg" alt="">
+                    </div>
+                    <div class="detail_text">
+                        <h1>윤지영 - 정규 1집 나의 정원에서</h1>
+                        <ul>
+                            <li>금액: 45000 원</li>
+                            <li>배송비: 3000 원</li>
+                            <li>
+                                <label for="quantity">수량:</label>
+                                <input type="number" id="quantity" value="1">
+                            </li>
+                            <hr>
+                            <li>
+                                <p>총 금액: <span id="total">48000</span> 원</p>
+                            </li>
+                        </ul>
+                        <div class="btn_wrap">
+                            <a onclick="return false;">장바구니</a>
+                            <a onclick="return false;">구매하기</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="detail_bottom">
+                    <div class="track_list">
+                        <div class="list_a">
+                            <h1 class="list_tit">Track List [A]</h1>
+                            <ul>
+                                <li>어제는 당신 꿈을 꿨어요</li>
+                                <li>You Have To Trust Me!</li>
+                                <li>City Seoul</li>
+                                <li>비행기</li>
+                                <li>나의 정원에서</li>
+                            </ul> 
+                        </div>
+                        <div class="list_b">
+                            <h1 class="list_tit">Track List [B]</h1>
+                            <ul>
+                                <li>날 지키던 건</li>
+                                <li>거미야 미아내</li>
+                                <li>당신은 내가 눈을 좋아하던 걸 기억할까?</li>
+                                <li>그래서 다행인 나를 </li>
+                                <li>나의 그늘</li>
+                            </ul> 
+                        </div>
+                    </div>
+                    <img src="./images/items/album_detail.jpg" alt="">
+                    
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <div class="search_popup">
+        <section>
+            <div class="inner">
+                <div class="close_btn">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="popup_wrap">
+                    <div class="search_wrap">
+                        <input type="text" placeholder="검색어를 입력해주세요." onfocus="this.placeholder=''"
+                            onblur="this.placeholder='검색어를 입력해주세요.'">
+                        <button type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search_list">
+                        <div class="recent">
+                            <h1 class="list_tit">- 최근 검색어 -</h1>
+                            <ul>
+                                <li><a>검색1</a></li>
+                                <li><a>검색2</a></li>
+                                <li><a>검색3</a></li>
+                                <li><a>검색4</a></li>
+                            </ul>
+                        </div>
+                        <div class="popular">
+                            <h1 class="list_tit">- 인기 검색어 -</h1>
+                            <ul>
+                                <li><a>검색1</a></li>
+                                <li><a>검색2</a></li>
+                                <li><a>검색3</a></li>
+                                <li><a>검색4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <div id="topBtn" onclick="window.scrollTo(0,0);"><i class="fa-solid fa-angle-up"></i></div>
+
+
+    <script>
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(37.536783, 127.000859),
+                zoom: 20,
+            };
+
+            var map = new google.maps.Map(
+                document.getElementById("googleMap"), mapOptions);
+        }
+    </script>
+
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL_jb9wtdO_zvjhB12mqll10TqG56DO-k&callback=myMap">
+    </script>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- slick js cdn-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- aos js cdn -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/71c4e8eb21.js" crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

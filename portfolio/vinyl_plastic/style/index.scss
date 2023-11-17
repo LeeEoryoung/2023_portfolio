@@ -1,0 +1,437 @@
+@import '../scss/reset';
+@import '../scss/common';
+@import '../scss/font';
+@import '../scss/header';
+@import '../scss/login';
+@import '../scss/place';
+@import '../scss/detail';
+@import '../scss/popup';
+
+section {
+    margin-bottom: 7rem;
+
+    &:last-child {
+        padding-bottom: 7rem ;
+    }
+
+    .inner {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.inner .main_sub_tit {
+    font-family: $ko_point_font;
+    font-size: 2.25rem;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
+}
+
+.mo_br {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.welcome {
+    width: 100%;
+    position: relative;
+}
+
+.welcome_text {
+    width: 95%;
+    margin: auto;
+    position: absolute;
+    bottom: 7%;
+    z-index: 8;
+
+    img {
+        width: 8.25rem;
+
+        @include tablet {
+            width: 6.25rem;
+        }
+
+        @include mobile {
+            width: 4.25rem;
+        }
+
+    }
+
+    h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+        font-weight: 700;
+        padding-top: 2rem;
+
+        @include tablet {
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+
+        @include mobile {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+
+        span {
+            font-family: $en_point_font;
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            position: relative;
+
+            @include tablet {
+                font-size: 1.5rem;
+            }
+
+            @include mobile {
+                font-size: 1.3rem;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 0.125rem;
+                position: absolute;
+                bottom: -18.5%;
+                left: 0;
+                background-color: $font_color;
+                opacity: 0;
+                transform: scaleX(0);
+                transform-origin: 0% 50%;
+                transition: transform 250ms ease-in-out;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+.main_slide {
+    position: absolute;
+    width: 100%;
+
+    div {
+        img {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+}
+
+.album_list {
+    padding-top: 5.125rem;
+
+    @include tablet {
+        padding-top: 3.125rem;
+    }
+
+    span {
+        font-size: 1.75rem;
+        text-transform: uppercase;
+        font-family: $ko_point_font;
+        position: relative;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -15%;
+            left: 0;
+            width: 100%;
+            height: 0.125rem;
+            background-color: $font_color;
+        }
+    }
+}
+
+.albums {
+    width: 100%;
+    margin-top: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.3rem;
+
+
+
+    @include tablet {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    
+    @media screen and (max-width: 735px)   {
+    }
+
+    .album_wrap {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+
+        &:hover .rot_lp {
+            bottom: 45%;
+            animation: rotate 3s 0.7s infinite linear;
+            filter: drop-shadow(5px 5px 10px #ffffff31);
+        }
+
+        .album_thumb {
+            width: 100%;
+        }
+
+        .rot_lp {
+            position: absolute;
+            bottom: 3%;
+            left: 2.5%;
+            z-index: -1;
+            transition: 0.5s;
+            width: 95%;
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
+}
+
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.post_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 3.125rem;
+
+    @include tablet {
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+
+    .post_wrap {
+        width: calc(100% / 4 - 3rem);
+        position: relative;
+
+        @include tablet {
+            width: calc(100% / 3 - 2rem);
+
+            &:nth-child(7),
+            &:last-child {
+                display: none;
+            }
+        }
+
+        .post_img {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: all 0.3s linear;
+
+                @include tablet {
+                    min-width: 10rem;
+
+                }
+
+                @media screen and (max-width: 590px) {
+                    min-width: 8rem;
+                }
+
+                &:hover {
+                    scale: (1.3);
+                }
+            }
+        }
+
+
+        .post_text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+            position: absolute;
+            bottom: -5%;
+            left: 10%;
+            text-align: center;
+            padding: 0.8125rem 0.625rem;
+            width: 80%;
+            margin: auto;
+            background-color: $font_color;
+            color: $bg_color;
+            font-family: $ko_point_font;
+
+            h1 {
+                font-weight: 700;
+            }
+
+            span {
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.monthly_mv {
+    width: 100%;
+    position: relative;
+
+    .mv_slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 3.125rem;
+
+        .iframe-outer {
+            height: 19.6875rem;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 53% !important;
+    transform: translate(-50%, -50%);
+    width: 1.875rem !important;
+    height: 1.875rem !important;
+    margin-top: 0;
+
+    @include tablet {
+        top: 93% !important;
+    }
+
+    &:after {
+        font-size: 1rem !important;
+        color: $font_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        transition: all .3s linear;
+        border-radius: 50%;
+
+
+        @include tablet {
+            font-size: 1.5rem !important;
+        }
+    }
+
+    &:hover:after {
+        background-color: $font_color;
+        color: $bg_color;
+        border-radius: 50%;
+        font-weight: 700;
+    }
+}
+
+.swiper-button-prev {
+    left: 32% !important;
+
+    @include tablet {
+        left: 40% !important;
+
+    }
+
+}
+
+.swiper-button-next {
+    right: 29% !important;
+
+    @include tablet {
+        right: 32% !important;
+
+    }
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 700;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-next:after {
+    content: '\f054' !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: '\f053' !important;
+}
+
+#topBtn {
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    display: none;
+    z-index: 8;
+    cursor: pointer;
+
+    &:hover i {
+        color: $point_color_bl;
+        border: 2px solid $point_color_bl;
+        transition: all 0.2s linear;
+        background-color: $font_color;
+    }
+
+    i {
+        color: $font_color;
+        border: 2px solid $font_color;
+        padding: 0.625rem 0.6875rem;
+        font-size: 1.125rem;
+        border-radius: 0.5rem;
+
+        @include tablet {
+            font-size: 1.0625rem;
+            padding: 0.4375rem 0.5rem;
+
+        }
+
+    }
+
+    @include tablet {
+        &:hover i {
+            color: inherit;
+            border: 2px solid $font_color;
+            transition: none;
+            background-color: inherit;
+        }
+    }
+
+}

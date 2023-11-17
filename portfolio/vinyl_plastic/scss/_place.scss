@@ -1,0 +1,172 @@
+.p_container {
+    width: 100%;
+    height: auto;
+
+    .inner {
+        position: relative;
+
+        h1 {
+            position: fixed;
+            top: 68%;
+            left: 50.5%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem;
+            text-transform: uppercase;
+            font-family: $en_point_font;
+            white-space: nowrap;
+            opacity: 8%;
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+            z-index: -1;
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.parallax_wrap {
+    width: 100%;
+    margin-top: 10%;
+    padding: 0 1.875rem;
+    position: relative;
+
+    @include tablet {
+        display: none;
+    }
+
+    .parallax_img {
+        width: 100%;
+        text-align: left;
+
+        &:nth-child(1) {
+            padding-left:15%;
+        }
+        &:nth-child(2) {
+            padding-right: 10%;
+        }
+        &:nth-child(3) {
+            padding-left: 3%;
+        }
+        &:nth-child(4) {
+            padding-right:30%;
+        }
+        &:nth-child(5) {
+            padding-left: 13%;
+        }
+        &:nth-child(6) {
+            padding-right: 20%;
+        }
+        
+
+        &:nth-child(even) {
+            text-align: right;
+        }
+
+        img {
+            width: 30%;
+        }
+    }
+}
+
+.info {
+    padding: 6.25rem 0;
+    margin-bottom: 0;
+
+    @include tablet {
+        padding: 3rem 0 6.25rem 0;
+
+    }
+
+    .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+}
+.info_img {
+    img {
+        
+        @include tablet {
+            width: 100%;
+
+        }
+    }
+}
+.info_text {
+    font-family: $ko_point_font;
+
+    h1 {
+        font-size: 2.25rem;
+        margin-bottom: 1.875rem;
+
+        @include tablet {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.8rem;
+
+        @include tablet {
+            font-size: 1rem;
+        }
+    }
+}
+
+
+
+.map {
+    #googleMap {
+        width: 100%;
+        height: 26.25rem;
+    }
+
+    .inner {
+        position: relative;
+
+        .map_text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+            position: absolute;
+            bottom: -5%;
+            left: 10%;
+            text-align: center;
+            padding: 0.8125rem 0.625rem;
+            width: 80%;
+            margin: auto;
+            background-color: $font_color;
+            color: $bg_color;
+            font-family: $ko_point_font;
+            
+            @include mobile {
+                line-height: 1.3rem;
+                padding: 0.9rem 0.625rem;
+            } 
+
+            h1 {
+                font-weight: 700;
+
+                @include mobile {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+}

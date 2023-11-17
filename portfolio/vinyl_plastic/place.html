@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vinyl & plastic</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/style/index.css">
+    <!-- slick css cdn -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- swiper slide cs cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- aos css cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="header_inner">
+                <a class="logo" href="./main.html">
+                    <img src="../images/common/white_logo.png" alt="logo">
+                </a>
+                <nav>
+                    <div class="gnb">
+                        <a href="./place.html">공간소개</a>
+                        <a href="./login.html">로그인</a>
+                        <a onclick="return false;">장바구니</a>
+                        <a id="search">검색</a>
+                    </div>
+                </nav>
+                <div class="trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mo_gnb">
+                    <a>
+                        <div class="search_wrap">
+                            <input type="text" placeholder="검색어를 입력해주세요." onfocus="this.placeholder=''"
+                                onblur="this.placeholder='검색어를 입력해주세요.'">
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </a>
+                    <a href="./place.html">공간소개</a>
+                    <a onclick="return false;">장바구니</a>
+                    <a href="./login.html">로그인</a>
+                    
+                </div>
+            </div>
+        </header>
+        <section class="p_container">
+            <div class="inner">
+                <h1>vinyl & plastic&nbsp;vinyl & plastic&nbsp;vinyl & plastic&nbsp;vinyl & plastic&nbsp;vinyl & plastic&nbsp;vinyl & plastic&nbsp;vinyl & plastic&nbsp;</h1>
+                <div class="parallax_wrap">
+                    <div class="parallax_img" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./images/info/ani_img1.jpg" alt="">
+                    </div>
+                    <div class="parallax_img" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./images/info/ani_img2.jpg" alt="">
+                    </div>
+                    <div class="parallax_img" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./images/info/ani_img3.jpg" alt="">
+                    </div>
+                    <div class="parallax_img" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./images/info/ani_img4.jpg" alt="">
+                    </div>
+                    <div class="parallax_img" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./images/info/ani_img5.jpg" alt="">
+                    </div>
+                    <div class="parallax_img" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                        <img src="./images/info/ani_img6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info">
+            <div class="inner">
+                <div class="info_img">
+                    <img src="./images/info/info_img.jpg" alt="">
+                </div>
+                <div class="info_text">
+                    <h1>바이닐앤플라스틱</h1>
+                    <p>
+                        현대카드 바이닐앤플라스틱은 1만종 이상의 바이닐을 판매하는 공간이자, 스트리밍이 아닌 실제의 음악을보고, 듣고, 만질 수 있는 체험형 공간이다.비틀즈가 걸었던 Abby
+                        Road의 교차로처럼, 출입구를 지나 바닥의 횡단보도를 걷는 순간 새로운 경험이 시작된다.켜켜이 쌓인 바이닐을 넘기는 Digging의 설렘, 미세한 마찰음마저도 음악으로
+                        만드는 턴테이블과 카세트플레이어의아날로그 사운드, 곳곳에 숨겨진 청음 기회를 통해 새로운 장르와 아티스트를 발견하는 즐거움까지.일상의 BGM이 되어버린 음악을 온전히 몰입해
+                        경험하고, 소유하는 공간, 바이닐앤플라스틱이다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="map">
+            <div class="inner">
+                <div id="googleMap">
+                </div>
+                <div class="map_text">
+                    <br><i class="fa-solid fa-location-dot"></i> 서울특별시 용산구<br class="mo_br"> 이태원로 248</h1>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="search_popup">
+        <section>
+            <div class="inner">
+                <div class="close_btn">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="popup_wrap">
+                    <div class="search_wrap">
+                        <input type="text" placeholder="검색어를 입력해주세요." onfocus="this.placeholder=''" onblur="this.placeholder='검색어를 입력해주세요.'">
+                        <button type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search_list">
+                        <div class="recent">
+                            <h1 class="list_tit">- 최근 검색어 -</h1>
+                            <ul>
+                                <li><a>검색1</a></li>
+                                <li><a>검색2</a></li>
+                                <li><a>검색3</a></li>
+                                <li><a>검색4</a></li>
+                            </ul>
+                        </div>
+                        <div class="popular">
+                            <h1 class="list_tit">- 인기 검색어 -</h1>
+                            <ul>
+                                <li><a>검색1</a></li>
+                                <li><a>검색2</a></li>
+                                <li><a>검색3</a></li>
+                                <li><a>검색4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <div id="topBtn" onclick="window.scrollTo(0,0);"><i class="fa-solid fa-angle-up"></i></div>
+
+
+    <script>
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(37.536783, 127.000859),
+                zoom: 20,
+            };
+
+            var map = new google.maps.Map(
+                document.getElementById("googleMap"), mapOptions);
+        }
+    </script>
+
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL_jb9wtdO_zvjhB12mqll10TqG56DO-k&callback=myMap">
+    </script>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- slick js cdn-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- aos js cdn -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/71c4e8eb21.js" crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

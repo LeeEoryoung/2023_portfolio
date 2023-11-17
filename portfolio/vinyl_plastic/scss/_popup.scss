@@ -1,0 +1,116 @@
+.search_popup {
+    display: none;
+
+
+    &.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(202, 202, 202, 0.7);
+        z-index: 8;
+    }
+    section {
+        margin-bottom: 0;
+        padding-bottom: 0 !important;
+    }
+
+    .inner {
+        width: 80%;
+        background-color: $font_color;
+        color: $bg_color;
+        border-radius: 1.125rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+
+        .close_btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1.1rem;
+            background-color: $point_color_bl;
+            color: $font_color;
+            font-size: 1.125rem;
+            cursor: pointer;
+            border-radius: 0 18px 0 0;
+        }
+    }
+}
+.popup_wrap {
+    padding: 4.375rem 1.875rem;
+
+    .search_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input {
+            border: 2px solid $point_color_bl;
+            padding: 0.9375rem 0.75rem;
+            width: 25%;
+            font-size: 1rem;
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            color: $font_color;
+            background-color: $point_color_bl;
+            padding: 17px 13px;
+            font-size: 1rem;
+        }
+    }
+}
+
+.search_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1.875rem 0 1.875rem;
+
+    .recent {
+        border-right: 1px solid #d8d8d8;
+    }
+
+    .recent,
+    .popular  {
+        flex: 1;
+        text-align: center;
+
+        .list_tit {
+            font-family: $ko_point_font;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        li {
+            margin: 1.4375rem 0;
+
+
+            a {
+                color: $bg_color;
+                font-size: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    color: $point_color_bl;
+                }
+
+            }
+
+            &:first-child {
+                margin-top: 1.875rem;
+            }
+
+
+        }
+
+    }
+
+
+}

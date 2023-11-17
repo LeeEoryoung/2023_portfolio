@@ -1,0 +1,63 @@
+// font family
+$ko_point_font: 'YouandiModernTR';
+$font: 'Pretendard';
+$en_point_font: 'YouandiBlack';
+
+
+// color list
+$font_color: #fff;
+$bg_color: #000;
+$point_color_bl: #0000ff;
+$point_color_rd: #ff0066;
+
+
+// responsive
+$break-mobile: 400px;
+$break-tablet: 800px;
+$break-Sdesktop: 1024px;
+$break-Ldesktop: 1280px;
+
+@mixin Ldesktop {
+    @media (max-width: #{$break-Ldesktop}) {
+        @content;
+    }
+}
+@mixin Sdesktop {
+    @media (max-width: #{$break-Sdesktop}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: #{$break-tablet}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: #{$break-mobile}) {
+        @content;
+    }
+}
+
+html {
+    background-color: $bg_color;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 0.625rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $font_color;
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $bg_color;
+    }
+}
+
+body {
+    font-family: 'Pretendard', 'YouandiBlack', 'YouandiModernTR';
+    color: $font_color;
+}
