@@ -33,11 +33,9 @@ $(function () {
 });
 
 
-
-
 // main_slide
 $(document).ready(function () {
-    $('.main_slide').slick({
+    $('.container .main_slide').slick({
         infinite: true,
         speed: 15000,
         slidesToShow: 1,
