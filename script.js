@@ -19,7 +19,7 @@ $(document).ready(function () {
         nav.toggleClass("active");
     });
 
-    $(document).click(function (e) {
+    $(document).click(function (e) { 
         if (!trigger.is(e.target) && trigger.has(e.target).length === 0 &&
             !nav.is(e.target) && nav.has(e.target).length === 0) {
             trigger.removeClass("active");
