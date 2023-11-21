@@ -25,16 +25,16 @@ body.active {
 .gototop {
     z-index: 10;
     position: fixed;
-    bottom: 20px;
-    right: -50px;
-    font-size: 50px;
+    bottom: 1.25rem;
+    right: -3.125rem;
+    font-size: 3.125rem;
     color: #385E81;
     border-radius: 100%;
     transition: 0.3s;
 }
 
 .gototop.active {
-    right: 50px;
+    right: 3.125rem;
 }
 
 .gototop:hover {
@@ -61,8 +61,8 @@ header.active {
     opacity: 1;
     visibility: visible;
     background-color: #fff;
-    box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
-    -webkit-box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
+    box-shadow: -0.25rem 0.5rem 0.625rem 0.25rem rgba(114, 114, 114, 0.212);
+    -webkit-box-shadow: -0.25rem 0.5rem 0.625rem 0.25rem rgba(114, 114, 114, 0.212);
 }
 
 .header_inner nav {
@@ -73,11 +73,11 @@ header.active {
 
 nav .logo {
     font-family: 'Caprasimo', cursive;
-    font-size: 2rem;
-    padding: 7px 11px;
-    margin: 3px 0 3px 0;
+    font-size: 32px;
+    padding: 0.4375rem 0.6875rem;
+    margin: 0.1875rem 0 0.1875rem 0;
     color: #385E81;
-    letter-spacing: 0.15rem;
+    letter-spacing: 2.4px;
 }
 
 nav .gnb {
@@ -90,8 +90,8 @@ nav .gnb {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    font-size: 1.1rem;
+    gap: 3.125rem;
+    font-size: 17.6px;
     text-transform: uppercase;
     font-weight: 900;
 }
@@ -103,11 +103,11 @@ nav .gnb {
 
 nav .gnb li::after {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
     position: absolute;
-    top: -5px;
-    right: -15px;
+    top: -0.3125rem;
+    right: -0.9375rem;
     transform: translateY(-3%);
     background-color: #385E81;
     border-radius: 100%;
@@ -142,12 +142,12 @@ nav .gnb li:hover::after {
 }
 
 .welcome_page h6 {
-    width: 150px;
+    width: 9.375rem;
     position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 0.8rem;
-    line-height: 1.1rem;
+    top: 0.9375rem;
+    left: 0.9375rem;
+    font-size: 12.8px;
+    line-height: 17.6px;
     text-align: center;
 }
 
@@ -159,7 +159,7 @@ nav .gnb li:hover::after {
     bottom: 0;
     right: -50%;
     transform: translateY(-20%);
-    text-shadow: 0 4px 4px rgba(114, 114, 114, 0.576);
+    text-shadow: 0 0.25rem 0.25rem rgba(114, 114, 114, 0.576);
     transition: all 0.7s ease-in-out;
 }
 .welcome_page h1.active{
@@ -181,13 +181,13 @@ nav .gnb li:hover::after {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: 30px;
-    font-size: 2.26rem;
+    padding-top: 1.875rem;
+    font-size: 36.16px;
 }
 
 .r_animation {
     overflow: hidden;
-    margin-left: 0.5rem;
+    margin-left: 8px;
 }
 
 .r_animation .rolling1 div {
@@ -199,9 +199,9 @@ nav .gnb li:hover::after {
 }
 
 .profile_title .r_animation div {
-    font-size: 2.3rem;
+    font-size: 36.8px;
     color: #385E81;
-    letter-spacing: .0313rem;
+    letter-spacing: 0.5008px;
 }
 
 @keyframes TextRolling1 {
@@ -242,23 +242,23 @@ nav .gnb li:hover::after {
 .profile_wrap .profile_img .profile_imgwrap,
 .profile_wrap .profile_img h6 {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 1.875rem;
 }
 
 .profile_wrap .profile_img h3 {
-    font-size: 2.2rem;
+    font-size: 35.2px;
     color: #f4f4f4;
-    text-shadow: -2px 0 #385E81, 0 2px #385E81, 2px 0 #385E81, 0 -2px #385E81;
+    text-shadow: -0.125rem 0 #385E81, 0 0.125rem #385E81, 0.125rem 0 #385E81, 0 -0.125rem #385E81;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    letter-spacing: 3.2px;
     animation: bounce 0.7s infinite ease-in-out;
 }
 
 .profile_img h3 small {
-    font-size: 0.9rem;
+    font-size: 14.4px;
     text-shadow: none;
     color: #385E81;
-    letter-spacing: -0.07rem;
+    letter-spacing: -1.12px;
     display: block;
 }
 
@@ -269,7 +269,7 @@ nav .gnb li:hover::after {
     }
 
     50% {
-        transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 0.625rem, 0);
     }
 
     100% {
@@ -286,24 +286,24 @@ nav .gnb li:hover::after {
 }
 
 .profile_imgwrap img {
-    filter: drop-shadow(-15px 3px 0 #385e818d);
+    filter: drop-shadow(-0.9375rem 0.1875rem 0 #385e818d);
     position: relative;
 }
 
 .tooltip .tip_box {
     width: 13%;
     position: absolute;
-    top: 50px;
-    left: 20px;
-    padding: 8px 15px;
-    border-radius: 5px;
+    top: 3.125rem;
+    left: 1.25rem;
+    padding: 0.5rem 0.9375rem;
+    border-radius: 0.3125rem;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
-    font-size: .9375rem;
+    font-size: 15px;
     text-transform: uppercase;
-    letter-spacing: .0688rem;
-    border: 1px solid transparent;
+    letter-spacing: 1.1008px;
+    border: 0.0625rem solid transparent;
     opacity: 0;
     visibility: hidden;
     transition: 0.2s ease-in-out;
@@ -315,8 +315,8 @@ nav .gnb li:hover::after {
     position: absolute;
     top: 100%;
     left: 40%;
-    border: 10px solid transparent;
-    border-top: 12px solid rgba(0, 0, 0, 0.8);
+    border: 0.625rem solid transparent;
+    border-top: 0.75rem solid rgba(0, 0, 0, 0.8);
 }
 
 .profile_imgwrap img:hover {
@@ -331,15 +331,15 @@ nav .gnb li:hover::after {
 .tooltip .tip_box:nth-child(1) {
     top: 30%;
     left: 15%;
-    padding: 8px 10px;
+    padding: 0.5rem 0.625rem;
     transform: rotate(-38deg);
 }
 
 .tooltip .tip_box:nth-child(2) {
-    width: 80px;
+    width: 5rem;
     top: 7%;
     left: 27%;
-    padding: 8px 10px;
+    padding: 0.5rem 0.625rem;
     transform: rotate(-15deg);
     transition-delay: 0.3s;
 }
@@ -348,7 +348,7 @@ nav .gnb li:hover::after {
     width: 13%;
     top: 3%;
     left: 52%;
-    padding: 8px 10px;
+    padding: 0.5rem 0.625rem;
     transform: rotate(12deg);
     transition-delay: 0.4s;
 }
@@ -357,7 +357,7 @@ nav .gnb li:hover::after {
     width: 13%;
     top: 20%;
     left: 65%;
-    padding: 8px 10px;
+    padding: 0.5rem 0.625rem;
     transform: rotate(25deg);
     transition-delay: 0.1s;
 }
@@ -367,14 +367,14 @@ nav .gnb li:hover::after {
     left: 70%;
     transform: rotate(40deg);
     transition-delay: 0.5s;
-    letter-spacing: 2.5008px;
+    letter-spacing: 0.1563rem;
 }
 
 .profile_img h6 {
     width: 43%;
-    font-size: 1.5rem;
+    font-size: 24px;
     text-transform: uppercase;
-    line-height: 2rem;
+    line-height: 32px;
     font-weight: 900;
     color: #385E81;
     margin: auto;
@@ -386,7 +386,7 @@ nav .gnb li:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 0.625rem;
 }
 
 .profile_text .profile_textwrap {
@@ -403,41 +403,49 @@ nav .gnb li:hover::after {
     font-size: 1.5625rem;
     text-transform: uppercase;
     color: #385E81;
-    margin: 30px 0 25px 0;
+    margin: 1.875rem 0 1.5625rem 0;
 }
 
 .pro_subtitle::after {
     content: '';
     width: 7%;
-    height: 16%;
+    height: 0.1875rem;
     position: absolute;
     background-color: #385E81;
     display: block;
-    margin: 5px 0;
+    margin: 0.5rem 0;
 }
 
 .profile_textwrap .myprofile {
     width: 100%;
 }
 
-.profile_textwrap .myprofile ul {
+.profile_textwrap .myprofile div {
     background-color: #fff;
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 1.25rem;
+    margin-top: 0.625rem;
+    border-radius: 1.25rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0rem 0.125rem 0.5rem 0rem;
 }
 
 .profile_textwrap .myprofile li {
-    margin-top: 10px;
+    line-height: 1.8rem;
     font-weight: 500;
 }
 
-.profile_textwrap .myprofile li:first-child {
-    margin-top: 0;
+.profile_textwrap .myprofile li::before {
+    content: '●';
+    font-size: 0.4rem;
+    padding-right: 0.4375rem;
+    color: #385E81;
+    vertical-align: middle;
+    line-height: 1.25rem;
 }
 
-.myprofile li h6 {
+.myprofile h6 {
+    margin-top: 0.625rem;
+    line-height: 1.8rem;
+
     color: #385E81;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -447,8 +455,8 @@ nav .gnb li:hover::after {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 15px;
-    margin-top: 5px;
+    gap: 0.9375rem;
+    margin-top: 0.3125rem;
     transition: 0.2s;
 }
 
@@ -458,9 +466,9 @@ nav .gnb li:hover::after {
 }
 
 .myprofile .study a>img {
-    width: 2.25rem;
-    border-radius: 3px;
-    margin: 6px 0 0 0;
+    width: 36px;
+    border-radius: 0.1875rem;
+    margin: 0.375rem 0 0 0;
 }
 
 .myprofile .study a>i:hover,
@@ -471,7 +479,7 @@ nav .gnb li:hover::after {
 .profile_textwrap .myskill {
     width: 100%;
     position: relative;
-    margin-top: 5px;
+    margin-top: 0.3125rem;
 }
 
 .myskill .pro_subtitle::before {
@@ -480,50 +488,50 @@ nav .gnb li:hover::after {
     bottom: 5%;
     left: 15%;
     font-size: 0.7rem;
-    letter-spacing: -0.7px;
+    letter-spacing: -0.0437rem;
 }
 
 .myskill strong {
-    font-size: 1.1rem;
+    font-size: 17.6px;
     text-transform: uppercase;
 }
 
 .myskill .skills {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    padding: 10px 0 15px 0;
+    padding: 1.25rem 0 0.9375rem 0;
+    gap: 0.9375rem
 }
 
 .myskill .skills>span {
-    padding: 8px 13px;
-    border-radius: 10px;
+    padding: 0.5rem 0.8125rem;
+    border-radius: 0.625rem;
     font-weight: 500;
     text-transform: uppercase;
     background-color: #fff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0rem 0.125rem 0.5rem 0rem;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .myskill .skills>span:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px #0000007e;
+    box-shadow: 0rem 0rem 0.9375rem #0000007e;
 }
 
 /* skill modal */
-
 .modal {
     width: 50%;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    line-height: 1.5rem;
-    border-radius: 30px;
+    line-height: 24px;
+    border-radius: 1.875rem;
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0rem 0.625rem 1.25rem, rgba(0, 0, 0, 0.23) 0rem 0.375rem 0.375rem;
     display: none;
     z-index: 99;
 }
@@ -532,13 +540,17 @@ nav .gnb li:hover::after {
 }
 
 .modal .modal_text {
-    padding: 20px;
+    padding: 1.25rem;
     text-align: center;
+}
+
+.modal_text p {
+    line-height: 1.8rem;
 }
 
 .modal_text .close_btn {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 24px;
     border: none;
     background-color: transparent;
     text-align: right;
@@ -572,22 +584,22 @@ nav .gnb li:hover::after {
 /* career */
 .profile_text .mycareer {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 
 .profile_text .mycareer ul {
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 20px;
+    padding: 1.25rem;
+    margin-top: 0.625rem;
+    border-radius: 1.25rem;
     background-color: #fff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0rem 0.125rem 0.5rem 0rem;
 
 }
 
 .profile_text .mycareer ul li {
     font-weight: 500;
-    line-height: 1.4rem;
-    margin-bottom: 8px;
+    line-height: 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .profile_text .mycareer ul li:last-child {
@@ -596,18 +608,18 @@ nav .gnb li:hover::after {
 
 .mycareer ul li::before {
     content: '●';
-    font-size: .4rem;
-    padding-right: 7px;
+    font-size: 0.4rem;
+    padding-right: 0.4375rem;
     color: #385E81;
     vertical-align: middle;
-    line-height: 20px;
+    line-height: 1.25rem;
 }
 
 
 .mycareer ul li span {
     display: block;
-    font-size: 0.93rem;
-    text-indent: 0.93rem;
+    font-size: 14.88px;
+    text-indent: 14.88px;
 }
 
 /*============ [end] profile section ============*/
@@ -622,11 +634,11 @@ nav .gnb li:hover::after {
 .gallery_page h1 {
     margin-top: 8%;
     color: #4080A0;
-    font-size: 4.5rem;
+    font-size: 72px;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
-    text-shadow: 0 4px 4px rgba(114, 114, 114, 0.576);
+    text-shadow: 0 0.25rem 0.25rem rgba(114, 114, 114, 0.576);
 }
 
 .pin_container {
@@ -650,7 +662,7 @@ nav .gnb li:hover::after {
 }
 
 .gallery_items .gallery_item {
-    margin: 70px;
+    margin: 4.375rem;
 }
 
 /* [start] gallery item slide css */
@@ -725,10 +737,10 @@ nav .gnb li:hover::after {
     width: 100%;
     height: 100%;
     text-transform: uppercase;
-    font-size: 7.2rem;
+    font-size: 115.2px;
     writing-mode: vertical-lr;
     text-transform: uppercase;
-    text-shadow: 0 4px 4px rgba(114, 114, 114, 0.197);
+    text-shadow: 0 0.25rem 0.25rem rgba(114, 114, 114, 0.197);
 }
 
 
@@ -737,14 +749,14 @@ nav .gnb li:hover::after {
     width: 100%;
     height: 100%;
     margin: 100% 0;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .gallery_item img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 4px rgba(114, 114, 114, 0.197);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.25rem rgba(114, 114, 114, 0.197);
 }
 
 .gallery_item .overlay {
@@ -764,8 +776,8 @@ nav .gnb li:hover::after {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
-    border-radius: 10px;
-    font-size: 0.9rem;
+    border-radius: 0.625rem;
+    font-size: 14.4px;
 }
 
 .gallery_item .mo_overlay {
@@ -811,41 +823,41 @@ nav .gnb li:hover::after {
 .slide_text .slide_btns a {
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.075rem;
 }
 
 .slide_text {
-    padding: 15px;
+    padding: 0.9375rem;
 }
 
 .slide_text h1 {
-    font-size: 2.5rem;
-    padding-bottom: 20px;
-    letter-spacing: -0.7px;
+    font-size: 40px;
+    padding-bottom: 1.25rem;
+    letter-spacing: -0.0437rem;
     color: #385E81;
-    text-shadow: 0 4px 4px rgba(114, 114, 114, 0.197);
+    text-shadow: 0 0.25rem 0.25rem rgba(114, 114, 114, 0.197);
 }
 
 .slide_text ul li {
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
     font-weight: 500;
-    font-size: 0.96rem;
+    font-size: 15.36px;
 }
 
 .slide_text .slide_btns {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
     margin-top: 7%;
 }
 
 .slide_text .slide_btns button {
-    padding: 5px 8px;
+    padding: 0.3125rem 0.5rem;
     background-color: #385E81;
-    border: 1px solid #4040406d;
-    border-radius: 8px;
-    box-shadow: 0 4px 4px rgba(114, 114, 114, 0.197);
+    border: 0.0625rem solid #4040406d;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.25rem rgba(114, 114, 114, 0.197);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets,
@@ -853,7 +865,7 @@ nav .gnb li:hover::after {
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
     position: absolute !important;
-    bottom: 40px !important;
+    bottom: 2.5rem !important;
     left: 0;
     width: 100%;
 }
@@ -863,7 +875,7 @@ nav .gnb li:hover::after {
 }
 
 .slide_img .one_img_app {
-    margin: 0 0 50px 0;
+    margin: 0 0 3.125rem 0;
 }
 
 .slide_img .one_img {
@@ -871,19 +883,19 @@ nav .gnb li:hover::after {
 }
 
 .swiper-pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: transparent;
-    border: 1px solid #385E81;
+    border: 0.0625rem solid #385E81;
     opacity: 1;
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-    width: 40px;
+    width: 2.5rem;
     transition: .5s;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     background-color: #385E81;
-    border: 1px solid transparent;
+    border: 0.0625rem solid transparent;
 }
 
 /*============ [end] portfolio page============ */
@@ -897,52 +909,52 @@ nav .gnb li:hover::after {
     margin-top: 8%;
     margin-bottom: 2%;
     color: #4080A0;
-    font-size: 4.5rem;
+    font-size: 72px;
     text-transform: uppercase;
-    text-shadow: 0 2px 2px rgba(114, 114, 114, 0.576);
+    text-shadow: 0 0.125rem 0.125rem rgba(114, 114, 114, 0.576);
 }
 
 .contact_page .section_inner>p {
     width: 40%;
     font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 1.7rem;
+    font-size: 17.6px;
+    line-height: 27.2px;
 }
 
 .contact_page .contact_inner {
     margin-top: 5%;
     text-align: center;
-    padding: 50px 30px;
-    border-radius: 30px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 3.125rem 1.875rem;
+    border-radius: 1.875rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0rem 0.125rem 0.5rem 0rem;
 }
 
 .contact_inner a {
     width: 50%;
     margin: auto;
-    margin-top: 30px;
-    padding: 15px 10px;
+    margin-top: 1.875rem;
+    padding: 0.9375rem 0.625rem;
     display: block;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 24px;
     background-color: #4080A0;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     color: #f4f4f4;
-    box-shadow: inset 0 -8px 0 rgba(0, 0, 0, .2),
-        1px 1px 0 0 #2a445d,
-        2px 2px 0 0 #2a445d,
-        3px 3px 0 0 #2a445d;
+    box-shadow: inset 0 -0.5rem 0 rgba(0, 0, 0, .2),
+        0.0625rem 0.0625rem 0 0 #2a445d,
+        0.125rem 0.125rem 0 0 #2a445d,
+        0.1875rem 0.1875rem 0 0 #2a445d;
     transition: 0.5s;
 }
 
 .contact_inner a:hover {
-    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, .2),
-        1px 1px 0 0 #2a445d
+    box-shadow: inset 0 -0.25rem 0 0 rgba(0, 0, 0, .2),
+        0.0625rem 0.0625rem 0 0 #2a445d
 }
 
 .contact_inner p {
-    font-size: 1.2rem;
-    padding-top: 50px;
+    font-size: 19.2px;
+    padding-top: 3.125rem;
     font-weight: 500;
 }
 
@@ -955,12 +967,12 @@ nav .gnb li:hover::after {
 
     /* responsive gototop */
     .gototop {
-        right: -50px;
-        font-size: 2.4rem;
+        right: -3.125rem;
+        font-size: 38.4px;
     }
 
     .gototop.active {
-        right: 20px;
+        right: 1.25rem;
     }
 
     .gototop:hover {
@@ -976,8 +988,8 @@ nav .gnb li:hover::after {
         background-color: #fff;
         opacity: 1;
         visibility: visible;
-        box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
-        -webkit-box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
+        box-shadow: -0.25rem 0.5rem 0.625rem 0.25rem rgba(114, 114, 114, 0.212);
+        -webkit-box-shadow: -0.25rem 0.5rem 0.625rem 0.25rem rgba(114, 114, 114, 0.212);
     }
 
     .header_inner .logo {
@@ -999,8 +1011,8 @@ nav .gnb li:hover::after {
 
     nav.active {
         left: 0;
-        box-shadow: 12px 0px 15px 0px rgba(0, 0, 0, 0.27);
-        -webkit-box-shadow: 12px 0px 15px 0px rgba(0, 0, 0, 0.27);
+        box-shadow: 0.75rem 0rem 0.9375rem 0rem rgba(0, 0, 0, 0.14);
+        -webkit-box-shadow: 0.75rem 0rem 0.9375rem 0rem rgba(0, 0, 0, 0.14);
     }
 
     nav .gnb {
@@ -1015,13 +1027,13 @@ nav .gnb li:hover::after {
 
     .gnb .gnb_menu {
         width: 100%;
-        margin: 150px 0 0 15px;
+        margin: 9.375rem 0 0 0.9375rem;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 50px;
-        font-size: 1.1rem;
+        gap: 3.125rem;
+        font-size: 17.6px;
         text-transform: uppercase;
         font-weight: 900;
     }
@@ -1031,12 +1043,12 @@ nav .gnb li:hover::after {
         transition: 0.3s;
         text-align: left;
         width: 80%;
-        padding-bottom: 10px;
+        padding-bottom: 0.625rem;
     }
 
     nav .gnb li a {
         color: #4080A0;
-        text-shadow: 0 2px 2px #40404064;
+        text-shadow: 0 0.125rem 0.125rem #40404064;
     }
 
     nav .gnb li::after {
@@ -1053,32 +1065,32 @@ nav .gnb li:hover::after {
 
     .trigger_wrap {
         width: 100%;
-        height: 50px;
+        height: 3.125rem;
         position: absolute !important;
         top: 0;
         left: 0;
         display: block;
         background-color: #fff;
-        box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
-        -webkit-box-shadow: -4px 8px 10px 4px rgba(114, 114, 114, 0.212);
+        box-shadow: -0.25rem 0.5rem 0.625rem 0.25rem rgba(114, 114, 114, 0.212);
+        -webkit-box-shadow: -0.25rem 0.5rem 0.625rem 0.25rem rgba(114, 114, 114, 0.212);
     }
 
     .trigger {
         display: block;
         position: fixed !important;
-        width: 30px;
-        height: 20px;
+        width: 1.875rem;
+        height: 1.25rem;
         z-index: 350;
-        margin: 13.5px 0 0 20px;
+        margin: 0.8438rem 0 0 1.25rem;
     }
 
     .trigger>span {
         position: absolute;
         width: 100%;
-        height: 4px;
+        height: 0.25rem;
         right: 0;
         background-color: #4080A0;
-        border-radius: 10px;
+        border-radius: 0.625rem;
         transition: all 0.3s;
     }
 
@@ -1089,7 +1101,7 @@ nav .gnb li:hover::after {
     .trigger span:nth-child(2) {
         top: 50%;
         width: 70%;
-        margin-right: 8px;
+        margin-right: 0.5rem;
     }
 
     .trigger span:nth-child(3) {
@@ -1113,21 +1125,21 @@ nav .gnb li:hover::after {
 
     /* responsive  welcome page */
     .welcome_page h6 {
-        width: 150px;
+        width: 9.375rem;
         position: absolute;
-        font-size: 0.8rem;
-        line-height: 1.1rem;
+        font-size: 12.8px;
+        line-height: 17.6px;
         text-align: center;
-        text-shadow: 0 2px 2px rgba(114, 114, 114, 0.576);
+        text-shadow: 0 0.125rem 0.125rem rgba(114, 114, 114, 0.576);
     }
 
     /* responsive  profile page */
     .profile_page .profile_title {
-        font-size: 1.6rem;
+        font-size: 25.6px;
     }
 
     .profile_title .r_animation div {
-        font-size: 1.9rem;
+        font-size: 30.4px;
     }
 
     .profile_page .profile_wrap {
@@ -1158,9 +1170,9 @@ nav .gnb li:hover::after {
 
     .profile_img h6 {
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 19.2px;
         text-transform: uppercase;
-        line-height: 2rem;
+        line-height: 32px;
         font-weight: 900;
         color: #385E81;
         margin: auto;
@@ -1176,29 +1188,19 @@ nav .gnb li:hover::after {
 
     .profile_textwrap .pro_subtitle {
         position: relative;
-        font-size: 1.35rem;
+        font-size: 21.6px;
         text-transform: uppercase;
         color: #385E81;
-        margin: 30px 0 25px 0;
+        margin: 1.875rem 0 1.5625rem 0;
     }
 
     .profile_textwrap .myprofile {
         width: 100%;
     }
 
-    .profile_textwrap .myprofile ul {
-        padding: 20px;
-        margin-top: 10px;
-        border-radius: 20px;
-    }
-
-    .profile_textwrap .myprofile li {
-        margin-top: 10px;
-        font-weight: 500;
-    }
-
-    .profile_textwrap .myprofile li:first-child {
-        margin-top: 0;
+    .profile_textwrap .myprofile div {
+        margin-top: 0.625rem;
+        border-radius: 1.25rem;
     }
 
     .profile_textwrap .myskill {
@@ -1209,16 +1211,16 @@ nav .gnb li:hover::after {
     .myskill .pro_subtitle::before {
         bottom: 5%;
         left: 11%;
-        font-size: 0.7rem;
+        font-size: 11.2px;
     }
 
     .myskill strong {
-        font-size: 1rem;
+        font-size: 16px;
         text-transform: uppercase;
     }
 
     .myskill .skills {
-        font-size: 0.9rem;
+        font-size: 14.4px;
     }
 
     .myskill .skills>span:hover {
@@ -1265,7 +1267,7 @@ nav .gnb li:hover::after {
         text-transform: uppercase;
         text-align: center;
         font-weight: 500;
-        margin-top: 10px;
+        margin-top: 0.625rem;
         line-height: 1.2rem;
     }
 
@@ -1296,27 +1298,27 @@ nav .gnb li:hover::after {
     }
 
     .swiper-slide .slide_img {
-        padding-right: 10px;
+        padding-right: 0.625rem;
     }
 
     .slide_text h1 {
         text-align: center;
-        font-size: 1.7rem;
+        font-size: 27.2px;
         margin-top: 3%;
     }
 
     .slide_text ul li {
-        font-size: 0.9rem;
+        font-size: 14.4px;
     }
 
     .slide_text .slide_btns {
-        gap: 20px;
+        gap: 1.25rem;
         align-items: center;
         justify-content: center;
     }
 
     .slide_img .one_img_app {
-        margin: 0 0 20px 0;
+        margin: 0 0 1.25rem 0;
     }
 
     .slide_img .one_img {
@@ -1327,30 +1329,30 @@ nav .gnb li:hover::after {
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: 15px !important;
+        bottom: 0.9375rem !important;
         z-index: 2 !important;
     }
 
     /* responsive contact */
 
     .contact_page h1 {
-        font-size: 3.2rem;
+        font-size: 51.2px;
     }
 
     .contact_page .section_inner>p {
-        font-size: 0.98rem;
-        line-height: 1.4rem;
+        font-size: 15.68px;
+        line-height: 22.4px;
     }
 
     .contact_page .contact_inner {
         margin-top: 5%;
         text-align: center;
-        padding: 50px 30px;
-        border-radius: 30px;
+        padding: 3.125rem 1.875rem;
+        border-radius: 1.875rem;
     }
 
     .contact_inner a {
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .contact_inner a:hover {
@@ -1358,13 +1360,13 @@ nav .gnb li:hover::after {
     }
 
     .contact_inner p {
-        font-size: 0.85rem;
-        padding-top: 30px;
+        font-size: 13.6px;
+        padding-top: 1.875rem;
     }
 }
 
 /* moblie ver */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
 
     /* responsive header */
     .header_inner nav {
@@ -1388,13 +1390,13 @@ nav .gnb li:hover::after {
         justify-content: center;
         width: 100%;
         font-size: 3rem;
-        padding: 15px;
+        padding: 0.9375rem;
         top: -50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
         box-sizing: border-box;
-        transition: 0.8s ease-in-out;
+        transition: .8s ease-in-out;
     }
     .welcome_page h1.active {
         top: 50%;
@@ -1402,12 +1404,12 @@ nav .gnb li:hover::after {
 
     /* responsive  profile page */
     .profile_page .profile_title {
-        font-size: 1.1rem;
-        padding-top: 40px;
+        font-size: 17.6px;
+        padding-top: 2.5rem;
     }
 
     .profile_title .r_animation div {
-        font-size: 1.3rem;
+        font-size: 20.8px;
     }
 
     .profile_page .profile_wrap {
@@ -1439,9 +1441,9 @@ nav .gnb li:hover::after {
 
     .profile_img h6 {
         width: 55%;
-        font-size: 1.2rem;
+        font-size: 19.2px;
         text-transform: uppercase;
-        line-height: 2rem;
+        line-height: 32px;
         font-weight: 900;
         color: #385E81;
     }
@@ -1457,10 +1459,10 @@ nav .gnb li:hover::after {
 
     .profile_textwrap .pro_subtitle {
         position: relative;
-        font-size: 1.25rem;
+        font-size: 20px;
         text-transform: uppercase;
         color: #385E81;
-        margin: 30px 0 25px 0;
+        margin: 1.875rem 0 1.5625rem 0;
     }
 
     .profile_textwrap .myprofile {
@@ -1491,7 +1493,8 @@ nav .gnb li:hover::after {
         font-size: 0.9rem;
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+
+        gap: 1.25rem;
     }
 
     .myskill .skills>span:hover {
@@ -1515,7 +1518,7 @@ nav .gnb li:hover::after {
     }
 
     .mycareer {
-        font-size: 0.95rem;
+        font-size: 15.2px;
     }
 
     .modal_text .close_btn:hover {
@@ -1537,7 +1540,7 @@ nav .gnb li:hover::after {
     }
 
     .gallery_items .gallery_item {
-        margin: 35px;
+        margin: 2.1875rem;
     }
 
     .gi1 .gallery_item:nth-child(odd) {
@@ -1563,12 +1566,12 @@ nav .gnb li:hover::after {
     .gallery_item .mo_overlay {
         display: block;
         color: #404040;
-        font-size: 0.78rem;
+        font-size: 12.48px;
         text-transform: uppercase;
         text-align: center;
         font-weight: 500;
-        margin-top: 10px;
-        line-height: 1.2rem;
+        margin-top: 0.625rem;
+        line-height: 1.8rem;
     }
 
     .mo_overlay span {
@@ -1599,7 +1602,7 @@ nav .gnb li:hover::after {
     }
 
     .swiper-slide .slide_img {
-        padding-right: 10px;
+        padding-right: 0.625rem;
     }
 
     .swiper-slide .slide_img img {
@@ -1608,24 +1611,24 @@ nav .gnb li:hover::after {
 
     .slide_text h1 {
         text-align: center;
-        font-size: 1.7rem;
+        font-size: 27.2px;
         margin-top: 3%;
     }
 
     .slide_text ul li {
-        font-size: 0.9rem;
+        font-size: 14.4px;
     }
 
     .slide_text .slide_btns {
-        gap: 20px;
+        gap: 1.25rem;
     }
 
     .slide_btns a {
-        font-size: 0.75rem;
+        font-size: 12px;
     }
 
     .slide_img .one_img_app {
-        margin: 0 0 20px 0;
+        margin: 0 0 1.25rem 0;
         width: 85%;
     }
 
@@ -1637,24 +1640,24 @@ nav .gnb li:hover::after {
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: 7px !important;
+        bottom: 0.4375rem !important;
     }
 
     /* responsive contact */
 
     .contact_page h1 {
-        font-size: 2.2rem;
+        font-size: 35.2px;
     }
 
     .contact_page .section_inner>p {
-        font-size: 0.8rem;
-        line-height: 1.1rem;
+        font-size: 12.8px;
+        line-height: 17.6px;
         width: 95%;
     }
 
     .contact_inner a {
         width: 80%;
-        font-size: 0.8rem;
+        font-size: 12.8px;
     }
 
     .contact_inner a:hover {
@@ -1662,19 +1665,19 @@ nav .gnb li:hover::after {
     }
 
     .contact_inner p {
-        font-size: 0.8rem;
-        padding-top: 30px;
+        font-size: 12.8px;
+        padding-top: 1.875rem;
     }
 }
 
 /* mibile s size */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 26.5625rem) {
     .profile_page .profile_title {
         justify-content: space-around;
-        font-size: 0.8rem;
+        font-size: 12.8px;
     }
     .profile_title .r_animation div {
-        font-size: 0.9rem;
+        font-size: 14.4px;
     }
 }
 /*########## [end] responsive css ########## */

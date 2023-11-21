@@ -82,21 +82,21 @@
                         <div class="profile_textwrap">
                             <div class="myprofile">
                                 <h2 class="pro_subtitle">profile</h2>
-                                <ul>
-                                    <li>이어령</li>
-                                    <li>1998.09.28</li>
-                                    <li>djfud7696@naver.com</li>
-                                    <li>010-6722-7696</li>
-                                    <li>
-                                        <h6>study</h6>
-                                    </li>
-                                    <li class="study">
-                                        <a href="https://github.com/LeeEoryoung"><i
+                                <div>
+                                    <ul>
+                                        <li>이어령</li>
+                                        <li>1998.09.28</li>
+                                        <li>djfud7696@naver.com</li>
+                                        <li>010-6722-7696</li>
+                                    </ul>
+                                    <h6>study</h6>
+                                    <span class="study">
+                                        <a target="_blank" href="https://github.com/LeeEoryoung"><i
                                                 class="fa-brands fa-square-github"></i></a>
-                                        <a href="https://www.notion.so/8afe3e4d9f054d4bafa2354aa4d00913?pvs=4"><img
+                                        <a target="_blank" href="https://www.notion.so/8afe3e4d9f054d4bafa2354aa4d00913?pvs=4"><img
                                                 src="./images/notion_logo.png" alt=""></a>
-                                    </li>
-                                </ul>
+                                    </span>
+                                </div>
                             </div>
                             <div class="myskill">
                                 <h2 class="pro_subtitle">skill</h2>
@@ -106,13 +106,23 @@
                                     <span id="Skill02">css</span>
                                     <span id="Skill03">javascript & jquery</span>
                                     <span id="Skill04">cafe24</span>
+                                    <span id="Skill05">Scss</span>
                                 </div>
                                 <strong>design</strong>
                                 <div class="skills">
-                                    <span id="Skill05">photoshop & illustrator</span>
-                                    <span id="Skill06">zeplin</span>
-                                    <span id="Skill07">figma</span>
+                                    <span id="Skill06">photoshop & illustrator</span>
+                                    <span id="Skill07">zeplin</span>
+                                    <span id="Skill08">figma</span>
+                                    <span id="Skill09">adobe xd</span>
                                 </div>
+                                <strong>collaboration</strong>
+                                <div class="skills">
+                                    <span id="Skill10">slack</span>
+                                    <span id="Skill11">google workspace</span>
+                                    <span id="Skill12">svn</span>
+                                    <span id="Skill13">ftp</span>
+                                </div>
+
                             </div>
                             <div class="mycareer">
                                 <h2 class="pro_subtitle">career</h2>
@@ -141,7 +151,7 @@
                         <h3>html</h3>
                         <p>
                             웹 표준과 웹 접근성을 준수하는 html 정보
-                            구조설계로 웹사이트 퍼블리싱을 해오고 있습니다.
+                            구조설계로 웹사이트 퍼블리싱을 해오고 있습니다. <br>
                             특히 웹표준을 위해 html5에서 권장하는 마크업 방식과
                             시멘틱 태그를 사용해 전체 레이아웃을 설계합니다.
                         </p>
@@ -198,8 +208,20 @@
                         </p>
                     </div>
                 </div>
+                <div class="modal modal_scss">
+                    <div class="modal_text">
+                        <button class="close_btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <h3>scss</h3>
+                        <p>
+                            변수 선언 후 공통적으로 관리하고 디자인이 가능합니다. <br>
+                            Mixin과 incloud를 적절히 사용하여 코드를 짤 수 있습니다.
+                        </p>
+                    </div>
+                </div>
                 <!-- design -->
-                <div class="modal modal_adoby">
+                <div class="modal modal_adobe">
                     <div class="modal_text">
                         <button class="close_btn">
                             <i class="fa-solid fa-xmark"></i>
@@ -230,11 +252,66 @@
                         <h3>figma</h3>
                         <p>
                             현업에서 사용 경험은 없지만, 포트폴리오 디자인 작업을 피그마로 작업했으며 그 작업을 토대로 퍼블리싱 작업을 했습니다.
-                            더욱 공부하여 현업 사용에서 익숙해질 수 있도록 노력하겠습니다
+                            더욱 공부하여 현업 사용에서 익숙해질 수 있도록 노력하겠습니다.
                         </p>
                     </div>
                 </div>
-                <div class="modal_background">
+                <div class="modal modal_adobexd">
+                    <div class="modal_text">
+                        <button class="close_btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <h3>Adoby XD</h3>
+                        <p>
+                            현업에서 사용 경험이 있으며, 디자이너분께서 Adoby XD 에 작업해주신 걸 토대로 구현 가능합니다.<br>
+                            ex: hover effect / click event시의 디자인
+                        </p>
+                    </div>
+                </div>
+                <!-- collaboration -->
+                <div class="modal modal_slack">
+                    <div class="modal_text">
+                        <button class="close_btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <h3>slack</h3>
+                        <p>
+                            메인 업무용 메신저로 사용하였으며, 기획,디자인,개발자 분들과 협업의 경험이 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal modal_google">
+                    <div class="modal_text">
+                        <button class="close_btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <h3>google workspace</h3>
+                        <p>
+                            현업 프로젝트에서 사용 경험이 있으며, 기획자분께서 올려주신 자료를 파악하고 퍼블리싱 했습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal modal_svn">
+                    <div class="modal_text">
+                        <button class="close_btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <h3>svn</h3>
+                        <p>
+                            TortoiseSVN 을 현업에서 사용한 경험이 있으며 이를 통해 프로젝트 협업이 가능합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal modal_ftp">
+                    <div class="modal_text">
+                        <button class="close_btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <h3>ftp</h3>
+                        <p>
+                            VScode의 플러그인 sftp를 사용하여 유지보수 경험이 있습니다.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -245,21 +322,21 @@
                     <div class="gallery_items gi1">
                         <h2>card-ui</h2>
                         <div id="Gitem1" class="gallery_item">
-                            <a href="./portfolio/practical/card-ui/01/index.html">
+                            <a target="_blank" href="./portfolio/practical/card-ui/01/index.html">
                                 <img src="./images/portfolio-cardui-01.png" alt="남성쇼핑몰 카드 ui">
                                 <div class="overlay">men's shopping mall card ui<span>제작방식: html/css</span></div>
                             </a>
                             <div class="mo_overlay">men's shopping mall card ui<span>제작방식: html/css</span></div>
                         </div>
                         <div id="Gitem2" class="gallery_item">
-                            <a href="./portfolio/practical/card-ui/02/index.html">
+                            <a target="_blank" href="./portfolio/practical/card-ui/02/index.html">
                                 <img src="./images/portfolio-cardui-02.png" alt="세계도시 카드 ui">
                                 <div class="overlay">world best cities card ui<span>제작방식: html/css</span></div>
                             </a>
                             <div class="mo_overlay">world best cities card ui<span>제작방식: html/css</span></div>
                         </div>
                         <div id="Gitem3" class="gallery_item">
-                            <a href="./portfolio/practical/card-ui/03/index.html">
+                            <a target="_blank" href="./portfolio/practical/card-ui/03/index.html">
                                 <img src="./images/portfolio-cardui-03.png" alt="퍼블리싱 포트폴리오">
                                 <div class="overlay">publishing portfolio<span>제작방식: html/css</span></div>
                             </a>
@@ -269,14 +346,14 @@
                     <div class="gallery_items gi2">
                         <h2>form</h2>
                         <div id="Gitem4" class="gallery_item">
-                            <a href="./portfolio/practical/form/01/index.html">
+                            <a target="_blank" href="./portfolio/practical/form/01/index.html">
                                 <img src="./images/portfolio-form-01.png" alt="반응형 상담신청서 폼">
                                 <div class="overlay">반응형 상담신청서 form<span>제작방식: html/css</span></div>
                             </a>
                             <div class="mo_overlay">반응형 상담신청서 form<span>제작방식: html/css</span></div>
                         </div>
                         <div id="Gitem5" class="gallery_item">
-                            <a href="./portfolio/practical/form/02/index.html">
+                            <a target="_blank" href="./portfolio/practical/form/02/index.html">
                                 <img src="./images/portfolio-form-02.png" alt="네이버 회원가입 폼">
                                 <div class="overlay">naver 회원가입 form<span>제작방식: html/css</span></div>
                             </a>
@@ -284,7 +361,7 @@
 
                         </div>
                         <div id="Gitem6" class="gallery_item">
-                            <a href="./portfolio/practical/form/03/index.html">
+                            <a target="_blank" href="./portfolio/practical/form/03/index.html">
                                 <img src="./images/portfolio-form-03.png" alt="네이버 밴드 로그인 폼">
                                 <div class="overlay">naver band 로그인 from<span>제작방식: html/css</span></div>
                             </a>
@@ -294,7 +371,7 @@
                     <div class="gallery_items gi1">
                         <h2>hover</h2>
                         <div id="Gitem7" class="gallery_item">
-                            <a href="./portfolio/practical/hover-effect/01/index.html">
+                            <a target="_blank" href="./portfolio/practical/hover-effect/01/index.html">
                                 <img src="./images/portfolio-hover-01.png" alt="모바일 앱 hover effect">
                                 <div class="overlay">mobile app hover effect<span>제작방식: html/css</span>
                                 </div>
@@ -302,14 +379,14 @@
                             <div class="mo_overlay">mobile app hover effect<span>제작방식: html/css</span></div>
                         </div>
                         <div id="Gitem8" class="gallery_item">
-                            <a href="./portfolio/practical/hover-effect/02/index.html">
+                            <a target="_blank" href="./portfolio/practical/hover-effect/02/index.html">
                                 <img src="./images/portfolio-hover-02.png" alt="조던 hover effect">
                                 <div class="overlay">jordan hover effect<span>제작방식: html/css</span></div>
                             </a>
                             <div class="mo_overlay">jordan hover effect<span>제작방식: html/css</span></div>
                         </div>
                         <div id="Gitem9" class="gallery_item">
-                            <a href="./portfolio/practical/hover-effect/03/index.html">
+                            <a target="_blank" href="./portfolio/practical/hover-effect/03/index.html">
                                 <img src="./images/portfolio-hover-03.png" alt="hover flip animation">
                                 <div class="overlay">hover sns logo rotate effect<span>제작방식: html/css</span></div>
                             </a>
@@ -319,21 +396,21 @@
                     <div class="gallery_items gi2">
                         <h2>navigation</h2>
                         <div id="Gitem10" class="gallery_item">
-                            <a href="./portfolio/practical/navigation/01/index.html">
+                            <a target="_blank" href="./portfolio/practical/navigation/01/index.html">
                                 <img src="./images/portfolio-navi-01.png" alt="ybm navigation">
                                 <div class="overlay">ybm toic navigation<span>제작방식: html/css/jquery</span></div>
                             </a>
                             <div class="mo_overlay">ybm toic navigation<span>제작방식: html/css/jquery</span></div>
                         </div>
                         <div id="Gitem11" class="gallery_item">
-                            <a href="./portfolio/practical/navigation/02/index.html">
+                            <a target="_blank" href="./portfolio/practical/navigation/02/index.html">
                                 <img src="./images/portfolio-navi-02.png" alt="투명 navigation">
                                 <div class="overlay">opacity navigation<span>제작방식: html/css</span></div>
                             </a>
                             <div class="mo_overlay">opacity navigation<span>제작방식: html/css</span></div>
                         </div>
                         <div id="Gitem12" class="gallery_item">
-                            <a href="./portfolio/practical/navigation/03/index.html">
+                            <a target="_blank"   href="./portfolio/practical/navigation/03/index.html">
                                 <img src="./images/portfolio-navi-03.png" alt="아이콘 navigation">
                                 <div class="overlay">icon navigation<span>제작방식: html/css</span></div>
                             </a>

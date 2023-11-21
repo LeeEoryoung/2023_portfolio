@@ -88,17 +88,47 @@ $(function () {
         $('body').addClass('active');
     });
     $('#Skill05').click(function () {
-        $('.modal_adoby').addClass('active');
+        $('.modal_scss').addClass('active');
         $('.modal_background').addClass('active');
         $('body').addClass('active');
     });
     $('#Skill06').click(function () {
-        $('.modal_zeplin').addClass('active');
+        $('.modal_adobe').addClass('active');
         $('.modal_background').addClass('active');
         $('body').addClass('active');
     });
     $('#Skill07').click(function () {
+        $('.modal_zeplin').addClass('active');
+        $('.modal_background').addClass('active');
+        $('body').addClass('active');
+    });
+    $('#Skill08').click(function () {
         $('.modal_figma').addClass('active');
+        $('.modal_background').addClass('active');
+        $('body').addClass('active');
+    });
+    $('#Skill09').click(function () {
+        $('.modal_adobexd').addClass('active');
+        $('.modal_background').addClass('active');
+        $('body').addClass('active');
+    });
+    $('#Skill10').click(function () {
+        $('.modal_slack').addClass('active');
+        $('.modal_background').addClass('active');
+        $('body').addClass('active');
+    });
+    $('#Skill11').click(function () {
+        $('.modal_google').addClass('active');
+        $('.modal_background').addClass('active');
+        $('body').addClass('active');
+    });
+    $('#Skill12').click(function () {
+        $('.modal_svn').addClass('active');
+        $('.modal_background').addClass('active');
+        $('body').addClass('active');
+    });
+    $('#Skill13').click(function () {
+        $('.modal_ftp').addClass('active');
         $('.modal_background').addClass('active');
         $('body').addClass('active');
     });
